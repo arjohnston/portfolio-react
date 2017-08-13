@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  max-width: 1250px;
+  margin: 0 auto 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+@media (max-width: 400px) {
+  .header {
+    padding: 10px 5px;
+  }
+}
+
+.title {
+  color: white;
+}

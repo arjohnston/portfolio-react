@@ -1,0 +1,29 @@
+.content-wrapper {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.project {
+  display: flex;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  transition: border-color .2s;
+}
+
+.project:hover {
+  border-color: white;
+}
+
+.project img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
