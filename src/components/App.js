@@ -14,9 +14,9 @@ class App extends Component {
       <Router>
         <div className='wrapper'>
           <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/tictactoe' component={Tictactoe} />
-            <Route path='/simon' component={Simon} />
+            <Route exact path='/projects/' component={Home} />
+            <Route path='/projects/tictactoe' component={Tictactoe} />
+            <Route path='/projects/simon' component={Simon} />
             <Route render={function () {
               return <p>Project not found</p>
             }} />
