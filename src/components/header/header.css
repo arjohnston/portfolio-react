@@ -1,18 +1,36 @@
+.header-wrapper {
+  width: 100%;
+  background-color: #5B88AA;
+  box-shadow: 0 4px 8px rgba(0,0,0,.28);
+  position: fixed;
+  height: 50px;
+  z-index: 2000;
+}
+
 .header {
   display: flex;
   max-width: 1250px;
-  margin: 0 auto 30px;
+  margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 
 @media (max-width: 400px) {
   .header {
-    padding: 10px 5px;
+    padding: 0px 5px;
   }
 }
 
-.title {
+.nav {
+  display: flex;
+}
+
+.nav li {
+  color: #ddd;
+  list-style: none;
+}
+
+.active {
   color: white;
 }

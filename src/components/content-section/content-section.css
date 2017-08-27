@@ -1,0 +1,29 @@
+.content-section {
+  max-width: 1250px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  min-height: calc(100vh - 61px);
+}
+
+.pane-50 {
+  width: 50%;
+}
+
+.pane-600 {
+  max-width: 600px;
+}
+
+.pane-800 {
+  max-width: 800px;
+}
+
+@media (max-width: 767px) {
+  .pane-600 {
+    padding-top: 100px;
+  }
+}
+
+.center {
+  margin: auto;
+}

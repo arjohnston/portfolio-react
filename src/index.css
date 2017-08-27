@@ -2,14 +2,31 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to bottom, rgba(47,122,63,1) 0%,rgba(91,136,170,1) 100%) fixed;
+  background: linear-gradient(to top, rgba(47,122,63,1) 0%,rgba(91,136,170,1) 100%);
+  background-size: 100% 800px;
+  background-repeat: no-repeat;
+  background-color: #2f7a3f;
 }
 
-p, h2, a {
-  text-decoration: none;
-  color: white;
-  padding: 0;
+h2 {
+  /*color: white;*/
+  /*padding: 0;
   margin: 0;
   letter-spacing: 1px;
+  font-weight: 300;*/
+}
+
+a {
+  text-decoration: none;
   font-weight: 300;
+  color: #ddd;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: white;
+}
+
+.hide-overflow {
+  overflow: hidden;
 }
