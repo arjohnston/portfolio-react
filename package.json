@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "description": "Andrew Johnston's portfolio",
-  "homepage": "https://arjohnston.github.io/portfolio",
+  "homepage": "http://arjohnston.github.io/portfolio",
   "version": "0.1.0",
   "private": true,
   "author": "Andrew Johnston",
