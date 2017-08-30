@@ -1,7 +1,10 @@
 .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
   border: 1px solid transparent;
+  -webkit-transition: border-color .2s;
   transition: border-color .2s;
 }
 
@@ -17,12 +20,18 @@
 .project img {
   height: 100px;
   width: 100px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .project-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-left: 10px;
 }
 
@@ -50,7 +59,10 @@
 
 @media (max-width: 480px) {
   .project {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-bottom: 30px;
     border: 0;
   }
