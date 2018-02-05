@@ -1,0 +1,30 @@
+.markdown-wrapper {
+  width: 100%;
+}
+
+.markdown-wrapper textarea,
+.markdown-output {
+  width: 100%;
+  resize: none;
+  height: 400px;
+  background: #222831;
+  color: white;
+  border: 1px solid #00ADB5;
+  padding: 12px;
+  font-size: 14px;
+  overflow-y: scroll;
+}
+
+.markdown-wrapper textarea:focus {
+  outline: none;
+}
+
+.markdown-output ul,
+.markdown-output li,
+.markdown-output p {
+  list-style: inherit;
+  line-height: initial;
+  font-size: initial;
+  color: white;
+  font-weight: initial;
+}

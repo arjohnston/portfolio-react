@@ -3,7 +3,9 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  min-height: calc(100vh - 61px);
+  min-height: calc(100vh - 206px);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .pane-50 {
@@ -16,6 +18,7 @@
 
 .pane-800 {
   max-width: 800px;
+  width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -25,5 +28,6 @@
 }
 
 .center {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }

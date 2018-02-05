@@ -7,6 +7,9 @@ var NavLink = require('react-router-dom').NavLink
 
 export default class Header extends Component {
   render () {
+    let pathArray = window.location.pathname.split('/')
+    let project = pathArray.length > 2 ? pathArray[pathArray.length - 1] : null
+
     return (
       <div className='header-wrapper'>
         <nav className='header'>
@@ -24,11 +27,13 @@ export default class Header extends Component {
             </li>
             <li>&nbsp;/&nbsp;</li>
             <li>
-              <NavLink activeClassName='active' to='/portfolio'>
-                portfolio
+              <NavLink exact activeClassName='active' to='/projects'>
+                projects
               </NavLink>
             </li>
             <li>&nbsp;/&nbsp;</li>
+            {project ? <li><NavLink exact activeClassName='active' to={`/projects/${project}`}>{project}</NavLink></li> : ''}
+            {project ? <li>&nbsp;/&nbsp;</li> : ''}
           </ul>
         </nav>
       </div>

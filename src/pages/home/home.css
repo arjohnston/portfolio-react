@@ -1,0 +1,260 @@
+.home-wrapper {
+  background-color: #222831;
+}
+
+.hero-wrapper {
+  height: 400px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+
+
+  background-color: #393E46;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+}
+
+@media (max-width: 767px) {
+  .hero-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .span-break {
+    display: none;
+  }
+}
+
+.hero-wrapper h1 {
+  font-size: 36px;
+  width: 100%;
+  margin: 0;
+}
+
+.hero-wrapper span {
+  font-size: 26px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.about {
+  width: 100%;
+  padding: 100px 0 30px 0;
+
+  background-color: #393E46;
+  clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
+}
+
+.about-wrapper {
+  max-width: 800px;
+  margin: 125px auto 30px;
+  padding: 0 10px;
+}
+
+.about-wrapper p {
+  text-align: center;
+}
+
+.profile-image {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-image img {
+  width: 250px;
+  margin: auto;
+  border-radius: 50%;
+  position: absolute;
+  top: -100px;
+  right: 0;
+  left: 0;
+  -webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.28);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.28);
+}
+
+@media (max-width: 767px) {
+  .profile-image img {
+    width: 200px;
+    top: -60px;
+  }
+}
+
+.portfolio {
+  margin: 100px 0 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-cta {
+  padding: 12px 36px;
+  border: 3px solid #FFF;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  margin: 75px auto 0;
+  font-size: 18px;
+}
+
+.portfolio-cta:hover {
+  border: 3px solid #00ADB5;
+}
+
+.portfolio-wrapper {
+  width: 100%;
+  display: flex;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.card-wrapper {
+  width: 50%;
+  /* height: 550px; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-cta {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; right: 0; left: 0; bottom: 0;
+}
+
+.card-cta img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-cta::before {
+  content: '';
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 100%);
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  top: 0;
+}
+
+.portfolio-card-lg,
+.portfolio-card-md {
+  margin: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,.28);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.portfolio-card-lg {
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  min-height: 500px;
+}
+
+.portfolio-card-md {
+  width: calc(50% - 8px);
+  height: calc(50% - 8px);
+  min-height: 250px;
+}
+
+.project-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  position: absolute;
+  bottom: calc(-120px / 2);
+  width: 100%;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.portfolio-card-lg:hover .project-info-wrapper,
+.portfolio-card-md:hover .project-info-wrapper {
+  bottom: 0;
+}
+
+.project-meta, .project-info {
+  height: 50%;
+  display: flex;
+  padding: 0 12px;
+  color: white;
+  z-index: 1;
+}
+
+.project-info {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.project-info h3 {
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.project-info span {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.project-meta {
+  background: rgba(0,0,0,0.2);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.project-meta > a {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  height: 100%;
+  color: white;
+  width: auto;
+}
+
+.project-meta > a:hover {
+  color: #00ADB5;
+}
+
+.project-meta > a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+@media (max-width: 900px) {
+  .portfolio-wrapper {
+    flex-direction: column;
+  }
+  .portfolio-card-lg,
+  .portfolio-card-md {
+    margin: 12px 4px;
+  }
+  .card-wrapper {
+    width: 100%;
+  }
+  .project-info-wrapper {
+    bottom: 0;
+  }
+  .card-cta::before {
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 100%);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-card-lg,
+  .portfolio-card-md {
+    margin: 12px 0;
+  }
+  .portfolio-card-md {
+    width: 100%;
+  }
+  .portfolio-cta {
+    margin-top: 40px;
+  }
+}

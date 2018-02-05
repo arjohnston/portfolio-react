@@ -1,0 +1,73 @@
+.selection {
+  font-size: 1.2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selection button {
+  user-select: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: default;
+  background: none;
+  border: 0;
+  outline: none;
+  transition: background 0.2s;
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 12px;
+}
+.selection button.hover {
+  user-select: auto;
+  cursor: pointer;
+}
+.selection button.hover:hover {
+  background: #00ADB5;
+}
+.selection button.selected {
+  background: #00ADB5;
+}
+.result {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 300;
+  margin-top: 20px;
+}
+table.tic-tac-toe-gameboard {
+  max-width: 500px;
+	margin: auto;
+	margin-top: 20px;
+	font-size: 70px;
+}
+
+.tic-tac-toe-gameboard td {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	width: 80px;
+	height: 80px;
+	background-color: #222831;
+	color: white;
+	border: none;
+	border-radius: 10%;
+	box-shadow: 0 4px 8px rgba(0,0,0,.28);
+	margin: 8px;
+	transition: background-color 0.2s ease;
+}
+
+.tic-tac-toe-gameboard td:hover {
+	cursor: pointer;
+	background-color: #00ADB5;
+}
+
+.tic-tac-toe-gameboard tr {
+	list-style-type: none;
+	width: 100%;
+  display: flex;
+}
