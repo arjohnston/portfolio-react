@@ -61,6 +61,10 @@ table.tic-tac-toe-gameboard {
 	transition: background-color 0.2s ease;
 }
 
+.tic-tac-toe-gameboard td.selected {
+  background: #00ADB5;
+}
+
 .tic-tac-toe-gameboard td:hover {
 	cursor: pointer;
 	background-color: #00ADB5;
