@@ -24,10 +24,13 @@ export default class Home extends Component {
                     <img src={require('../../assets/projects/eu.png')} alt='P' />
                   </Link>
                   <div className='project-info-wrapper'>
-                    <div className='project-info'>
-                      <h3>Emergency University</h3>
-                      <span>/projects/emergency-university</span>
-                    </div>
+                    <Link to='/projects/emergency-university'>
+                      <div className='project-info'>
+                        <span>/projects/emergency-university</span>
+                        <h3>Emergency University</h3>
+                      </div>
+                    </Link>
+
                     <div className='project-meta'>
                       <a href='github.com'>
                         <img src={require('../../assets/github-circle.svg')} alt='Github Profile' />
@@ -48,10 +51,13 @@ export default class Home extends Component {
                     <img src={require('../../assets/projects/mario.png')} alt='Pixelated' />
                   </Link>
                   <div className='project-info-wrapper'>
-                    <div className='project-info'>
-                      <h3>Pixelated</h3>
-                      <span>/projects/pixelated</span>
-                    </div>
+                    <Link to='/projects/pixelated'>
+                      <div className='project-info'>
+                        <span>/projects/pixelated</span>
+                        <h3>Pixelated</h3>
+                      </div>
+                    </Link>
+
                     <div className='project-meta'>
                       <a href='github.com'>
                         <img src={require('../../assets/github-circle.svg')} alt='Github Profile' />
@@ -70,10 +76,13 @@ export default class Home extends Component {
                     <img src={require('../../assets/projects/tictactoe.png')} alt='Tic Tac Toe' />
                   </Link>
                   <div className='project-info-wrapper'>
-                    <div className='project-info'>
-                      <h3>Tic Tac Toe</h3>
-                      <span>/projects/tictactoe</span>
-                    </div>
+                    <Link to='/projects/tictactoe'>
+                      <div className='project-info'>
+                        <span>/projects/tictactoe</span>
+                        <h3>Tic Tac Toe</h3>
+                      </div>
+                    </Link>
+
                     <div className='project-meta'>
                       <a href='github.com'>
                         <img src={require('../../assets/github-circle.svg')} alt='Github Profile' />
@@ -92,10 +101,13 @@ export default class Home extends Component {
                     <img src={require('../../assets/projects/markdown.png')} alt='Markdown Editor' />
                   </Link>
                   <div className='project-info-wrapper'>
-                    <div className='project-info'>
-                      <h3>Markdown Editor</h3>
-                      <span>/projects/markdown</span>
-                    </div>
+                    <Link to='/projects/markdown'>
+                      <div className='project-info'>
+                        <span>/projects/markdown</span>
+                        <h3>Markdown Editor</h3>
+                      </div>
+                    </Link>
+
                     <div className='project-meta'>
                       <a href='github.com'>
                         <img src={require('../../assets/github-circle.svg')} alt='Github Profile' />
@@ -114,10 +126,13 @@ export default class Home extends Component {
                     <img src={require('../../assets/projects/simon.png')} alt='Simon Says' />
                   </Link>
                   <div className='project-info-wrapper'>
-                    <div className='project-info'>
-                      <h3>Simon Says</h3>
-                      <span>/projects/simon</span>
-                    </div>
+                    <Link to='/projects/simon'>
+                      <div className='project-info'>
+                        <span>/projects/simon</span>
+                        <h3>Simon Says</h3>
+                      </div>
+                    </Link>
+
                     <div className='project-meta'>
                       <a href='github.com'>
                         <img src={require('../../assets/github-circle.svg')} alt='Github Profile' />
@@ -136,7 +151,7 @@ export default class Home extends Component {
             <Link
               className='portfolio-cta'
               to='/projects/'
-              >
+            >
               view all projects
             </Link>
           </section>

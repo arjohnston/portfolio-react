@@ -2,33 +2,47 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 24px;
   border: 1px solid transparent;
   -webkit-transition: border-color .2s;
   transition: border-color .2s;
   justify-content: space-between;
-  box-shadow: 0 4px 8px rgba(0,0,0,.28);
+  box-shadow: 0 5px 25px rgba(0,0,0,.38);
+  background-color: #393E46;
+}
+
+.project-wrapper {
+  background-color: #222831;
+  padding-top: 48px;
 }
 
 .project:hover {
-  border-color: #00ADB5;
+  border-color: #2dc8ce;
 }
 
 .project-image-wrapper {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .project-image-wrapper img {
-  height: 150px;
-  width: 150px;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.project:hover .project-image-wrapper img {
+  transform: scale(1.05);
 }
 
 .project-content {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 12px;
   width: 100%;
 }
 
@@ -37,7 +51,12 @@
   align-items: center;
   width: 50px;
   justify-content: flex-end;
-  padding-right: 4px;
+  padding-right: 18px;
+  transition: padding 0.2s;
+}
+
+.project:hover .project-right-arrow {
+  padding-right: 12px;
 }
 
 .project-right-arrow img {
@@ -53,6 +72,7 @@
 
 .project-wrapper h2 {
   color: white;
+  letter-spacing: 1px;
 }
 
 .project-wrapper p {

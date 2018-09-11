@@ -1,11 +1,7 @@
 .header-wrapper {
   width: 100%;
   position: fixed;
-  height: 50px;
   z-index: 2000;
-
-  background-color: #393E46;
-  border-bottom: 1px solid #222831;
 }
 
 .header {

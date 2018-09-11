@@ -15,7 +15,7 @@ export default class Portfolio extends Component {
               href='https://emergencyuniversity.com'
               target='_blank'
               rel='noopener noreferrer'
-              >
+            >
               <div className='project-image-wrapper'>
                 <img src={require('../../assets/projects/eu.png')} alt='Emergency University' />
               </div>
@@ -31,6 +31,7 @@ export default class Portfolio extends Component {
                 <img src={require('../../assets/right-arrow.svg')} alt='right arrow' />
               </div>
             </a>
+
             <Link className='project' to='/projects/pixelated'>
               <div className='project-image-wrapper'>
                 <img src={require('../../assets/projects/mario.png')} alt='sidescroller' />
@@ -47,6 +48,7 @@ export default class Portfolio extends Component {
                 <img src={require('../../assets/right-arrow.svg')} alt='right arrow' />
               </div>
             </Link>
+
             <Link className='project' to='/projects/markdown-editor'>
               <div className='project-image-wrapper'>
                 <img src={require('../../assets/projects/markdown.png')} alt='markdown previewer' />
@@ -63,6 +65,7 @@ export default class Portfolio extends Component {
                 <img src={require('../../assets/right-arrow.svg')} alt='right arrow' />
               </div>
             </Link>
+
             <Link className='project' to='/projects/simon'>
               <div className='project-image-wrapper'>
                 <img src={require('../../assets/projects/simon.png')} alt='simon says' />
@@ -79,6 +82,7 @@ export default class Portfolio extends Component {
                 <img src={require('../../assets/right-arrow.svg')} alt='right arrow' />
               </div>
             </Link>
+
             <Link className='project' to='/projects/tic-tac-toe'>
               <div className='project-image-wrapper'>
                 <img src={require('../../assets/projects/tictactoe.png')} alt='tic tac toe' />
