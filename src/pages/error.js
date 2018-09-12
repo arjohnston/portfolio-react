@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import ContentSection from '../../components/content-section/ContentSection'
-import Projects from '../projects'
+import ContentSection from '../components/content-section/ContentSection'
+import Projects from './projects'
 
 export default class Error extends Component {
   render () {

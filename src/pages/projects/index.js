@@ -12,7 +12,7 @@ export default class Portfolio extends Component {
           <div className='pane-800 center'>
             <Link className='project' to='/projects/emergency-university'>
               <div className='project-image-wrapper'>
-                <img src={require('../../assets/projects/eu.png')} alt='Emergency University' />
+                <img src='/images/projects/eu.png' alt='Emergency University' />
               </div>
               <div className='project-content'>
                 <h2>
@@ -29,7 +29,7 @@ export default class Portfolio extends Component {
 
             <Link className='project' to='/projects/pixelated'>
               <div className='project-image-wrapper'>
-                <img src={require('../../assets/projects/mario.png')} alt='sidescroller' />
+                <img src='/images/projects/mario.png' alt='sidescroller' />
               </div>
               <div className='project-content'>
                 <h2>
@@ -46,7 +46,7 @@ export default class Portfolio extends Component {
 
             <Link className='project' to='/projects/markdown-editor'>
               <div className='project-image-wrapper'>
-                <img src={require('../../assets/projects/markdown.png')} alt='markdown previewer' />
+                <img src='/images/projects/markdown.png' alt='markdown previewer' />
               </div>
               <div className='project-content'>
                 <h2>
@@ -63,7 +63,7 @@ export default class Portfolio extends Component {
 
             <Link className='project' to='/projects/simon'>
               <div className='project-image-wrapper'>
-                <img src={require('../../assets/projects/simon.png')} alt='simon says' />
+                <img src='/images/projects/simon.png' alt='simon says' />
               </div>
               <div className='project-content'>
                 <h2>
@@ -80,7 +80,7 @@ export default class Portfolio extends Component {
 
             <Link className='project' to='/projects/tic-tac-toe'>
               <div className='project-image-wrapper'>
-                <img src={require('../../assets/projects/tictactoe.png')} alt='tic tac toe' />
+                <img src='/images/projects/tictactoe.png' alt='tic tac toe' />
               </div>
               <div className='project-content'>
                 <h2>
