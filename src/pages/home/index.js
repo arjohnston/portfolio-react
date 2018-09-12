@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Card from '../../components/card/Card'
 import './home.css'
 var Link = require('react-router-dom').Link
 
@@ -17,134 +18,45 @@ export default class Home extends Component {
           </section>
 
           <section className='portfolio'>
-            <div className='portfolio-wrapper'>
-              <div className='card-wrapper'>
-                <div className='portfolio-card-lg'>
-                  <Link to='/projects/emergency-university' className='card-cta'>
-                    <img src={require('../../assets/projects/eu.png')} alt='P' />
-                  </Link>
-                  <div className='project-info-wrapper'>
-                    <Link to='/projects/emergency-university'>
-                      <div className='project-info'>
-                        <span>/projects/emergency-university</span>
-                        <h3>Emergency University</h3>
-                      </div>
-                    </Link>
-
-                    <div className='project-meta'>
-                      <a href='github.com'>
-                        <img src={require('../../assets/github-circle.svg')} alt='Github Profile' />
-                        <span>view code</span>
-                      </a>
-                      <Link to='/projects/emergency-university'>
-                        <img src={require('../../assets/play.svg')} alt='View Project' />
-                        <span>view project</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+            <div className='grid'>
+              <div className='grid-section'>
+                <Card
+                  size='four-by-four'
+                  name='Emergency University'
+                  projectLink='/projects/emergency-university'
+                  image='/images/projects/eu.png'
+                  githubLink='#'
+                />
               </div>
 
-              <div className='card-wrapper'>
-                <div className='portfolio-card-md'>
-                  <Link to='/projects/pixelated' className='card-cta'>
-                    <img src={require('../../assets/projects/mario.png')} alt='Pixelated' />
-                  </Link>
-                  <div className='project-info-wrapper'>
-                    <Link to='/projects/pixelated'>
-                      <div className='project-info'>
-                        <span>/projects/pixelated</span>
-                        <h3>Pixelated</h3>
-                      </div>
-                    </Link>
+              <div className='grid-section'>
+                <Card
+                  name='Pixelated'
+                  projectLink='/projects/pixelated'
+                  image='/images/projects/mario.png'
+                  githubLink='#'
+                />
 
-                    <div className='project-meta'>
-                      <a href='github.com'>
-                        <img src={require('../../assets/github-circle.svg')} alt='Github Profile' />
-                        <span>view code</span>
-                      </a>
-                      <Link to='/projects/pixelated'>
-                        <img src={require('../../assets/play.svg')} alt='View Project' />
-                        <span>view project</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                <Card
+                  name='Tic Tac Toe'
+                  projectLink='/projects/tic-tac-toe'
+                  image='/images/projects/tictactoe.png'
+                  githubLink='#'
+                />
 
-                <div className='portfolio-card-md'>
-                  <Link to='/projects/tictactoe' className='card-cta'>
-                    <img src={require('../../assets/projects/tictactoe.png')} alt='Tic Tac Toe' />
-                  </Link>
-                  <div className='project-info-wrapper'>
-                    <Link to='/projects/tictactoe'>
-                      <div className='project-info'>
-                        <span>/projects/tictactoe</span>
-                        <h3>Tic Tac Toe</h3>
-                      </div>
-                    </Link>
+                <Card
+                  name='Markdown Editor'
+                  projectLink='/projects/markdown-editor'
+                  image='/images/projects/markdown.png'
+                  githubLink='#'
+                />
 
-                    <div className='project-meta'>
-                      <a href='github.com'>
-                        <img src={require('../../assets/github-circle.svg')} alt='Github Profile' />
-                        <span>view code</span>
-                      </a>
-                      <Link to='/projects/tictactoe'>
-                        <img src={require('../../assets/play.svg')} alt='View Project' />
-                        <span>view project</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                <div className='portfolio-card-md'>
-                  <Link to='/projects/markdown' className='card-cta'>
-                    <img src={require('../../assets/projects/markdown.png')} alt='Markdown Editor' />
-                  </Link>
-                  <div className='project-info-wrapper'>
-                    <Link to='/projects/markdown'>
-                      <div className='project-info'>
-                        <span>/projects/markdown</span>
-                        <h3>Markdown Editor</h3>
-                      </div>
-                    </Link>
-
-                    <div className='project-meta'>
-                      <a href='github.com'>
-                        <img src={require('../../assets/github-circle.svg')} alt='Github Profile' />
-                        <span>view code</span>
-                      </a>
-                      <Link to='/projects/markdown'>
-                        <img src={require('../../assets/play.svg')} alt='View Project' />
-                        <span>view project</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                <div className='portfolio-card-md'>
-                  <Link to='/projects/simon' className='card-cta'>
-                    <img src={require('../../assets/projects/simon.png')} alt='Simon Says' />
-                  </Link>
-                  <div className='project-info-wrapper'>
-                    <Link to='/projects/simon'>
-                      <div className='project-info'>
-                        <span>/projects/simon</span>
-                        <h3>Simon Says</h3>
-                      </div>
-                    </Link>
-
-                    <div className='project-meta'>
-                      <a href='github.com'>
-                        <img src={require('../../assets/github-circle.svg')} alt='Github Profile' />
-                        <span>view code</span>
-                      </a>
-                      <Link to='/projects/simon'>
-                        <img src={require('../../assets/play.svg')} alt='View Project' />
-                        <span>view project</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                <Card
+                  name='Simon Says'
+                  projectLink='/projects/simon'
+                  image='/images/projects/simon.png'
+                  githubLink='#'
+                />
               </div>
             </div>
 

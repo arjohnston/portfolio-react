@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import './error.css'
 import ContentSection from '../../components/content-section/ContentSection'
 import Projects from '../projects'
 

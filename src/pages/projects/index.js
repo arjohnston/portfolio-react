@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import './projects.css'
 import ContentSection from '../../components/content-section/ContentSection'
+import './projects.css'
 
 var Link = require('react-router-dom').Link
 
@@ -10,12 +10,7 @@ export default class Portfolio extends Component {
       <div className='project-wrapper'>
         <ContentSection>
           <div className='pane-800 center'>
-            <a
-              className='project'
-              href='https://emergencyuniversity.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
+            <Link className='project' to='/projects/emergency-university'>
               <div className='project-image-wrapper'>
                 <img src={require('../../assets/projects/eu.png')} alt='Emergency University' />
               </div>
@@ -30,7 +25,7 @@ export default class Portfolio extends Component {
               <div className='project-right-arrow'>
                 <img src={require('../../assets/right-arrow.svg')} alt='right arrow' />
               </div>
-            </a>
+            </Link>
 
             <Link className='project' to='/projects/pixelated'>
               <div className='project-image-wrapper'>

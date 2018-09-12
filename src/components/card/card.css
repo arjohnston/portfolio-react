@@ -1,0 +1,155 @@
+.card-cta {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; right: 0; left: 0; bottom: 0;
+}
+
+.card-cta img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.card-cta::before {
+  content: '';
+  background: linear-gradient(to top, transparent 50%, rgba(0,0,0,0.5) 100%);
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  top: 0;
+}
+
+.card {
+  margin: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,.28);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.card a {
+  overflow: hidden;
+}
+
+.card.four-by-four {
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  min-height: 500px;
+}
+
+.card.one-by-one {
+  width: calc(50% - 8px);
+  height: calc(50% - 8px);
+  min-height: 250px;
+}
+
+.project-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.card:hover .project-info-wrapper {
+  background-color: rgba(13, 115, 119, 0.95);
+}
+
+.card:hover .project-meta {
+  bottom: 0;
+}
+
+.card:hover a img {
+  transform: scale(1.01);
+}
+
+.project-meta,
+.project-info {
+  display: flex;
+  padding: 0 12px;
+  color: white;
+  z-index: 1;
+  position: absolute;
+  width: calc(100% - 24px);
+}
+
+.project-info {
+  top: 12px;
+  bottom: 80px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.project-info h3 {
+  margin: 0;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.project-info span {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.project-meta {
+  justify-content: space-around;
+  flex-direction: column;
+  height: 80px;
+  bottom: -80px;
+  transition: all 0.2s cubic-bezier(0.42, 0, 0.81, 1.41);
+}
+
+.project-meta > a {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  height: 100%;
+  color: white;
+  width: auto;
+}
+
+.project-meta > a:hover {
+  color: #00ADB5;
+}
+
+.project-meta > a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    flex-direction: column;
+  }
+  .card {
+    margin: 12px 4px;
+  }
+  .card-wrapper {
+    width: 100%;
+  }
+  .project-info-wrapper {
+    bottom: 0;
+  }
+  .card-cta::before {
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 100%);
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    margin: 12px 0;
+  }
+  .card.one-by-one {
+    width: 100%;
+  }
+  .portfolio-cta {
+    margin-top: 40px;
+  }
+}
