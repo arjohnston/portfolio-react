@@ -23,7 +23,7 @@ export default class Portfolio extends Component {
                 </p>
               </div>
               <div className='project-right-arrow'>
-                <img src={require('../../assets/right-arrow.svg')} alt='right arrow' />
+                <img src='/svg/right-arrow.svg' alt='right arrow' />
               </div>
             </Link>
 
@@ -40,7 +40,7 @@ export default class Portfolio extends Component {
                 </p>
               </div>
               <div className='project-right-arrow'>
-                <img src={require('../../assets/right-arrow.svg')} alt='right arrow' />
+                <img src='/svg/right-arrow.svg' alt='right arrow' />
               </div>
             </Link>
 
@@ -57,7 +57,7 @@ export default class Portfolio extends Component {
                 </p>
               </div>
               <div className='project-right-arrow'>
-                <img src={require('../../assets/right-arrow.svg')} alt='right arrow' />
+                <img src='/svg/right-arrow.svg' alt='right arrow' />
               </div>
             </Link>
 
@@ -74,7 +74,7 @@ export default class Portfolio extends Component {
                 </p>
               </div>
               <div className='project-right-arrow'>
-                <img src={require('../../assets/right-arrow.svg')} alt='right arrow' />
+                <img src='/svg/right-arrow.svg' alt='right arrow' />
               </div>
             </Link>
 
@@ -91,7 +91,7 @@ export default class Portfolio extends Component {
                 </p>
               </div>
               <div className='project-right-arrow'>
-                <img src={require('../../assets/right-arrow.svg')} alt='right arrow' />
+                <img src='/svg/right-arrow.svg' alt='right arrow' />
               </div>
             </Link>
           </div>

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import initialState from './initial-state'
 import * as CONSTANTS from './constants'
 import {
-  getWidth,
+  // getWidth,
   getHeight,
   getStyle,
   handleKeyDown,
@@ -11,9 +11,9 @@ import {
 } from './helpers'
 
 import {
-  moveClouds,
+  // moveClouds,
   checkCollisionY,
-  playerSpriteAnimation,
+  // playerSpriteAnimation,
   movePlayerSpriteLeft,
   movePlayerSpriteRight,
   movePlayerSpriteUp,
@@ -156,69 +156,69 @@ export default class Sidescroller extends Component {
     cloudSpriteStyle6.left = CONSTANTS.BOARD_WIDTH * 0.9 + 'px'
     cloudSpriteStyle6.top = CONSTANTS.SCREEN_HEIGHT * 0.05 + 'px'
 
-    let bushSpriteStyle1 = getStyle(CONSTANTS.BUSH_1_SPRITE_1)
-    bushSpriteStyle1.left = 105 + 'px'
-    bushSpriteStyle1.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
-
-    let bushSpriteStyle12 = getStyle(CONSTANTS.BUSH_1_SPRITE_2)
-    bushSpriteStyle12.left = 1100 + 'px'
-    bushSpriteStyle12.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
-
-    let bushSpriteStyle13 = getStyle(CONSTANTS.BUSH_1_SPRITE_3)
-    bushSpriteStyle13.left = 1985 + 'px'
-    bushSpriteStyle13.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
-
-    let bushSpriteStyle14 = getStyle(CONSTANTS.BUSH_1_SPRITE_4)
-    bushSpriteStyle14.left = 3160 + 'px'
-    bushSpriteStyle14.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
-
-    let bushSpriteStyle15 = getStyle(CONSTANTS.BUSH_1_SPRITE_5)
-    bushSpriteStyle15.left = 4040 + 'px'
-    bushSpriteStyle15.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
-
-    let bushSpriteStyle16 = getStyle(CONSTANTS.BUSH_1_SPRITE_6)
-    bushSpriteStyle16.left = 6380 + 'px'
-    bushSpriteStyle16.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
-
-    let bushSpriteStyle17 = getStyle(CONSTANTS.BUSH_1_SPRITE_7)
-    bushSpriteStyle17.left = 7365 + 'px'
-    bushSpriteStyle17.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
-
-    let bushSpriteStyle18 = getStyle(CONSTANTS.BUSH_1_SPRITE_8)
-    bushSpriteStyle18.left = 8175 + 'px'
-    bushSpriteStyle18.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
-
-    let bushSpriteStyle19 = getStyle(CONSTANTS.BUSH_1_SPRITE_9)
-    bushSpriteStyle19.left = 9315 + 'px'
-    bushSpriteStyle19.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
-
-    let bushSpriteStyle21 = getStyle(CONSTANTS.BUSH_2_SPRITE_1)
-    bushSpriteStyle21.left = 545 + 'px'
-    bushSpriteStyle21.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
-
-    let bushSpriteStyle22 = getStyle(CONSTANTS.BUSH_2_SPRITE_2)
-    bushSpriteStyle22.left = 2420 + 'px'
-    bushSpriteStyle22.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
-
-    let bushSpriteStyle23 = getStyle(CONSTANTS.BUSH_2_SPRITE_3)
-    bushSpriteStyle23.left = 3600 + 'px'
-    bushSpriteStyle23.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
-
-    let bushSpriteStyle24 = getStyle(CONSTANTS.BUSH_2_SPRITE_4)
-    bushSpriteStyle24.left = 6815 + 'px'
-    bushSpriteStyle24.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
-
-    let bushSpriteStyle25 = getStyle(CONSTANTS.BUSH_2_SPRITE_5)
-    bushSpriteStyle25.left = 7810 + 'px'
-    bushSpriteStyle25.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
-
-    let bushSpriteStyle26 = getStyle(CONSTANTS.BUSH_2_SPRITE_6)
-    bushSpriteStyle26.left = 8610 + 'px'
-    bushSpriteStyle26.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
-
-    let bushSpriteStyle27 = getStyle(CONSTANTS.BUSH_2_SPRITE_7)
-    bushSpriteStyle27.left = 9750 + 'px'
-    bushSpriteStyle27.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
+    // let bushSpriteStyle1 = getStyle(CONSTANTS.BUSH_1_SPRITE_1)
+    // bushSpriteStyle1.left = 105 + 'px'
+    // bushSpriteStyle1.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
+    //
+    // let bushSpriteStyle12 = getStyle(CONSTANTS.BUSH_1_SPRITE_2)
+    // bushSpriteStyle12.left = 1100 + 'px'
+    // bushSpriteStyle12.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
+    //
+    // let bushSpriteStyle13 = getStyle(CONSTANTS.BUSH_1_SPRITE_3)
+    // bushSpriteStyle13.left = 1985 + 'px'
+    // bushSpriteStyle13.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
+    //
+    // let bushSpriteStyle14 = getStyle(CONSTANTS.BUSH_1_SPRITE_4)
+    // bushSpriteStyle14.left = 3160 + 'px'
+    // bushSpriteStyle14.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
+    //
+    // let bushSpriteStyle15 = getStyle(CONSTANTS.BUSH_1_SPRITE_5)
+    // bushSpriteStyle15.left = 4040 + 'px'
+    // bushSpriteStyle15.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
+    //
+    // let bushSpriteStyle16 = getStyle(CONSTANTS.BUSH_1_SPRITE_6)
+    // bushSpriteStyle16.left = 6380 + 'px'
+    // bushSpriteStyle16.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
+    //
+    // let bushSpriteStyle17 = getStyle(CONSTANTS.BUSH_1_SPRITE_7)
+    // bushSpriteStyle17.left = 7365 + 'px'
+    // bushSpriteStyle17.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
+    //
+    // let bushSpriteStyle18 = getStyle(CONSTANTS.BUSH_1_SPRITE_8)
+    // bushSpriteStyle18.left = 8175 + 'px'
+    // bushSpriteStyle18.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
+    //
+    // let bushSpriteStyle19 = getStyle(CONSTANTS.BUSH_1_SPRITE_9)
+    // bushSpriteStyle19.left = 9315 + 'px'
+    // bushSpriteStyle19.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
+    //
+    // let bushSpriteStyle21 = getStyle(CONSTANTS.BUSH_2_SPRITE_1)
+    // bushSpriteStyle21.left = 545 + 'px'
+    // bushSpriteStyle21.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
+    //
+    // let bushSpriteStyle22 = getStyle(CONSTANTS.BUSH_2_SPRITE_2)
+    // bushSpriteStyle22.left = 2420 + 'px'
+    // bushSpriteStyle22.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
+    //
+    // let bushSpriteStyle23 = getStyle(CONSTANTS.BUSH_2_SPRITE_3)
+    // bushSpriteStyle23.left = 3600 + 'px'
+    // bushSpriteStyle23.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
+    //
+    // let bushSpriteStyle24 = getStyle(CONSTANTS.BUSH_2_SPRITE_4)
+    // bushSpriteStyle24.left = 6815 + 'px'
+    // bushSpriteStyle24.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
+    //
+    // let bushSpriteStyle25 = getStyle(CONSTANTS.BUSH_2_SPRITE_5)
+    // bushSpriteStyle25.left = 7810 + 'px'
+    // bushSpriteStyle25.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
+    //
+    // let bushSpriteStyle26 = getStyle(CONSTANTS.BUSH_2_SPRITE_6)
+    // bushSpriteStyle26.left = 8610 + 'px'
+    // bushSpriteStyle26.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
+    //
+    // let bushSpriteStyle27 = getStyle(CONSTANTS.BUSH_2_SPRITE_7)
+    // bushSpriteStyle27.left = 9750 + 'px'
+    // bushSpriteStyle27.top = CONSTANTS.SCREEN_HEIGHT - 25 - CONSTANTS.GROUND_HEIGHT + 'px'
 
     // let boxSpriteStyle1 = getStyle(CONSTANTS.BOX_SPRITE_1)
     // boxSpriteStyle1.left = 50 + 'px'
@@ -597,18 +597,20 @@ export default class Sidescroller extends Component {
     // spritesWithBoxCollider.push(CONSTANTS.BOX_SPRITE_19)
 
     let playerSpriteStyle = getStyle(CONSTANTS.PLAYER_SPRITE)
-    let playerSpritesheetStyle = getStyle(CONSTANTS.PLAYER_SPRITESHEET)
+    // let playerSpritesheetStyle = getStyle(CONSTANTS.PLAYER_SPRITESHEET)
     playerSpriteStyle.height = CONSTANTS.PLAYER_SPRITE_HEIGHT + 'px'
-    playerSpriteStyle.width = getWidth(CONSTANTS.PLAYER_SPRITESHEET) / CONSTANTS.PLAYER_SPRITESHEET_FRAMES + 'px'
+    // playerSpriteStyle.width = getWidth(CONSTANTS.PLAYER_SPRITESHEET) / CONSTANTS.PLAYER_SPRITESHEET_FRAMES + 'px'
+    playerSpriteStyle.width = CONSTANTS.PLAYER_SPRITE_HEIGHT + 'px'
     playerSpriteStyle.visibility = 'visible'
     playerSpriteStyle.top = CONSTANTS.SCREEN_HEIGHT * 2 / 3 + 'px'
     playerSpriteStyle.left = 0 + 'px'
-    playerSpritesheetStyle.left = 0
+    // playerSpritesheetStyle.left = 0
     spritesWithBoxCollider.push(CONSTANTS.PLAYER_SPRITE)
 
     let enemySpriteStyle1 = getStyle(CONSTANTS.ENEMY_1)
     enemySpriteStyle1.height = CONSTANTS.ENEMY_SPRITE_HEIGHT + 'px'
-    enemySpriteStyle1.width = getWidth(CONSTANTS.ENEMY_SPRITESHEET) / CONSTANTS.ENEMY_SPRITESHEET_FRAMES + 'px'
+    enemySpriteStyle1.width = CONSTANTS.ENEMY_SPRITE_HEIGHT + 'px'
+    // enemySpriteStyle1.width = getWidth(CONSTANTS.ENEMY_SPRITESHEET) / CONSTANTS.ENEMY_SPRITESHEET_FRAMES + 'px'
     enemySpriteStyle1.top = CONSTANTS.SCREEN_HEIGHT - CONSTANTS.GROUND_HEIGHT - getHeight(CONSTANTS.ENEMY_1) + 'px'
     enemySpriteStyle1.left = 1800 + 'px'
     enemySpriteStyle1.visibility = 'visible'
@@ -646,11 +648,11 @@ export default class Sidescroller extends Component {
     clearInterval(this.gameTimeInterval)
   }
 
-  startSpriteAnimationInterval () {
-    this.spriteAnimationInterval = setInterval(
-      () => this.spriteAnimation(), CONSTANTS.ANIMATION_SPEED
-    )
-  }
+  // startSpriteAnimationInterval () {
+  //   this.spriteAnimationInterval = setInterval(
+  //     () => this.spriteAnimation(), CONSTANTS.ANIMATION_SPEED
+  //   )
+  // }
 
   clearSpriteAnimationInterval () {
     clearInterval(this.spriteAnimationInterval)
@@ -659,23 +661,23 @@ export default class Sidescroller extends Component {
   startIntervals () {
     this.startGameLoopInterval()
     this.startGameTimeInterval()
-    this.startSpriteAnimationInterval()
+    // this.startSpriteAnimationInterval()
   }
 
   clearIntervals () {
     this.clearGameLoopInterval()
     this.clearGameTimeInterval()
-    this.clearSpriteAnimationInterval()
+    // this.clearSpriteAnimationInterval()
   }
 
-  spriteAnimation () {
-    playerSpriteAnimation(this.state.animation)
-  }
+  // spriteAnimation () {
+  //   playerSpriteAnimation(this.state.animation)
+  // }
 
   gameLoop () {
     this.movePlayerSprite(...this.state.movementQueue)
 
-    moveClouds()
+    // moveClouds()
   }
 
   handleGameState (input) {
@@ -731,7 +733,7 @@ export default class Sidescroller extends Component {
     let spriteMovingLeft = false
     let spriteMovingRight = false
     let spriteJumping = false
-    let animation = null
+    // let animation = null
 
     let spriteStyle = getStyle(CONSTANTS.PLAYER_SPRITE)
     let spritePositionX = parseInt(spriteStyle.left, 10)
@@ -780,7 +782,7 @@ export default class Sidescroller extends Component {
     if (spriteMovingLeft) {
       newSpritePositionX = movePlayerSpriteLeft(spritePositionX, ...this.state.spritesWithBoxCollider)
 
-      animation = 'MOVE_LEFT'
+      // animation = 'MOVE_LEFT'
     }
 
     // If only right and/or jump is pressed:
@@ -789,7 +791,7 @@ export default class Sidescroller extends Component {
     if (spriteMovingRight) {
       newSpritePositionX = movePlayerSpriteRight(spritePositionX, ...this.state.spritesWithBoxCollider)
 
-      animation = 'MOVE_RIGHT'
+      // animation = 'MOVE_RIGHT'
     }
 
     if (spriteJumping) {
@@ -825,13 +827,13 @@ export default class Sidescroller extends Component {
             this.falsifyPlayerSpriteJumpingState()
           }
 
-          if (spriteMovingRight) {
-            animation = 'JUMP_RIGHT'
-          } else if (spriteMovingLeft) {
-            animation = 'JUMP_LEFT'
-          } else {
-            animation = 'JUMP'
-          }
+          // if (spriteMovingRight) {
+          //   animation = 'JUMP_RIGHT'
+          // } else if (spriteMovingLeft) {
+          //   animation = 'JUMP_LEFT'
+          // } else {
+          //   animation = 'JUMP'
+          // }
         }
       }
     }
@@ -839,7 +841,7 @@ export default class Sidescroller extends Component {
     if (spriteFalling) {
       newSpritePositionY = movePlayerSpriteDown(spritePositionY, ...this.state.spritesWithBoxCollider)
 
-      animation = 'JUMP'
+      // animation = 'JUMP'
     }
 
     // If the player sprite is not moving in any direction
@@ -849,7 +851,7 @@ export default class Sidescroller extends Component {
       !spriteJumping &&
       !spriteFalling
     ) {
-      animation = null
+      // animation = null
     }
 
     newCameraPositionX = centerCameraX(newSpritePositionX)
@@ -860,7 +862,7 @@ export default class Sidescroller extends Component {
     cameraPositionStyle.left = newCameraPositionX + 'px'
 
     this.setState({
-      animation: animation
+      // animation: animation
     })
   }
 
@@ -891,15 +893,15 @@ export default class Sidescroller extends Component {
               backgroundColor: '#AACDF8'
             }}
             onMouseMove={this.showMouse.bind(this)}
-            >
+          >
             <div className='game-menu' style={{display: this.state.menuState ? 'flex' : 'none'}}>
               <div style={{display: this.state.menuState === 'startMenu' ? 'flex' : 'none'}}>
-                <img src={require('../../../assets/logo.svg')} alt='Pixels' />
+                <img src='/svg/projects/pixelated/pixelated-logo.svg' alt='Pixels' />
                 <button onClick={this.handleGameState.bind(this, 'startGame')}>Start</button>
                 <button onClick={this.handleGameState.bind(this, 'showControlMenu')}>Controls</button>
               </div>
               <div style={{display: this.state.menuState === 'pauseMenu' ? 'flex' : 'none'}}>
-                <img src={require('../../../assets/logo.svg')} alt='Pixels' />
+                <img src='/svg/projects/pixelated/pixelated-logo.svg' alt='Pixels' />
                 <button onClick={this.handleGameState.bind(this, 'resumeGame')}>Resume</button>
                 <button onClick={this.handleGameState.bind(this, 'showControlMenu')}>Controls</button>
               </div>
@@ -974,15 +976,15 @@ export default class Sidescroller extends Component {
                 className='clouds-3-sprite clouds'
                 id='clouds-6-sprite'
               />
-              <div
+              {/* <div
                 className='bush-1-sprite bush'
                 id='bush-1-sprite-1'
-              />
-              <div
+              /> */}
+              {/* <div
                 className='bush-1-sprite bush'
                 id='bush-1-sprite-2'
-              />
-              <div
+              /> */}
+              {/* <div
                 className='bush-1-sprite bush'
                 id='bush-1-sprite-3'
               />
@@ -1037,7 +1039,7 @@ export default class Sidescroller extends Component {
               <div
                 className='bush-2-sprite bush'
                 id='bush-2-sprite-7'
-              />
+              /> */}
               {/* <div
                 className='box-sprite-1 box'
                 id='box-sprite-1'
@@ -1322,21 +1324,21 @@ export default class Sidescroller extends Component {
                 className='enemy-sprite'
                 id='enemy-1-sprite'
               >
-                <img
+                {/* <img
                   src={require('../../../assets/enemy-spritesheet.png')}
                   alt='enemy sprite'
                   id='enemy-spritesheet'
-                />
+                /> */}
               </div>
               <div
                 className='player-sprite'
                 id='player-sprite'
               >
-                <img
+                {/* <img
                   src={require('../../../assets/player-spritesheet.png')}
                   alt='player sprite'
                   id='player-spritesheet'
-                />
+                /> */}
               </div>
             </div>
             <div className='score-wrapper'>

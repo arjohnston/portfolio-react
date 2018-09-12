@@ -5,56 +5,56 @@ import {
 } from './helpers'
 import * as CONSTANTS from './constants'
 
-export function moveClouds () {
-  let cloudStyle1 = getStyle(CONSTANTS.CLOUDS_1_SPRITE)
-  let cloudStyle2 = getStyle(CONSTANTS.CLOUDS_2_SPRITE)
-  let cloudStyle3 = getStyle(CONSTANTS.CLOUDS_3_SPRITE)
-  let cloudStyle4 = getStyle(CONSTANTS.CLOUDS_4_SPRITE)
-  let cloudStyle5 = getStyle(CONSTANTS.CLOUDS_5_SPRITE)
-  let cloudStyle6 = getStyle(CONSTANTS.CLOUDS_6_SPRITE)
-  let cloudLeft1 = parseFloat(cloudStyle1.left, 10)
-  let cloudLeft2 = parseFloat(cloudStyle2.left, 10)
-  let cloudLeft3 = parseFloat(cloudStyle3.left, 10)
-  let cloudLeft4 = parseFloat(cloudStyle4.left, 10)
-  let cloudLeft5 = parseFloat(cloudStyle5.left, 10)
-  let cloudLeft6 = parseFloat(cloudStyle6.left, 10)
-
-  if (cloudLeft1 + getWidth(CONSTANTS.CLOUDS_1_SPRITE) < 0) {
-    cloudStyle1.left = CONSTANTS.BOARD_WIDTH + 'px'
-  } else {
-    cloudStyle1.left = cloudLeft1 - CONSTANTS.CLOUD_1_SPEED + 'px'
-  }
-
-  if (cloudLeft2 + getWidth(CONSTANTS.CLOUDS_2_SPRITE) < 0) {
-    cloudStyle2.left = CONSTANTS.BOARD_WIDTH + 'px'
-  } else {
-    cloudStyle2.left = cloudLeft2 - CONSTANTS.CLOUD_2_SPEED + 'px'
-  }
-
-  if (cloudLeft3 + getWidth(CONSTANTS.CLOUDS_3_SPRITE) < 0) {
-    cloudStyle3.left = CONSTANTS.BOARD_WIDTH + 'px'
-  } else {
-    cloudStyle3.left = cloudLeft3 - CONSTANTS.CLOUD_3_SPEED + 'px'
-  }
-
-  if (cloudLeft4 + getWidth(CONSTANTS.CLOUDS_4_SPRITE) < 0) {
-    cloudStyle4.left = CONSTANTS.BOARD_WIDTH + 'px'
-  } else {
-    cloudStyle4.left = cloudLeft4 - CONSTANTS.CLOUD_1_SPEED + 'px'
-  }
-
-  if (cloudLeft5 + getWidth(CONSTANTS.CLOUDS_5_SPRITE) < 0) {
-    cloudStyle5.left = CONSTANTS.BOARD_WIDTH + 'px'
-  } else {
-    cloudStyle5.left = cloudLeft5 - CONSTANTS.CLOUD_2_SPEED + 'px'
-  }
-
-  if (cloudLeft6 + getWidth(CONSTANTS.CLOUDS_6_SPRITE) < 0) {
-    cloudStyle6.left = CONSTANTS.BOARD_WIDTH + 'px'
-  } else {
-    cloudStyle6.left = cloudLeft6 - CONSTANTS.CLOUD_3_SPEED + 'px'
-  }
-}
+// export function moveClouds () {
+//   let cloudStyle1 = getStyle(CONSTANTS.CLOUDS_1_SPRITE)
+//   let cloudStyle2 = getStyle(CONSTANTS.CLOUDS_2_SPRITE)
+//   let cloudStyle3 = getStyle(CONSTANTS.CLOUDS_3_SPRITE)
+//   let cloudStyle4 = getStyle(CONSTANTS.CLOUDS_4_SPRITE)
+//   let cloudStyle5 = getStyle(CONSTANTS.CLOUDS_5_SPRITE)
+//   let cloudStyle6 = getStyle(CONSTANTS.CLOUDS_6_SPRITE)
+//   let cloudLeft1 = parseFloat(cloudStyle1.left, 10)
+//   let cloudLeft2 = parseFloat(cloudStyle2.left, 10)
+//   let cloudLeft3 = parseFloat(cloudStyle3.left, 10)
+//   let cloudLeft4 = parseFloat(cloudStyle4.left, 10)
+//   let cloudLeft5 = parseFloat(cloudStyle5.left, 10)
+//   let cloudLeft6 = parseFloat(cloudStyle6.left, 10)
+//
+//   if (cloudLeft1 + getWidth(CONSTANTS.CLOUDS_1_SPRITE) < 0) {
+//     cloudStyle1.left = CONSTANTS.BOARD_WIDTH + 'px'
+//   } else {
+//     cloudStyle1.left = cloudLeft1 - CONSTANTS.CLOUD_1_SPEED + 'px'
+//   }
+//
+//   if (cloudLeft2 + getWidth(CONSTANTS.CLOUDS_2_SPRITE) < 0) {
+//     cloudStyle2.left = CONSTANTS.BOARD_WIDTH + 'px'
+//   } else {
+//     cloudStyle2.left = cloudLeft2 - CONSTANTS.CLOUD_2_SPEED + 'px'
+//   }
+//
+//   if (cloudLeft3 + getWidth(CONSTANTS.CLOUDS_3_SPRITE) < 0) {
+//     cloudStyle3.left = CONSTANTS.BOARD_WIDTH + 'px'
+//   } else {
+//     cloudStyle3.left = cloudLeft3 - CONSTANTS.CLOUD_3_SPEED + 'px'
+//   }
+//
+//   if (cloudLeft4 + getWidth(CONSTANTS.CLOUDS_4_SPRITE) < 0) {
+//     cloudStyle4.left = CONSTANTS.BOARD_WIDTH + 'px'
+//   } else {
+//     cloudStyle4.left = cloudLeft4 - CONSTANTS.CLOUD_1_SPEED + 'px'
+//   }
+//
+//   if (cloudLeft5 + getWidth(CONSTANTS.CLOUDS_5_SPRITE) < 0) {
+//     cloudStyle5.left = CONSTANTS.BOARD_WIDTH + 'px'
+//   } else {
+//     cloudStyle5.left = cloudLeft5 - CONSTANTS.CLOUD_2_SPEED + 'px'
+//   }
+//
+//   if (cloudLeft6 + getWidth(CONSTANTS.CLOUDS_6_SPRITE) < 0) {
+//     cloudStyle6.left = CONSTANTS.BOARD_WIDTH + 'px'
+//   } else {
+//     cloudStyle6.left = cloudLeft6 - CONSTANTS.CLOUD_3_SPEED + 'px'
+//   }
+// }
 
 // Refactor all collision functions for DRY
 // Checks general collision with object
@@ -244,64 +244,64 @@ export function checkCollisionY (
   return false
 }
 
-export function playerSpriteAnimation (movement = null) {
-  let spritesheetStyle = getStyle(CONSTANTS.PLAYER_SPRITESHEET)
-  let spritesheetWidth = getWidth(CONSTANTS.PLAYER_SPRITESHEET)
-  let amountOfSpriteFrames
-  let currentSpritesheetPosition = parseFloat(spritesheetStyle.left, 10)
-  let spritesheetFrameWidth
-  let newSpritesheetPosition = currentSpritesheetPosition
+// export function playerSpriteAnimation (movement = null) {
+// let spritesheetStyle = getStyle(CONSTANTS.PLAYER_SPRITESHEET)
+// let spritesheetWidth = getWidth(CONSTANTS.PLAYER_SPRITESHEET)
+// let amountOfSpriteFrames
+// let currentSpritesheetPosition = parseFloat(spritesheetStyle.left, 10)
+// let spritesheetFrameWidth
+// let newSpritesheetPosition = currentSpritesheetPosition
 
-  amountOfSpriteFrames = CONSTANTS.PLAYER_SPRITESHEET_FRAMES
-  spritesheetFrameWidth = spritesheetWidth / amountOfSpriteFrames
-
-  newSpritesheetPosition -= spritesheetFrameWidth
-
-  if (movement === 'JUMP' || movement === 'JUMP_LEFT' || movement === 'JUMP_RIGHT') {
-    switch (movement) {
-      case 'JUMP_LEFT':
-        spritesheetStyle.transform = 'rotateY(180deg)'
-        spritesheetStyle.left = -(spritesheetWidth - (spritesheetFrameWidth * 2)) + 'px'
-        break
-
-      case 'JUMP_RIGHT':
-        spritesheetStyle.transform = 'rotateY(0)'
-        spritesheetStyle.left = -spritesheetFrameWidth + 'px'
-        break
-
-      default:
-        if (spritesheetStyle.transform === 'rotateY(180deg)') {
-          spritesheetStyle.left = -(spritesheetWidth - (spritesheetFrameWidth * 2)) + 'px'
-        } else {
-          spritesheetStyle.left = -spritesheetFrameWidth + 'px'
-        }
-    }
-  } else if (movement === 'MOVE_RIGHT') {
-    if (Math.round(Math.abs(newSpritesheetPosition)) >= spritesheetWidth ||
-    Math.round(Math.abs(newSpritesheetPosition)) < (2 * spritesheetFrameWidth)) {
-      spritesheetStyle.left = -(2 * spritesheetFrameWidth) + 'px'
-    } else {
-      spritesheetStyle.left = newSpritesheetPosition + 'px'
-    }
-
-    spritesheetStyle.transform = 'rotateY(0)'
-  } else if (movement === 'MOVE_LEFT') {
-    if (Math.round(Math.abs(newSpritesheetPosition)) >= spritesheetWidth - (3 * spritesheetFrameWidth) ||
-    Math.round(Math.abs(newSpritesheetPosition)) < 0) {
-      spritesheetStyle.left = 0 + 'px'
-    } else {
-      spritesheetStyle.left = newSpritesheetPosition + 'px'
-    }
-
-    spritesheetStyle.transform = 'rotateY(180deg)'
-  } else {
-    if (spritesheetStyle.transform === 'rotateY(180deg)') {
-      spritesheetStyle.left = -(spritesheetWidth - spritesheetFrameWidth) + 'px'
-    } else {
-      spritesheetStyle.left = '0px'
-    }
-  }
-}
+//   amountOfSpriteFrames = CONSTANTS.PLAYER_SPRITESHEET_FRAMES
+//   spritesheetFrameWidth = spritesheetWidth / amountOfSpriteFrames
+//
+//   newSpritesheetPosition -= spritesheetFrameWidth
+//
+//   if (movement === 'JUMP' || movement === 'JUMP_LEFT' || movement === 'JUMP_RIGHT') {
+//     switch (movement) {
+//       case 'JUMP_LEFT':
+//         spritesheetStyle.transform = 'rotateY(180deg)'
+//         spritesheetStyle.left = -(spritesheetWidth - (spritesheetFrameWidth * 2)) + 'px'
+//         break
+//
+//       case 'JUMP_RIGHT':
+//         spritesheetStyle.transform = 'rotateY(0)'
+//         spritesheetStyle.left = -spritesheetFrameWidth + 'px'
+//         break
+//
+//       default:
+//         if (spritesheetStyle.transform === 'rotateY(180deg)') {
+//           spritesheetStyle.left = -(spritesheetWidth - (spritesheetFrameWidth * 2)) + 'px'
+//         } else {
+//           spritesheetStyle.left = -spritesheetFrameWidth + 'px'
+//         }
+//     }
+//   } else if (movement === 'MOVE_RIGHT') {
+//     if (Math.round(Math.abs(newSpritesheetPosition)) >= spritesheetWidth ||
+//     Math.round(Math.abs(newSpritesheetPosition)) < (2 * spritesheetFrameWidth)) {
+//       spritesheetStyle.left = -(2 * spritesheetFrameWidth) + 'px'
+//     } else {
+//       spritesheetStyle.left = newSpritesheetPosition + 'px'
+//     }
+//
+//     spritesheetStyle.transform = 'rotateY(0)'
+//   } else if (movement === 'MOVE_LEFT') {
+//     if (Math.round(Math.abs(newSpritesheetPosition)) >= spritesheetWidth - (3 * spritesheetFrameWidth) ||
+//     Math.round(Math.abs(newSpritesheetPosition)) < 0) {
+//       spritesheetStyle.left = 0 + 'px'
+//     } else {
+//       spritesheetStyle.left = newSpritesheetPosition + 'px'
+//     }
+//
+//     spritesheetStyle.transform = 'rotateY(180deg)'
+//   } else {
+//     if (spritesheetStyle.transform === 'rotateY(180deg)') {
+//       spritesheetStyle.left = -(spritesheetWidth - spritesheetFrameWidth) + 'px'
+//     } else {
+//       spritesheetStyle.left = '0px'
+//     }
+//   }
+// }
 
 export function movePlayerSpriteLeft (spritePositionX, ...spritesWithBoxCollider) {
   let [ ...spritesWithBoxColliderArray ] = spritesWithBoxCollider

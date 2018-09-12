@@ -70,7 +70,7 @@ export default class Home extends Component {
 
           <div className='profile-image'>
             <img
-              src={require('../../assets/profile-sm.png')}
+              src='/images/profile-sm.png'
               alt='andrew johnston'
             />
           </div>

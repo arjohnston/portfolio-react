@@ -25,11 +25,11 @@ export default class Card extends Component {
 
           <div className='project-meta'>
             <a href={this.props.githubLink}>
-              <img src={require('../../assets/github-circle.svg')} alt='Github Profile' />
+              <img src='/svg/github-circle.svg' alt='Github Profile' />
               <span>view code</span>
             </a>
             <Link to={this.props.projectLink}>
-              <img src={require('../../assets/play.svg')} alt='View Project' />
+              <img src='/svg/play.svg' alt='View Project' />
               <span>view project</span>
             </Link>
           </div>
