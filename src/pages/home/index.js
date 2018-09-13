@@ -25,6 +25,7 @@ export default class Home extends Component {
                   name='Emergency University'
                   projectLink='/projects/emergency-university'
                   image='/images/projects/eu.png'
+                  languageIcon='/svg/language-icons/react.svg'
                   githubLink='#'
                 />
               </div>
@@ -34,6 +35,7 @@ export default class Home extends Component {
                   name='Pixelated'
                   projectLink='/projects/pixelated'
                   image='/images/projects/mario.png'
+                  languageIcon='/svg/language-icons/react.svg'
                   githubLink='#'
                 />
 
@@ -41,6 +43,7 @@ export default class Home extends Component {
                   name='Tic Tac Toe'
                   projectLink='/projects/tic-tac-toe'
                   image='/images/projects/tictactoe.png'
+                  languageIcon='/svg/language-icons/react.svg'
                   githubLink='#'
                 />
 
@@ -48,6 +51,7 @@ export default class Home extends Component {
                   name='Markdown Editor'
                   projectLink='/projects/markdown-editor'
                   image='/images/projects/markdown.png'
+                  languageIcon='/svg/language-icons/react.svg'
                   githubLink='#'
                 />
 
@@ -55,6 +59,7 @@ export default class Home extends Component {
                   name='Simon Says'
                   projectLink='/projects/simon'
                   image='/images/projects/simon.png'
+                  languageIcon='/svg/language-icons/react.svg'
                   githubLink='#'
                 />
               </div>

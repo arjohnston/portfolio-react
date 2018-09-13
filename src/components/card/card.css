@@ -97,6 +97,12 @@
   color: rgba(255,255,255,0.7);
 }
 
+.project-info img {
+  width: 50px;
+  position: absolute;
+  top: 0; right: 0;
+}
+
 .project-meta {
   justify-content: space-around;
   flex-direction: column;
@@ -125,9 +131,6 @@
 }
 
 @media (max-width: 900px) {
-  .grid {
-    flex-direction: column;
-  }
   .card {
     margin: 12px 4px;
   }
@@ -136,9 +139,6 @@
   }
   .project-info-wrapper {
     bottom: 0;
-  }
-  .card-cta::before {
-    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 100%);
   }
 }
 

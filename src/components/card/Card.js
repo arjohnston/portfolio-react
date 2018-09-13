@@ -20,6 +20,8 @@ export default class Card extends Component {
             <div className='project-info'>
               <span>{this.props.projectLink}</span>
               <h3>{this.props.name}</h3>
+
+              {this.props.languageIcon && <img src={this.props.languageIcon} alt='Project Language' />}
             </div>
           </Link>
 

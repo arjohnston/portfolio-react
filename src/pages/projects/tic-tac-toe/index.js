@@ -144,14 +144,14 @@ export default class Tictactoe extends Component {
   evaluate (board) {
     let score = 0
 
-    score += this.evaluateLine(board, 0, 0, 0, 1, 0, 2)  // row 0
-    score += this.evaluateLine(board, 1, 0, 1, 1, 1, 2)  // row 1
-    score += this.evaluateLine(board, 2, 0, 2, 1, 2, 2)  // row 2
-    score += this.evaluateLine(board, 0, 0, 1, 0, 2, 0)  // col 0
-    score += this.evaluateLine(board, 0, 1, 1, 1, 2, 1)  // col 1
-    score += this.evaluateLine(board, 0, 2, 1, 2, 2, 2)  // col 2
-    score += this.evaluateLine(board, 0, 0, 1, 1, 2, 2)  // diagonal
-    score += this.evaluateLine(board, 0, 2, 1, 1, 2, 0)  // alternate diagonal
+    score += this.evaluateLine(board, 0, 0, 0, 1, 0, 2) // row 0
+    score += this.evaluateLine(board, 1, 0, 1, 1, 1, 2) // row 1
+    score += this.evaluateLine(board, 2, 0, 2, 1, 2, 2) // row 2
+    score += this.evaluateLine(board, 0, 0, 1, 0, 2, 0) // col 0
+    score += this.evaluateLine(board, 0, 1, 1, 1, 2, 1) // col 1
+    score += this.evaluateLine(board, 0, 2, 1, 2, 2, 2) // col 2
+    score += this.evaluateLine(board, 0, 0, 1, 1, 2, 2) // diagonal
+    score += this.evaluateLine(board, 0, 2, 1, 1, 2, 0) // alternate diagonal
 
     return score
   }

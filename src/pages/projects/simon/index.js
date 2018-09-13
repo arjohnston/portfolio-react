@@ -148,13 +148,13 @@ export default class Simon extends Component {
         <div
           className='settings-button'
           onClick={this.toggleMenu.bind(this)}
-          >
+        >
           Settings
         </div>
         <div
           className='settings-button'
           onClick={this.toggleStart.bind(this)}
-          >
+        >
           {this.state.gameInProgress ? 'Reset' : 'Start'}
         </div>
         <div>
