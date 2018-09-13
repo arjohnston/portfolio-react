@@ -477,21 +477,21 @@ export default class Tictactoe extends Component {
                   ${this.state.selected === null ? 'hover' : ''} ${this.state.selected === 'X' ? 'selected' : ''}
                   `}
                 disabled={this.state.selected}
-                >
+              >
                   X
-                </button>
+              </button>
               <button
                 onClick={this.selection.bind(this, 'O')}
                 className={`
                   ${this.state.selected === null ? 'hover' : ''} ${this.state.selected === 'O' ? 'selected' : ''}
                   `}
                 disabled={this.state.selected}
-                >
+              >
                   O
-                </button>
+              </button>
             </div>
             <div className='result'>{this.state.result}</div>
-            <table className='tic-tac-toe-gameboard' onClick={this.handleClick.bind(this)}>
+            <table className={`tic-tac-toe-gameboard${this.state.selected ? ' active' : ''}`} onClick={this.handleClick.bind(this)}>
               <tbody>
                 <tr>
                   <td id='00' className={this.state.board[0][0] !== '' ? 'selected' : ''}>

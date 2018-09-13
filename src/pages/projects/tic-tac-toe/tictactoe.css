@@ -24,10 +24,10 @@
   cursor: pointer;
 }
 .selection button.hover:hover {
-  background: #00ADB5;
+  background: #0d7377;
 }
 .selection button.selected {
-  background: #00ADB5;
+  background: #0d7377;
 }
 .result {
   height: 40px;
@@ -52,7 +52,7 @@ table.tic-tac-toe-gameboard {
   align-items: center;
 	width: 80px;
 	height: 80px;
-	background-color: #222831;
+  background-color: #222831;
 	color: white;
 	border: none;
 	border-radius: 10%;
@@ -61,13 +61,17 @@ table.tic-tac-toe-gameboard {
 	transition: background-color 0.2s ease;
 }
 
+.tic-tac-toe-gameboard.active td {
+  background-color: #393E46;
+}
+
 .tic-tac-toe-gameboard td.selected {
-  background: #00ADB5;
+  background: #0d7377;
 }
 
 .tic-tac-toe-gameboard td:hover {
 	cursor: pointer;
-	background-color: #00ADB5;
+	background-color: #0d7377;
 }
 
 .tic-tac-toe-gameboard tr {
