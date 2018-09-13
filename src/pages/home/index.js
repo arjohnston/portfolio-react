@@ -17,7 +17,8 @@ export default class Home extends Component {
     this.state = {
       heroTextIndex: null,
       heroTextStyle: null,
-      textAnimationTimer: null
+      textAnimationTimer: null,
+      pageLoaded: false
     }
   }
 
@@ -26,7 +27,14 @@ export default class Home extends Component {
   }
 
   startTextAnimationTimer () {
-    setTimeout(this.openText.bind(this), HERO_TEXT_ANIMATION_INTERVAL)
+    let startDelay = 500
+    setTimeout(this.openText.bind(this), HERO_TEXT_ANIMATION_INTERVAL - startDelay)
+
+    setTimeout(() => {
+      this.setState({
+        pageLoaded: true
+      })
+    }, 50)
   }
 
   openText () {
@@ -88,7 +96,7 @@ export default class Home extends Component {
     return (
       <div>
         <div className='home-wrapper'>
-          <section className='hero'>
+          <section className={`hero${this.state.pageLoaded ? ' active' : ''}`}>
             <div className='hero-wrapper'>
               <h1>andrew johnston</h1>
               <span
@@ -99,7 +107,7 @@ export default class Home extends Component {
             </div>
           </section>
 
-          <section className='portfolio'>
+          <section className={`portfolio${this.state.pageLoaded ? ' active' : ''}`}>
             <div className='grid'>
               <div className='grid-section'>
                 <Card
@@ -162,7 +170,7 @@ export default class Home extends Component {
             />
           </div>
 
-          <section className='about'>
+          <section className={`about${this.state.pageLoaded ? ' active' : ''}`}>
             <div className='about-wrapper'>
               <p>
                 Andrew is a professional front end web developer, with full stack experience. He works daily in a collaborive environment to make life-saving tools for people.

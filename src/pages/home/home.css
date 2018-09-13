@@ -2,6 +2,17 @@
   background-color: #222831;
 }
 
+.home-wrapper section > div {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease 0s;
+}
+
+.home-wrapper section.active > div {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hero {
   height: 400px;
   color: white;
