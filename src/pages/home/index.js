@@ -1,20 +1,102 @@
 import React, { Component } from 'react'
 import Card from '../../components/card/Card'
 import './home.css'
-var Link = require('react-router-dom').Link
+const Link = require('react-router-dom').Link
+
+const heroText = [
+  'web developer.',
+  'creator.',
+  'designer.'
+]
+const HERO_TEXT_ANIMATION_INTERVAL = 1500
 
 export default class Home extends Component {
+  constructor () {
+    super()
+
+    this.state = {
+      heroTextIndex: null,
+      heroTextStyle: null,
+      textAnimationTimer: null
+    }
+  }
+
+  componentDidMount () {
+    this.startTextAnimationTimer()
+  }
+
+  startTextAnimationTimer () {
+    setTimeout(this.openText.bind(this), HERO_TEXT_ANIMATION_INTERVAL)
+  }
+
+  openText () {
+    let callback = () => {
+      this.setState({
+        animating: false,
+        heroTextStyle: {
+          maxWidth: '100%'
+        }
+      }, () => {
+        this.closeText()
+      })
+
+      delete this.openTextAnimation
+    }
+
+    this.setState({
+      animating: true,
+      heroTextIndex: this.state.heroTextIndex >= heroText.length - 1 || this.state.heroTextIndex === null ? 0 : this.state.heroTextIndex + 1
+    }, () => {
+      this.setState({
+        heroTextStyle: {
+          maxWidth: '100%',
+          transition: `max-width ${HERO_TEXT_ANIMATION_INTERVAL}ms steps(30)`
+        }
+      })
+      let closeAnimationDelay = 1000
+      this.openTextAnimation = setTimeout(callback, HERO_TEXT_ANIMATION_INTERVAL + closeAnimationDelay)
+    })
+  }
+
+  closeText () {
+    let callback = () => {
+      this.setState({
+        animating: false,
+        heroTextStyle: null
+      }, () => {
+        this.openText()
+      })
+
+      delete this.closeTextAnimation
+    }
+
+    this.setState({
+      animating: true
+    }, () => {
+      this.setState({
+        heroTextStyle: {
+          maxWidth: '0px',
+          transition: `max-width ${HERO_TEXT_ANIMATION_INTERVAL}ms steps(30)`
+        }
+      })
+      let openAnimationDelay = 100
+      this.closeTextAnimation = setTimeout(callback, HERO_TEXT_ANIMATION_INTERVAL + openAnimationDelay)
+    })
+  }
+
   render () {
     return (
       <div>
         <div className='home-wrapper'>
-          <section className='hero-wrapper'>
-            <h1>andrew johnston</h1>
-            <span>react.js developer</span>
-            <span className='span-break'>&nbsp;⁃&nbsp;</span>
-            <span>creator</span>
-            <span className='span-break'>&nbsp;⁃&nbsp;</span>
-            <span>designer&nbsp;</span>
+          <section className='hero'>
+            <div className='hero-wrapper'>
+              <h1>andrew johnston</h1>
+              <span
+                style={this.state.heroTextStyle}
+              >
+                {heroText[this.state.heroTextIndex === null ? 0 : this.state.heroTextIndex]}
+              </span>
+            </div>
           </section>
 
           <section className='portfolio'>
