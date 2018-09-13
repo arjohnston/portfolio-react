@@ -1,1 +1,181 @@
-'use strict'; var precacheConfig = [['/index.html', 'f73fda6cf9b66d9e7e9dcc0ddea619da'], ['/static/css/main.b2551fb3.css', 'b894a0ddd363b700c9bc71c7fd07eadc'], ['/static/js/main.f5758ce2.js', 'a36d53eb1f4631d19fec7f506e287ee4'], ['/static/media/logo.d8da14f9.svg', 'd8da14f97b845c9eb66e7857bb104bcf']]; var cacheName = 'sw-precache-v3-sw-precache-webpack-plugin-' + (self.registration ? self.registration.scope : ''); var ignoreUrlParametersMatching = [/^utm_/]; var addDirectoryIndex = function (e, t) { var n = new URL(e); return n.pathname.slice(-1) === '/' && (n.pathname += t), n.toString() }; var cleanResponse = function (t) { return t.redirected ? ('body' in t ? Promise.resolve(t.body) : t.blob()).then(function (e) { return new Response(e, { headers: t.headers, status: t.status, statusText: t.statusText }) }) : Promise.resolve(t) }; var createCacheKey = function (e, t, n, r) { var a = new URL(e); return r && a.pathname.match(r) || (a.search += (a.search ? '&' : '') + encodeURIComponent(t) + '=' + encodeURIComponent(n)), a.toString() }; var isPathWhitelisted = function (e, t) { if (e.length === 0) return !0; var n = new URL(t).pathname; return e.some(function (e) { return n.match(e) }) }; var stripIgnoredUrlParameters = function (e, n) { var t = new URL(e); return t.hash = '', t.search = t.search.slice(1).split('&').map(function (e) { return e.split('=') }).filter(function (t) { return n.every(function (e) { return !e.test(t[0]) }) }).map(function (e) { return e.join('=') }).join('&'), t.toString() }; var hashParamName = '_sw-precache'; var urlsToCacheKeys = new Map(precacheConfig.map(function (e) { var t = e[0]; var n = e[1]; var r = new URL(t, self.location); var a = createCacheKey(r, hashParamName, n, /\.\w{8}\./); return [r.toString(), a] })); function setOfCachedUrls (e) { return e.keys().then(function (e) { return e.map(function (e) { return e.url }) }).then(function (e) { return new Set(e) }) }self.addEventListener('install', function (e) { e.waitUntil(caches.open(cacheName).then(function (r) { return setOfCachedUrls(r).then(function (n) { return Promise.all(Array.from(urlsToCacheKeys.values()).map(function (t) { if (!n.has(t)) { var e = new Request(t, { credentials: 'same-origin' }); return fetch(e).then(function (e) { if (!e.ok) throw new Error('Request for ' + t + ' returned a response with status ' + e.status); return cleanResponse(e).then(function (e) { return r.put(t, e) }) }) } })) }) }).then(function () { return self.skipWaiting() })) }), self.addEventListener('activate', function (e) { var n = new Set(urlsToCacheKeys.values()); e.waitUntil(caches.open(cacheName).then(function (t) { return t.keys().then(function (e) { return Promise.all(e.map(function (e) { if (!n.has(e.url)) return t.delete(e) })) }) }).then(function () { return self.clients.claim() })) }), self.addEventListener('fetch', function (t) { if (t.request.method === 'GET') { var e; var n = stripIgnoredUrlParameters(t.request.url, ignoreUrlParametersMatching); var r = 'index.html'; (e = urlsToCacheKeys.has(n)) || (n = addDirectoryIndex(n, r), e = urlsToCacheKeys.has(n)); var a = '/index.html'; !e && t.request.mode === 'navigate' && isPathWhitelisted(['^(?!\\/__).*'], t.request.url) && (n = new URL(a, self.location).toString(), e = urlsToCacheKeys.has(n)), e && t.respondWith(caches.open(cacheName).then(function (e) { return e.match(urlsToCacheKeys.get(n)).then(function (e) { if (e) return e; throw Error('The cached response that was expected is missing.') }) }).catch(function (e) { return console.warn('Couldn\'t serve response for "%s" from cache: %O', t.request.url, e), fetch(t.request) })) } })
+'use strict'
+var precacheConfig = [
+    ['/index.html', '331e551cc325b99d4ff0bb7c2167137e'],
+    ['/static/css/main.b2551fb3.css', 'b894a0ddd363b700c9bc71c7fd07eadc'],
+    ['/static/js/main.54e3f360.js', '60d93a78766fd4d292cd42cc492143e3'],
+    ['/static/media/logo.d8da14f9.svg', 'd8da14f97b845c9eb66e7857bb104bcf']
+  ],
+  cacheName =
+    'sw-precache-v3-sw-precache-webpack-plugin-' +
+    (self.registration ? self.registration.scope : ''),
+  ignoreUrlParametersMatching = [/^utm_/],
+  addDirectoryIndex = function(e, t) {
+    var n = new URL(e)
+    return '/' === n.pathname.slice(-1) && (n.pathname += t), n.toString()
+  },
+  cleanResponse = function(t) {
+    return t.redirected
+      ? ('body' in t ? Promise.resolve(t.body) : t.blob()).then(function(e) {
+          return new Response(e, {
+            headers: t.headers,
+            status: t.status,
+            statusText: t.statusText
+          })
+        })
+      : Promise.resolve(t)
+  },
+  createCacheKey = function(e, t, n, r) {
+    var a = new URL(e)
+    return (
+      (r && a.pathname.match(r)) ||
+        (a.search +=
+          (a.search ? '&' : '') +
+          encodeURIComponent(t) +
+          '=' +
+          encodeURIComponent(n)),
+      a.toString()
+    )
+  },
+  isPathWhitelisted = function(e, t) {
+    if (0 === e.length) return !0
+    var n = new URL(t).pathname
+    return e.some(function(e) {
+      return n.match(e)
+    })
+  },
+  stripIgnoredUrlParameters = function(e, n) {
+    var t = new URL(e)
+    return (
+      (t.hash = ''),
+      (t.search = t.search
+        .slice(1)
+        .split('&')
+        .map(function(e) {
+          return e.split('=')
+        })
+        .filter(function(t) {
+          return n.every(function(e) {
+            return !e.test(t[0])
+          })
+        })
+        .map(function(e) {
+          return e.join('=')
+        })
+        .join('&')),
+      t.toString()
+    )
+  },
+  hashParamName = '_sw-precache',
+  urlsToCacheKeys = new Map(
+    precacheConfig.map(function(e) {
+      var t = e[0],
+        n = e[1],
+        r = new URL(t, self.location),
+        a = createCacheKey(r, hashParamName, n, /\.\w{8}\./)
+      return [r.toString(), a]
+    })
+  )
+function setOfCachedUrls(e) {
+  return e
+    .keys()
+    .then(function(e) {
+      return e.map(function(e) {
+        return e.url
+      })
+    })
+    .then(function(e) {
+      return new Set(e)
+    })
+}
+self.addEventListener('install', function(e) {
+  e.waitUntil(
+    caches
+      .open(cacheName)
+      .then(function(r) {
+        return setOfCachedUrls(r).then(function(n) {
+          return Promise.all(
+            Array.from(urlsToCacheKeys.values()).map(function(t) {
+              if (!n.has(t)) {
+                var e = new Request(t, { credentials: 'same-origin' })
+                return fetch(e).then(function(e) {
+                  if (!e.ok)
+                    throw new Error(
+                      'Request for ' +
+                        t +
+                        ' returned a response with status ' +
+                        e.status
+                    )
+                  return cleanResponse(e).then(function(e) {
+                    return r.put(t, e)
+                  })
+                })
+              }
+            })
+          )
+        })
+      })
+      .then(function() {
+        return self.skipWaiting()
+      })
+  )
+}),
+  self.addEventListener('activate', function(e) {
+    var n = new Set(urlsToCacheKeys.values())
+    e.waitUntil(
+      caches
+        .open(cacheName)
+        .then(function(t) {
+          return t.keys().then(function(e) {
+            return Promise.all(
+              e.map(function(e) {
+                if (!n.has(e.url)) return t.delete(e)
+              })
+            )
+          })
+        })
+        .then(function() {
+          return self.clients.claim()
+        })
+    )
+  }),
+  self.addEventListener('fetch', function(t) {
+    if ('GET' === t.request.method) {
+      var e,
+        n = stripIgnoredUrlParameters(
+          t.request.url,
+          ignoreUrlParametersMatching
+        ),
+        r = 'index.html'
+      ;(e = urlsToCacheKeys.has(n)) ||
+        ((n = addDirectoryIndex(n, r)), (e = urlsToCacheKeys.has(n)))
+      var a = '/index.html'
+      !e &&
+        'navigate' === t.request.mode &&
+        isPathWhitelisted(['^(?!\\/__).*'], t.request.url) &&
+        ((n = new URL(a, self.location).toString()),
+        (e = urlsToCacheKeys.has(n))),
+        e &&
+          t.respondWith(
+            caches
+              .open(cacheName)
+              .then(function(e) {
+                return e.match(urlsToCacheKeys.get(n)).then(function(e) {
+                  if (e) return e
+                  throw Error(
+                    'The cached response that was expected is missing.'
+                  )
+                })
+              })
+              .catch(function(e) {
+                return (
+                  console.warn(
+                    'Couldn\'t serve response for "%s" from cache: %O',
+                    t.request.url,
+                    e
+                  ),
+                  fetch(t.request)
+                )
+              })
+          )
+    }
+  })
