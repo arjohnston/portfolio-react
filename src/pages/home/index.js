@@ -7,7 +7,7 @@ const heroText = ['web developer.', 'creator.', 'designer.']
 const HERO_TEXT_ANIMATION_INTERVAL = 1500
 
 export default class Home extends Component {
-  constructor () {
+  constructor() {
     super()
 
     this.state = {
@@ -18,11 +18,11 @@ export default class Home extends Component {
     }
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.startTextAnimationTimer()
   }
 
-  startTextAnimationTimer () {
+  startTextAnimationTimer() {
     let startDelay = 500
     setTimeout(
       this.openText.bind(this),
@@ -36,7 +36,7 @@ export default class Home extends Component {
     }, 50)
   }
 
-  openText () {
+  openText() {
     let callback = () => {
       this.setState(
         {
@@ -78,7 +78,7 @@ export default class Home extends Component {
     )
   }
 
-  closeText () {
+  closeText() {
     let callback = () => {
       this.setState(
         {
@@ -113,15 +113,15 @@ export default class Home extends Component {
     )
   }
 
-  render () {
+  render() {
     let heroTextIndex =
       this.state.heroTextIndex === null ? 0 : this.state.heroTextIndex
 
     return (
       <div>
-        <div className='home-wrapper'>
+        <div className="home-wrapper">
           <section className={`hero${this.state.pageLoaded ? ' active' : ''}`}>
-            <div className='hero-wrapper'>
+            <div className="hero-wrapper">
               <h1>andrew johnston</h1>
               <span style={this.state.heroTextStyle}>
                 {heroText[heroTextIndex]}
@@ -132,64 +132,67 @@ export default class Home extends Component {
           <section
             className={`portfolio${this.state.pageLoaded ? ' active' : ''}`}
           >
-            <div className='grid'>
-              <div className='grid-section'>
+            <div className="grid">
+              <div className="grid-section">
                 <Card
-                  size='four-by-four'
-                  name='Emergency University'
-                  projectLink='/projects/emergency-university'
-                  image='/images/projects/eu.png'
-                  languageIcon='/svg/language-icons/react.svg'
-                  githubLink='#'
+                  size="four-by-four"
+                  name="Emergency University"
+                  projectLink="/projects/emergency-university"
+                  image="/images/projects/eu.png"
+                  languageIcon="/svg/language-icons/react.svg"
+                  githubLink="#"
                 />
               </div>
 
-              <div className='grid-section'>
+              <div className="grid-section">
                 <Card
-                  name='Pixelated'
-                  projectLink='/projects/pixelated'
-                  image='/images/projects/mario.png'
-                  languageIcon='/svg/language-icons/react.svg'
-                  githubLink='#'
+                  name="Pixelated"
+                  projectLink="/projects/pixelated"
+                  image="/images/projects/mario.png"
+                  languageIcon="/svg/language-icons/react.svg"
+                  githubLink="#"
                 />
 
                 <Card
-                  name='Tic Tac Toe'
-                  projectLink='/projects/tic-tac-toe'
-                  image='/images/projects/tictactoe.png'
-                  languageIcon='/svg/language-icons/react.svg'
-                  githubLink='#'
+                  name="Tic Tac Toe"
+                  projectLink="/projects/tic-tac-toe"
+                  image="/images/projects/tictactoe.png"
+                  languageIcon="/svg/language-icons/react.svg"
+                  githubLink="#"
                 />
 
                 <Card
-                  name='Markdown Editor'
-                  projectLink='/projects/markdown-editor'
-                  image='/images/projects/markdown.png'
-                  languageIcon='/svg/language-icons/react.svg'
-                  githubLink='#'
+                  name="Markdown Editor"
+                  projectLink="/projects/markdown-editor"
+                  image="/images/projects/markdown.png"
+                  languageIcon="/svg/language-icons/react.svg"
+                  githubLink="#"
                 />
 
                 <Card
-                  name='Simon Says'
-                  projectLink='/projects/simon'
-                  image='/images/projects/simon.png'
-                  languageIcon='/svg/language-icons/react.svg'
-                  githubLink='#'
+                  name="Simon Says"
+                  projectLink="/projects/simon"
+                  image="/images/projects/simon.png"
+                  languageIcon="/svg/language-icons/react.svg"
+                  githubLink="#"
                 />
               </div>
             </div>
 
-            <Link className='portfolio-cta' to='/projects/'>
+            <Link className="portfolio-cta" to="/projects/">
               view all projects
             </Link>
           </section>
 
-          <div className='profile-image'>
-            <img src='/images/profile-sm.png' alt='andrew johnston' />
+          <div className="profile-image">
+            <picture>
+              <source type="image/webp" srcSet="/images/profile-sm.webp" />
+              <img src="/images/profile-sm.png" alt="Andrew Johnston" />
+            </picture>
           </div>
 
           <section className={`about${this.state.pageLoaded ? ' active' : ''}`}>
-            <div className='about-wrapper'>
+            <div className="about-wrapper">
               <p>
                 Andrew is a professional front end web developer, with full
                 stack experience. He works daily in a collaborive environment to

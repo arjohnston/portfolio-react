@@ -265,7 +265,7 @@
       (e.exports = o)
   },
   function(e, t, n) {
-    e.exports = n(213)()
+    e.exports = n(214)()
   },
   function(e, t, n) {
     'use strict'
@@ -886,11 +886,11 @@
   function(e, t, n) {
     'use strict'
     Object.defineProperty(t, '__esModule', { value: !0 })
-    var r = n(225)
+    var r = n(226)
     n.d(t, 'BrowserRouter', function() {
       return r.a
     })
-    var o = n(227)
+    var o = n(228)
     n.d(t, 'HashRouter', function() {
       return o.a
     })
@@ -898,19 +898,19 @@
     n.d(t, 'Link', function() {
       return a.a
     })
-    var i = n(229)
+    var i = n(230)
     n.d(t, 'MemoryRouter', function() {
       return i.a
     })
-    var s = n(230)
+    var s = n(231)
     n.d(t, 'NavLink', function() {
       return s.a
     })
-    var u = n(231)
+    var u = n(232)
     n.d(t, 'Prompt', function() {
       return u.a
     })
-    var c = n(232)
+    var c = n(233)
     n.d(t, 'Redirect', function() {
       return c.a
     })
@@ -922,19 +922,19 @@
     n.d(t, 'Router', function() {
       return p.a
     })
-    var f = n(233)
+    var f = n(234)
     n.d(t, 'StaticRouter', function() {
       return f.a
     })
-    var d = n(234)
+    var d = n(235)
     n.d(t, 'Switch', function() {
       return d.a
     })
-    var h = n(235)
+    var h = n(236)
     n.d(t, 'matchPath', function() {
       return h.a
     })
-    var m = n(236)
+    var m = n(237)
     n.d(t, 'withRouter', function() {
       return m.a
     })
@@ -972,7 +972,7 @@
     }
     var i = n(1),
       s = n.n(i),
-      u = n(238),
+      u = n(239),
       c = (n.n(u),
       (function() {
         function e(e, t) {
@@ -1915,7 +1915,7 @@
   },
   function(e, t, n) {
     'use strict'
-    var r = n(219),
+    var r = n(220),
       o = n.n(r),
       a = {},
       i = 0,
@@ -4536,7 +4536,7 @@
       return e.length === t.length ? -1 : n
     }
     function o(e) {
-      return e ? (e.nodeType === I ? e.documentElement : e.firstChild) : null
+      return e ? (e.nodeType === j ? e.documentElement : e.firstChild) : null
     }
     function a(e) {
       return (e.getAttribute && e.getAttribute(M)) || ''
@@ -4562,7 +4562,7 @@
     }
     function u(e, t, n) {
       for (
-        C.unmountComponent(e, n), t.nodeType === I && (t = t.documentElement);
+        C.unmountComponent(e, n), t.nodeType === j && (t = t.documentElement);
         t.lastChild;
 
       )
@@ -4576,7 +4576,7 @@
       }
     }
     function l(e) {
-      return !(!e || (e.nodeType !== R && e.nodeType !== I && e.nodeType !== j))
+      return !(!e || (e.nodeType !== R && e.nodeType !== j && e.nodeType !== I))
     }
     function p(e) {
       var t = o(e),
@@ -4608,8 +4608,8 @@
       M = (n(2), m.ID_ATTRIBUTE_NAME),
       A = m.ROOT_ATTRIBUTE_NAME,
       R = 1,
-      I = 9,
-      j = 11,
+      j = 9,
+      I = 11,
       L = {},
       D = 1,
       F = function() {
@@ -4721,9 +4721,9 @@
               p.substring(f - 20, f + 20) +
               '\n (server) ' +
               c.substring(f - 20, f + 20)
-          t.nodeType === I && d('42', m)
+          t.nodeType === j && d('42', m)
         }
-        if ((t.nodeType === I && d('43'), i.useCreateElement)) {
+        if ((t.nodeType === j && d('43'), i.useCreateElement)) {
           for (; t.lastChild; ) t.removeChild(t.lastChild)
           h.insertTreeBefore(t, e, null)
         } else S(t, e), y.precacheNode(n, t.firstChild)
@@ -4785,7 +4785,7 @@
       c = n.n(u),
       l = n(9),
       p = n.n(l),
-      f = n(214),
+      f = n(215),
       d = n.n(f),
       h = n(36),
       m = (function(e) {
@@ -5035,7 +5035,7 @@
       p = n.n(l),
       f = n(11),
       d = n.n(f),
-      h = n(215),
+      h = n(216),
       m = (function(e) {
         function t() {
           return r(this, t), o(this, e.apply(this, arguments))
@@ -5452,7 +5452,7 @@
       a = n.n(o),
       i = n(9),
       s = n.n(i),
-      u = n(221),
+      u = n(222),
       c = n.n(u),
       l = n(59),
       p =
@@ -5691,7 +5691,7 @@
     var i = n(1),
       s = n.n(i),
       u = n(22),
-      c = n(239),
+      c = n(240),
       l = (n.n(c),
       (function() {
         function e(e, t) {
@@ -6536,8 +6536,10 @@
       a = n(70),
       i = n.n(a),
       s = n(210),
-      u = (n.n(s), n(211))
-    i.a.render(o.a.createElement(u.a, null), document.getElementById('root'))
+      u = n(211),
+      c = (n.n(u), n(212))
+    i.a.render(o.a.createElement(c.a, null), document.getElementById('root')),
+      Object(s.a)()
   },
   function(e, t, n) {
     'use strict'
@@ -8106,27 +8108,27 @@
       },
       A = null,
       R = null,
-      I = !1
+      j = !1
     x.canUseDOM &&
-      (I = S('change') && (!document.documentMode || document.documentMode > 8))
-    var j = !1
+      (j = S('change') && (!document.documentMode || document.documentMode > 8))
+    var I = !1
     x.canUseDOM &&
-      (j = S('input') && (!document.documentMode || document.documentMode > 9))
+      (I = S('input') && (!document.documentMode || document.documentMode > 9))
     var L = {
       eventTypes: M,
       _allowSimulatedPassThrough: !0,
-      _isInputEventSupported: j,
+      _isInputEventSupported: I,
       extractEvents: function(e, t, n, a) {
         var i,
           s,
           u = t ? C.getNodeFromInstance(t) : window
         if (
           (o(u)
-            ? I
+            ? j
               ? (i = l)
               : (s = p)
             : N(u)
-              ? j
+              ? I
                 ? (i = b)
                 : ((i = v), (s = m))
               : g(u) && (i = y),
@@ -8649,7 +8651,7 @@
         null != t.style && 'object' !== typeof t.style && v('62', r(e)))
     }
     function a(e, t, n, r) {
-      if (!(r instanceof I)) {
+      if (!(r instanceof j)) {
         var o = e._hostContainerInfo,
           a = o._node && o._node.nodeType === Y,
           s = a ? o._node : o._ownerDocument
@@ -8764,8 +8766,8 @@
       M = n(84),
       A = n(168),
       R = (n(10), n(169)),
-      I = n(176),
-      j = (n(8), n(34)),
+      j = n(176),
+      I = (n(8), n(34)),
       L = (n(0), n(43), n(50), n(77)),
       D = (n(54), n(2), T),
       F = C.deleteListener,
@@ -8961,7 +8963,7 @@
           else {
             var a = W[typeof t.children] ? t.children : null,
               i = null != a ? null : t.children
-            if (null != a) r = j(a)
+            if (null != a) r = I(a)
             else if (null != i) {
               var s = this.mountChildren(i, e, n)
               r = s.join('')
@@ -11668,6 +11670,63 @@
     var r = n(95)
     e.exports = r.renderSubtreeIntoContainer
   },
+  function(e, t, n) {
+    'use strict'
+    function r() {
+      if ('serviceWorker' in navigator) {
+        if (new URL('', window.location).origin !== window.location.origin)
+          return
+        window.addEventListener('load', function() {
+          var e = '/service-worker.js'
+          i ? a(e) : o(e)
+        })
+      }
+    }
+    function o(e) {
+      navigator.serviceWorker
+        .register(e)
+        .then(function(e) {
+          e.onupdatefound = function() {
+            var t = e.installing
+            t.onstatechange = function() {
+              'installed' === t.state &&
+                (navigator.serviceWorker.controller
+                  ? console.log('New content is available; please refresh.')
+                  : console.log('Content is cached for offline use.'))
+            }
+          }
+        })
+        .catch(function(e) {
+          console.error('Error during service worker registration:', e)
+        })
+    }
+    function a(e) {
+      fetch(e)
+        .then(function(t) {
+          404 === t.status ||
+          -1 === t.headers.get('content-type').indexOf('javascript')
+            ? navigator.serviceWorker.ready.then(function(e) {
+                e.unregister().then(function() {
+                  window.location.reload()
+                })
+              })
+            : o(e)
+        })
+        .catch(function() {
+          console.log(
+            'No internet connection found. App is running in offline mode.'
+          )
+        })
+    }
+    t.a = r
+    var i = Boolean(
+      'localhost' === window.location.hostname ||
+        '[::1]' === window.location.hostname ||
+        window.location.hostname.match(
+          /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+        )
+    )
+  },
   function(e, t) {},
   function(e, t, n) {
     'use strict'
@@ -11702,15 +11761,15 @@
     }
     var i = n(1),
       s = n.n(i),
-      u = n(212),
-      c = n(222),
+      u = n(213),
+      c = n(223),
       l = n(110),
-      p = n(240),
-      f = n(242),
-      d = n(244),
-      h = n(247),
-      m = n(251),
-      v = n(252),
+      p = n(241),
+      f = n(243),
+      d = n(245),
+      h = n(248),
+      m = n(252),
+      v = n(253),
       g = (function() {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
@@ -12070,7 +12129,7 @@
   },
   function(e, t, n) {
     'use strict'
-    var r = (n(216), n(217), n(218), n(37))
+    var r = (n(217), n(218), n(219), n(37))
     n.d(t, 'a', function() {
       return r.a
     }),
@@ -12313,7 +12372,7 @@
         e instanceof RegExp ? f(e, t) : g(e) ? d(e, t, n) : h(e, t, n)
       )
     }
-    var g = n(220)
+    var g = n(221)
     ;(e.exports = v),
       (e.exports.parse = r),
       (e.exports.compile = o),
@@ -12416,8 +12475,8 @@
     }
     var i = n(1),
       s = n.n(i),
-      u = n(223),
-      c = n(237),
+      u = n(224),
+      c = n(238),
       l = (n.n(c),
       (function() {
         function e(e, t) {
@@ -12619,10 +12678,18 @@
                     s.a.createElement(
                       'div',
                       { className: 'profile-image' },
-                      s.a.createElement('img', {
-                        src: '/images/profile-sm.png',
-                        alt: 'andrew johnston'
-                      })
+                      s.a.createElement(
+                        'picture',
+                        null,
+                        s.a.createElement('source', {
+                          type: 'image/webp',
+                          srcSet: '/images/profile-sm.webp'
+                        }),
+                        s.a.createElement('img', {
+                          src: '/images/profile-sm.png',
+                          alt: 'Andrew Johnston'
+                        })
+                      )
                     ),
                     s.a.createElement(
                       'section',
@@ -12693,7 +12760,7 @@
     }
     var i = n(1),
       s = n.n(i),
-      u = n(224),
+      u = n(225),
       c = (n.n(u),
       (function() {
         function e(e, t) {
@@ -12733,10 +12800,18 @@
                   s.a.createElement(
                     l,
                     { to: this.props.projectLink, className: 'card-cta' },
-                    s.a.createElement('img', {
-                      src: this.props.image,
-                      alt: this.props.name
-                    })
+                    s.a.createElement(
+                      'picture',
+                      null,
+                      s.a.createElement('source', {
+                        type: 'image/webp',
+                        srcSet: this.props.image.replace(/\.[^\/.]+$/, '.webp')
+                      }),
+                      s.a.createElement('img', {
+                        src: this.props.image,
+                        alt: this.props.name
+                      })
+                    )
                   ),
                   s.a.createElement(
                     'div',
@@ -12826,7 +12901,7 @@
       c = n.n(u),
       l = n(9),
       p = n.n(l),
-      f = n(226),
+      f = n(227),
       d = n.n(f),
       h = n(60),
       m = (function(e) {
@@ -12984,7 +13059,7 @@
             var r = N.indexOf(e.key)
             ;-1 === r && (r = 0)
             var o = n - r
-            o && ((O = !0), I(o))
+            o && ((O = !0), j(o))
           },
           S = w(m()),
           N = [S.key],
@@ -13055,14 +13130,14 @@
               }
             })
           },
-          I = function(e) {
+          j = function(e) {
             t.go(e)
           },
-          j = function() {
-            return I(-1)
+          I = function() {
+            return j(-1)
           },
           L = function() {
-            return I(1)
+            return j(1)
           },
           D = 0,
           F = function(e) {
@@ -13102,8 +13177,8 @@
             createHref: M,
             push: A,
             replace: R,
-            go: I,
-            goBack: j,
+            go: j,
+            goBack: I,
             goForward: L,
             block: B,
             listen: H
@@ -13149,7 +13224,7 @@
       c = n.n(u),
       l = n(9),
       p = n.n(l),
-      f = n(228),
+      f = n(229),
       d = n.n(f),
       h = n(60),
       m = (function(e) {
@@ -13317,10 +13392,10 @@
         N !== M && g(M)
         var A = E(),
           R = [(0, l.createPath)(A)],
-          I = function(e) {
+          j = function(e) {
             return '#' + w(y + (0, l.createPath)(e))
           },
-          j = function(e, t) {
+          I = function(e, t) {
             ;(0, i.default)(
               void 0 === t,
               'Hash history cannot push state; it is ignored'
@@ -13405,8 +13480,8 @@
             length: t.length,
             action: 'POP',
             location: A,
-            createHref: I,
-            push: j,
+            createHref: j,
+            push: I,
             replace: L,
             go: D,
             goBack: F,
@@ -13605,7 +13680,7 @@
     }
     var s = n(1),
       u = n.n(s),
-      c = n(241),
+      c = n(242),
       l = (n.n(c), n(22)),
       p = (function() {
         function e(e, t) {
@@ -14150,7 +14225,7 @@
     var s = n(1),
       u = n.n(s),
       c = n(111),
-      l = (n.n(c), n(243)),
+      l = (n.n(c), n(244)),
       p = n(22),
       f = (function() {
         function e(e, t) {
@@ -14655,7 +14730,7 @@
     }
     var i = n(1),
       s = n.n(i),
-      u = n(245),
+      u = n(246),
       c = (n.n(u), n(22)),
       l = (function() {
         function e(e, t) {
@@ -14671,7 +14746,7 @@
           return n && e(t.prototype, n), r && e(t, r), t
         }
       })(),
-      p = n(246),
+      p = n(247),
       f =
         'Heading\n =======\n\nSub-heading\n-----------\n\n### Another deeper heading\n\nParagraphs are separated\nby a blank line.\n\nLeave 2 spaces at the end of a line to do a  \nline break\n\nText attributes *italic*, **bold**, `monospace`, ~~strikethrough~~ .\n\nShopping list:\n* apples\n* oranges\n* pears\n\nNumbered list:\n1. apples\n2. oranges\n3. pears',
       d = (function(e) {
@@ -15568,12 +15643,12 @@
     }
     var s = n(1),
       u = n.n(s),
-      c = n(248),
+      c = n(249),
       l = n.n(c),
       p = n(61),
       f = n(112),
-      d = n(249),
-      h = n(250),
+      d = n(250),
+      h = n(251),
       m = (n.n(h), n(22)),
       v = (function() {
         function e(e, t) {
@@ -16478,9 +16553,9 @@
     }
     var i = n(1),
       s = n.n(i),
-      u = n(253),
-      c = (n.n(u), n(254)),
-      l = n(257),
+      u = n(254),
+      c = (n.n(u), n(255)),
+      l = n(258),
       p = (function() {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
@@ -16560,8 +16635,8 @@
     }
     var i = n(1),
       s = n.n(i),
-      u = n(255),
-      c = (n.n(u), n(256)),
+      u = n(256),
+      c = (n.n(u), n(257)),
       l = n.n(c),
       p = n(97),
       f = (function() {
@@ -16756,8 +16831,8 @@
     }
     var i = n(1),
       s = n.n(i),
-      u = n(258),
-      c = (n.n(u), n(259)),
+      u = n(259),
+      c = (n.n(u), n(260)),
       l = (function() {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
@@ -16983,4 +17058,4 @@
     }
   }
 ])
-//# sourceMappingURL=main.54e3f360.js.map
+//# sourceMappingURL=main.70725615.js.map
