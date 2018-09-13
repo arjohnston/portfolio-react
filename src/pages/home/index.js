@@ -3,11 +3,7 @@ import Card from '../../components/card/Card'
 import './home.css'
 const Link = require('react-router-dom').Link
 
-const heroText = [
-  'web developer.',
-  'creator.',
-  'designer.'
-]
+const heroText = ['web developer.', 'creator.', 'designer.']
 const HERO_TEXT_ANIMATION_INTERVAL = 1500
 
 export default class Home extends Component {
@@ -28,7 +24,10 @@ export default class Home extends Component {
 
   startTextAnimationTimer () {
     let startDelay = 500
-    setTimeout(this.openText.bind(this), HERO_TEXT_ANIMATION_INTERVAL - startDelay)
+    setTimeout(
+      this.openText.bind(this),
+      HERO_TEXT_ANIMATION_INTERVAL - startDelay
+    )
 
     setTimeout(() => {
       this.setState({
@@ -39,75 +38,100 @@ export default class Home extends Component {
 
   openText () {
     let callback = () => {
-      this.setState({
-        animating: false,
-        heroTextStyle: {
-          maxWidth: '100%'
+      this.setState(
+        {
+          animating: false,
+          heroTextStyle: {
+            maxWidth: '100%'
+          }
+        },
+        () => {
+          this.closeText()
         }
-      }, () => {
-        this.closeText()
-      })
+      )
 
       delete this.openTextAnimation
     }
 
-    this.setState({
-      animating: true,
-      heroTextIndex: this.state.heroTextIndex >= heroText.length - 1 || this.state.heroTextIndex === null ? 0 : this.state.heroTextIndex + 1
-    }, () => {
-      this.setState({
-        heroTextStyle: {
-          maxWidth: '100%',
-          transition: `max-width ${HERO_TEXT_ANIMATION_INTERVAL}ms steps(30)`
-        }
-      })
-      let closeAnimationDelay = 1000
-      this.openTextAnimation = setTimeout(callback, HERO_TEXT_ANIMATION_INTERVAL + closeAnimationDelay)
-    })
+    this.setState(
+      {
+        animating: true,
+        heroTextIndex:
+          this.state.heroTextIndex >= heroText.length - 1 ||
+          this.state.heroTextIndex === null
+            ? 0
+            : this.state.heroTextIndex + 1
+      },
+      () => {
+        this.setState({
+          heroTextStyle: {
+            maxWidth: '100%',
+            transition: `max-width ${HERO_TEXT_ANIMATION_INTERVAL}ms steps(30)`
+          }
+        })
+        let closeAnimationDelay = 1000
+        this.openTextAnimation = setTimeout(
+          callback,
+          HERO_TEXT_ANIMATION_INTERVAL + closeAnimationDelay
+        )
+      }
+    )
   }
 
   closeText () {
     let callback = () => {
-      this.setState({
-        animating: false,
-        heroTextStyle: null
-      }, () => {
-        this.openText()
-      })
+      this.setState(
+        {
+          animating: false,
+          heroTextStyle: null
+        },
+        () => {
+          this.openText()
+        }
+      )
 
       delete this.closeTextAnimation
     }
 
-    this.setState({
-      animating: true
-    }, () => {
-      this.setState({
-        heroTextStyle: {
-          maxWidth: '0px',
-          transition: `max-width ${HERO_TEXT_ANIMATION_INTERVAL}ms steps(30)`
-        }
-      })
-      let openAnimationDelay = 100
-      this.closeTextAnimation = setTimeout(callback, HERO_TEXT_ANIMATION_INTERVAL + openAnimationDelay)
-    })
+    this.setState(
+      {
+        animating: true
+      },
+      () => {
+        this.setState({
+          heroTextStyle: {
+            maxWidth: '0px',
+            transition: `max-width ${HERO_TEXT_ANIMATION_INTERVAL}ms steps(30)`
+          }
+        })
+        let openAnimationDelay = 100
+        this.closeTextAnimation = setTimeout(
+          callback,
+          HERO_TEXT_ANIMATION_INTERVAL + openAnimationDelay
+        )
+      }
+    )
   }
 
   render () {
+    let heroTextIndex =
+      this.state.heroTextIndex === null ? 0 : this.state.heroTextIndex
+
     return (
       <div>
         <div className='home-wrapper'>
           <section className={`hero${this.state.pageLoaded ? ' active' : ''}`}>
             <div className='hero-wrapper'>
               <h1>andrew johnston</h1>
-              <span
-                style={this.state.heroTextStyle}
-              >
-                {heroText[this.state.heroTextIndex === null ? 0 : this.state.heroTextIndex]}
+              <span style={this.state.heroTextStyle}>
+                {heroText[heroTextIndex]}
               </span>
             </div>
           </section>
 
-          <section className={`portfolio${this.state.pageLoaded ? ' active' : ''}`}>
+          <section
+            className={`portfolio${this.state.pageLoaded ? ' active' : ''}`}
+          >
             <div className='grid'>
               <div className='grid-section'>
                 <Card
@@ -155,33 +179,33 @@ export default class Home extends Component {
               </div>
             </div>
 
-            <Link
-              className='portfolio-cta'
-              to='/projects/'
-            >
+            <Link className='portfolio-cta' to='/projects/'>
               view all projects
             </Link>
           </section>
 
           <div className='profile-image'>
-            <img
-              src='/images/profile-sm.png'
-              alt='andrew johnston'
-            />
+            <img src='/images/profile-sm.png' alt='andrew johnston' />
           </div>
 
           <section className={`about${this.state.pageLoaded ? ' active' : ''}`}>
             <div className='about-wrapper'>
               <p>
-                Andrew is a professional front end web developer, with full stack experience. He works daily in a collaborive environment to make life-saving tools for people.
+                Andrew is a professional front end web developer, with full
+                stack experience. He works daily in a collaborive environment to
+                make life-saving tools for people.
               </p>
 
               <p>
-                In his spare time, Andrew attends skill-developent programs, creates side-projects and explores new technologies. When he's not coding, you can find him with family and a craft brew in hand.
+                In his spare time, Andrew attends skill-developent programs,
+                creates side-projects and explores new technologies. When he's
+                not coding, you can find him with family and a craft brew in
+                hand.
               </p>
 
               <p>
-                Andrew is furthering his education with back-end development and is motivated towards specializing in Machine Learning.
+                Andrew is furthering his education with back-end development and
+                is motivated towards specializing in Machine Learning.
               </p>
             </div>
           </section>

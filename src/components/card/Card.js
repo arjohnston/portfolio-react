@@ -10,10 +10,7 @@ export default class Card extends Component {
     return (
       <div className={`card ${classList}`}>
         <Link to={this.props.projectLink} className='card-cta'>
-          <img
-            src={this.props.image}
-            alt={this.props.name}
-          />
+          <img src={this.props.image} alt={this.props.name} />
         </Link>
         <div className='project-info-wrapper'>
           <Link to={this.props.projectLink}>
@@ -21,7 +18,9 @@ export default class Card extends Component {
               <span>{this.props.projectLink}</span>
               <h3>{this.props.name}</h3>
 
-              {this.props.languageIcon && <img src={this.props.languageIcon} alt='Project Language' />}
+              {this.props.languageIcon && (
+                <img src={this.props.languageIcon} alt='Project Language' />
+              )}
             </div>
           </Link>
 

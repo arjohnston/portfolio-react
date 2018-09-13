@@ -9,7 +9,8 @@ export default class Error extends Component {
         <ContentSection>
           <div className='pane-600 center'>
             <h1>
-              Whoops, looks like the page doesn't exist. Try visiting one of the projects below.
+              Whoops, looks like the page doesn't exist. Try visiting one of the
+              projects below.
             </h1>
           </div>
 

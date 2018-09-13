@@ -3,37 +3,38 @@ import './simon.css'
 
 export default class Settings extends Component {
   render () {
-    const Settings = () =>
-      <div className={`simon-settings-menu ${this.props.menuOpen
-          ? 'is-open'
-          : ''}`}
-        >
+    const Settings = () => (
+      <div
+        className={`simon-settings-menu ${
+          this.props.menuOpen ? 'is-open' : ''
+        }`}
+      >
         <div className='settings-menu-option'>
           <span>Difficulty</span>
           <div className='settings-menu-selection-wrapper'>
             <span
-              className={`settings-menu-selection simon-easy ${this.props.difficulty === 1
-                  ? 'setting-selected'
-                  : ''}`}
+              className={`settings-menu-selection simon-easy ${
+                this.props.difficulty === 1 ? 'setting-selected' : ''
+              }`}
               onClick={() => this.props.setDifficulty(1)}
-              >
-                SLOW
+            >
+              SLOW
             </span>
             <span
-              className={`settings-menu-selection simon-medium ${this.props.difficulty === 2
-                  ? 'setting-selected'
-                  : ''}`}
+              className={`settings-menu-selection simon-medium ${
+                this.props.difficulty === 2 ? 'setting-selected' : ''
+              }`}
               onClick={() => this.props.setDifficulty(2)}
-              >
-                NORMAL
+            >
+              NORMAL
             </span>
             <span
-              className={`settings-menu-selection simon-hard ${this.props.difficulty === 3
-                  ? 'setting-selected'
-                  : ''}`}
+              className={`settings-menu-selection simon-hard ${
+                this.props.difficulty === 3 ? 'setting-selected' : ''
+              }`}
               onClick={() => this.props.setDifficulty(3)}
-              >
-                FAST
+            >
+              FAST
             </span>
           </div>
         </div>
@@ -41,20 +42,20 @@ export default class Settings extends Component {
           <span>Strict Mode</span>
           <div className='settings-menu-selection-wrapper'>
             <span
-              className={`settings-menu-selection settings-menu-selection-highlight ${this.props.strictMode
-                  ? 'setting-selected'
-                  : ''}`}
+              className={`settings-menu-selection settings-menu-selection-highlight ${
+                this.props.strictMode ? 'setting-selected' : ''
+              }`}
               onClick={this.props.toggleStrictMode}
-              >
-                ON
+            >
+              ON
             </span>
             <span
-              className={`settings-menu-selection ${!this.props.strictMode
-                  ? 'setting-selected'
-                  : ''}`}
+              className={`settings-menu-selection ${
+                !this.props.strictMode ? 'setting-selected' : ''
+              }`}
               onClick={this.props.toggleStrictMode}
-              >
-                OFF
+            >
+              OFF
             </span>
           </div>
         </div>
@@ -62,33 +63,29 @@ export default class Settings extends Component {
           <span>Sound</span>
           <div className='settings-menu-selection-wrapper'>
             <span
-              className={`settings-menu-selection settings-menu-selection-highlight ${this.props.sound
-                  ? 'setting-selected'
-                  : ''}`}
+              className={`settings-menu-selection settings-menu-selection-highlight ${
+                this.props.sound ? 'setting-selected' : ''
+              }`}
               onClick={this.props.toggleSound}
-              >
-                ON
+            >
+              ON
             </span>
             <span
-              className={`settings-menu-selection ${!this.props.sound
-                  ? 'setting-selected'
-                  : ''}`}
+              className={`settings-menu-selection ${
+                !this.props.sound ? 'setting-selected' : ''
+              }`}
               onClick={this.props.toggleSound}
-              >
-                OFF
+            >
+              OFF
             </span>
           </div>
         </div>
-        <div
-          className='settings-button close'
-          onClick={this.props.toggleMenu}
-          >
+        <div className='settings-button close' onClick={this.props.toggleMenu}>
           Return to Game
         </div>
       </div>
-
-    return (
-      <Settings />
     )
+
+    return <Settings />
   }
 }

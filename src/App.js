@@ -29,9 +29,11 @@ export default class App extends Component {
                 <Route path='/projects/simon' component={Simon} />
                 <Route path='/projects/markdown-editor' component={Markdown} />
                 <Route path='/projects/pixelated' component={Pixelated} />
-                <Route render={function () {
-                  return <Error />
-                }} />
+                <Route
+                  render={function () {
+                    return <Error />
+                  }}
+                />
               </Switch>
             </Layout>
           </div>

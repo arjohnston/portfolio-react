@@ -64,26 +64,38 @@ export default class Sidescroller extends Component {
   }
 
   componentWillMount () {
-    document.addEventListener('keydown', function (e) {
-      this.keyDown(e)
-    }.bind(this))
+    document.addEventListener(
+      'keydown',
+      function (e) {
+        this.keyDown(e)
+      }.bind(this)
+    )
 
-    document.addEventListener('keyup', function (e) {
-      this.keyUp(e)
-    }.bind(this))
+    document.addEventListener(
+      'keyup',
+      function (e) {
+        this.keyUp(e)
+      }.bind(this)
+    )
 
     this.clearGameLoopInterval()
     this.clearGameTimeInterval()
   }
 
   componentWillUnmount () {
-    document.removeEventListener('keydown', function (e) {
-      this.keyDown(e)
-    }.bind(this))
+    document.removeEventListener(
+      'keydown',
+      function (e) {
+        this.keyDown(e)
+      }.bind(this)
+    )
 
-    document.removeEventListener('keyup', function (e) {
-      this.keyUp(e)
-    }.bind(this))
+    document.removeEventListener(
+      'keyup',
+      function (e) {
+        this.keyUp(e)
+      }.bind(this)
+    )
   }
 
   keyDown (e) {
@@ -502,25 +514,29 @@ export default class Sidescroller extends Component {
 
     let gameboardGroundStyle1 = getStyle(CONSTANTS.GAMEBOARD_GROUND_1)
     let gameboardGroundHeight1 = getHeight(CONSTANTS.GAMEBOARD_GROUND_1)
-    gameboardGroundStyle1.top = CONSTANTS.SCREEN_HEIGHT - gameboardGroundHeight1 + 'px'
+    gameboardGroundStyle1.top =
+      CONSTANTS.SCREEN_HEIGHT - gameboardGroundHeight1 + 'px'
     gameboardGroundStyle1.left = 0 + 'px'
     gameboardGroundStyle1.width = 1500 + 'px'
 
     let gameboardGroundStyle2 = getStyle(CONSTANTS.GAMEBOARD_GROUND_2)
     let gameboardGroundHeight2 = getHeight(CONSTANTS.GAMEBOARD_GROUND_2)
-    gameboardGroundStyle2.top = CONSTANTS.SCREEN_HEIGHT - gameboardGroundHeight2 + 'px'
+    gameboardGroundStyle2.top =
+      CONSTANTS.SCREEN_HEIGHT - gameboardGroundHeight2 + 'px'
     gameboardGroundStyle2.left = 1650 + 'px'
     gameboardGroundStyle2.width = 2800 + 'px'
 
     let gameboardGroundStyle3 = getStyle(CONSTANTS.GAMEBOARD_GROUND_3)
     let gameboardGroundHeight3 = getHeight(CONSTANTS.GAMEBOARD_GROUND_3)
-    gameboardGroundStyle3.top = CONSTANTS.SCREEN_HEIGHT - gameboardGroundHeight3 + 'px'
+    gameboardGroundStyle3.top =
+      CONSTANTS.SCREEN_HEIGHT - gameboardGroundHeight3 + 'px'
     gameboardGroundStyle3.left = 5725 + 'px'
     gameboardGroundStyle3.width = 3400 + 'px'
 
     let gameboardGroundStyle4 = getStyle(CONSTANTS.GAMEBOARD_GROUND_4)
     let gameboardGroundHeight4 = getHeight(CONSTANTS.GAMEBOARD_GROUND_4)
-    gameboardGroundStyle4.top = CONSTANTS.SCREEN_HEIGHT - gameboardGroundHeight4 + 'px'
+    gameboardGroundStyle4.top =
+      CONSTANTS.SCREEN_HEIGHT - gameboardGroundHeight4 + 'px'
     gameboardGroundStyle4.left = 9275 + 'px'
     gameboardGroundStyle4.width = 725 + 'px'
   }
@@ -602,7 +618,7 @@ export default class Sidescroller extends Component {
     // playerSpriteStyle.width = getWidth(CONSTANTS.PLAYER_SPRITESHEET) / CONSTANTS.PLAYER_SPRITESHEET_FRAMES + 'px'
     playerSpriteStyle.width = CONSTANTS.PLAYER_SPRITE_HEIGHT + 'px'
     playerSpriteStyle.visibility = 'visible'
-    playerSpriteStyle.top = CONSTANTS.SCREEN_HEIGHT * 2 / 3 + 'px'
+    playerSpriteStyle.top = (CONSTANTS.SCREEN_HEIGHT * 2) / 3 + 'px'
     playerSpriteStyle.left = 0 + 'px'
     // playerSpritesheetStyle.left = 0
     spritesWithBoxCollider.push(CONSTANTS.PLAYER_SPRITE)
@@ -611,7 +627,11 @@ export default class Sidescroller extends Component {
     enemySpriteStyle1.height = CONSTANTS.ENEMY_SPRITE_HEIGHT + 'px'
     enemySpriteStyle1.width = CONSTANTS.ENEMY_SPRITE_HEIGHT + 'px'
     // enemySpriteStyle1.width = getWidth(CONSTANTS.ENEMY_SPRITESHEET) / CONSTANTS.ENEMY_SPRITESHEET_FRAMES + 'px'
-    enemySpriteStyle1.top = CONSTANTS.SCREEN_HEIGHT - CONSTANTS.GROUND_HEIGHT - getHeight(CONSTANTS.ENEMY_1) + 'px'
+    enemySpriteStyle1.top =
+      CONSTANTS.SCREEN_HEIGHT -
+      CONSTANTS.GROUND_HEIGHT -
+      getHeight(CONSTANTS.ENEMY_1) +
+      'px'
     enemySpriteStyle1.left = 1800 + 'px'
     enemySpriteStyle1.visibility = 'visible'
     spritesWithBoxCollider.push(CONSTANTS.ENEMY_1)
@@ -625,7 +645,8 @@ export default class Sidescroller extends Component {
 
   startGameLoopInterval () {
     this.gameLoopInterval = setInterval(
-      () => this.gameLoop(), CONSTANTS.SYNC_SPEED
+      () => this.gameLoop(),
+      CONSTANTS.SYNC_SPEED
     )
   }
 
@@ -635,12 +656,14 @@ export default class Sidescroller extends Component {
 
   startGameTimeInterval () {
     this.gameTimeInterval = setInterval(
-      () => this.setState((prevState, props) => {
-        return {
-          gameTime: prevState.gameTime + 1,
-          mouseTimer: prevState.mouseTimer + 1
-        }
-      }), 1000
+      () =>
+        this.setState((prevState, props) => {
+          return {
+            gameTime: prevState.gameTime + 1,
+            mouseTimer: prevState.mouseTimer + 1
+          }
+        }),
+      1000
     )
   }
 
@@ -721,7 +744,12 @@ export default class Sidescroller extends Component {
 
   checkIfPlayerSpriteShouldFall () {
     if (!this.state.playerSpriteJumping) {
-      if (checkCollisionY(this.state.spritesWithBoxCollider, CONSTANTS.PLAYER_SPRITE) === 'y-top') {
+      if (
+        checkCollisionY(
+          this.state.spritesWithBoxCollider,
+          CONSTANTS.PLAYER_SPRITE
+        ) === 'y-top'
+      ) {
         return false
       }
       return true
@@ -729,7 +757,7 @@ export default class Sidescroller extends Component {
   }
 
   movePlayerSprite (...movementQueue) {
-    let [ ...queue ] = movementQueue
+    let [...queue] = movementQueue
     let spriteMovingLeft = false
     let spriteMovingRight = false
     let spriteJumping = false
@@ -780,7 +808,10 @@ export default class Sidescroller extends Component {
     // Move sprite left
     // Animate sprite
     if (spriteMovingLeft) {
-      newSpritePositionX = movePlayerSpriteLeft(spritePositionX, ...this.state.spritesWithBoxCollider)
+      newSpritePositionX = movePlayerSpriteLeft(
+        spritePositionX,
+        ...this.state.spritesWithBoxCollider
+      )
 
       // animation = 'MOVE_LEFT'
     }
@@ -789,7 +820,10 @@ export default class Sidescroller extends Component {
     // Move sprite right
     // Animate sprite
     if (spriteMovingRight) {
-      newSpritePositionX = movePlayerSpriteRight(spritePositionX, ...this.state.spritesWithBoxCollider)
+      newSpritePositionX = movePlayerSpriteRight(
+        spritePositionX,
+        ...this.state.spritesWithBoxCollider
+      )
 
       // animation = 'MOVE_RIGHT'
     }
@@ -808,20 +842,26 @@ export default class Sidescroller extends Component {
         // if max height reached while holding space bar
         if (
           this.state.spaceBarHeld &&
-          newSpritePositionY <= this.state.startingYJumpPosition - CONSTANTS.PLAYER_MAX_JUMP_HEIGHT_HOLDING_SPACE
+          newSpritePositionY <=
+            this.state.startingYJumpPosition -
+              CONSTANTS.PLAYER_MAX_JUMP_HEIGHT_HOLDING_SPACE
         ) {
           this.falsifyPlayerSpriteJumpingState()
 
           // else if not holding space bar & max height reached
         } else if (
           !this.state.spaceBarHeld &&
-          newSpritePositionY <= this.state.startingYJumpPosition - CONSTANTS.PLAYER_MAX_JUMP_HEIGHT
+          newSpritePositionY <=
+            this.state.startingYJumpPosition - CONSTANTS.PLAYER_MAX_JUMP_HEIGHT
         ) {
           this.falsifyPlayerSpriteJumpingState()
 
-        // Move sprite up
+          // Move sprite up
         } else {
-          newSpritePositionY = movePlayerSpriteUp(spritePositionY, ...this.state.spritesWithBoxCollider)
+          newSpritePositionY = movePlayerSpriteUp(
+            spritePositionY,
+            ...this.state.spritesWithBoxCollider
+          )
 
           if (newSpritePositionY === spritePositionY) {
             this.falsifyPlayerSpriteJumpingState()
@@ -839,7 +879,10 @@ export default class Sidescroller extends Component {
     }
 
     if (spriteFalling) {
-      newSpritePositionY = movePlayerSpriteDown(spritePositionY, ...this.state.spritesWithBoxCollider)
+      newSpritePositionY = movePlayerSpriteDown(
+        spritePositionY,
+        ...this.state.spritesWithBoxCollider
+      )
 
       // animation = 'JUMP'
     }
@@ -885,7 +928,9 @@ export default class Sidescroller extends Component {
       <div>
         <ContentSection>
           <div
-            className={`pane center gameboard-foreground ${this.state.mouseTimer < 2 ? 'show-mouse' : ''}`}
+            className={`pane center gameboard-foreground ${
+              this.state.mouseTimer < 2 ? 'show-mouse' : ''
+            }`}
             id='gameboard-foreground'
             style={{
               height: CONSTANTS.SCREEN_HEIGHT,
@@ -894,19 +939,64 @@ export default class Sidescroller extends Component {
             }}
             onMouseMove={this.showMouse.bind(this)}
           >
-            <div className='game-menu' style={{display: this.state.menuState ? 'flex' : 'none'}}>
-              <div style={{display: this.state.menuState === 'startMenu' ? 'flex' : 'none'}}>
-                <img src='/svg/projects/pixelated/pixelated-logo.svg' alt='Pixels' />
-                <button onClick={this.handleGameState.bind(this, 'startGame')}>Start</button>
-                <button onClick={this.handleGameState.bind(this, 'showControlMenu')}>Controls</button>
+            <div
+              className='game-menu'
+              style={{ display: this.state.menuState ? 'flex' : 'none' }}
+            >
+              <div
+                style={{
+                  display:
+                    this.state.menuState === 'startMenu' ? 'flex' : 'none'
+                }}
+              >
+                <img
+                  src='/svg/projects/pixelated/pixelated-logo.svg'
+                  alt='Pixels'
+                />
+                <button onClick={this.handleGameState.bind(this, 'startGame')}>
+                  Start
+                </button>
+                <button
+                  onClick={this.handleGameState.bind(this, 'showControlMenu')}
+                >
+                  Controls
+                </button>
               </div>
-              <div style={{display: this.state.menuState === 'pauseMenu' ? 'flex' : 'none'}}>
-                <img src='/svg/projects/pixelated/pixelated-logo.svg' alt='Pixels' />
-                <button onClick={this.handleGameState.bind(this, 'resumeGame')}>Resume</button>
-                <button onClick={this.handleGameState.bind(this, 'showControlMenu')}>Controls</button>
+              <div
+                style={{
+                  display:
+                    this.state.menuState === 'pauseMenu' ? 'flex' : 'none'
+                }}
+              >
+                <img
+                  src='/svg/projects/pixelated/pixelated-logo.svg'
+                  alt='Pixels'
+                />
+                <button onClick={this.handleGameState.bind(this, 'resumeGame')}>
+                  Resume
+                </button>
+                <button
+                  onClick={this.handleGameState.bind(this, 'showControlMenu')}
+                >
+                  Controls
+                </button>
               </div>
-              <div className='control-menu' style={{display: this.state.menuState === 'showControlMenu' ? 'flex' : 'none'}}>
-                <span style={{color: 'white', textAlign: 'center', marginBottom: '20px'}}>Use the keyboard to control</span>
+              <div
+                className='control-menu'
+                style={{
+                  display:
+                    this.state.menuState === 'showControlMenu' ? 'flex' : 'none'
+                }}
+              >
+                <span
+                  style={{
+                    color: 'white',
+                    textAlign: 'center',
+                    marginBottom: '20px'
+                  }}
+                >
+                  Use the keyboard to control
+                </span>
                 <div>
                   <svg width='30' height='30' viewBox='0 0 40 40'>
                     <path fill='#fff' d='M20 5v7h14v16h-14v7l-15-15 15-15z' />
@@ -915,17 +1005,30 @@ export default class Sidescroller extends Component {
                 </div>
                 <div>
                   <svg width='30' height='30' viewBox='0 0 40 40'>
-                    <path fill='#fff' d='M35 20l-15 15v-7h-14v-16h14v-7l15 15z' />
+                    <path
+                      fill='#fff'
+                      d='M35 20l-15 15v-7h-14v-16h14v-7l15 15z'
+                    />
                   </svg>
                   Move right (right-arrow)
                 </div>
                 <div>
                   <svg width='36' height='36' viewBox='0 0 48 48'>
-                    <path fill='#fff' d='M36 18h4.031v12h-32.063v-12h4.031v7.969h24v-7.969z' />
+                    <path
+                      fill='#fff'
+                      d='M36 18h4.031v12h-32.063v-12h4.031v7.969h24v-7.969z'
+                    />
                   </svg>
                   Jump (space-bar)
                 </div>
-                <button onClick={this.handleGameState.bind(this, this.state.gameInProgress ? 'pauseMenu' : 'startMenu')}>Return</button>
+                <button
+                  onClick={this.handleGameState.bind(
+                    this,
+                    this.state.gameInProgress ? 'pauseMenu' : 'startMenu'
+                  )}
+                >
+                  Return
+                </button>
               </div>
             </div>
             <div
@@ -935,47 +1038,18 @@ export default class Sidescroller extends Component {
                 height: CONSTANTS.SCREEN_HEIGHT,
                 transition: 'transform 0.3s'
               }}
-              id='gameboard-wrapper'>
-              <div
-                className='gameboard-ground'
-                id='gameboard-ground-1'
-              />
-              <div
-                className='gameboard-ground'
-                id='gameboard-ground-2'
-              />
-              <div
-                className='gameboard-ground'
-                id='gameboard-ground-3'
-              />
-              <div
-                className='gameboard-ground'
-                id='gameboard-ground-4'
-              />
-              <div
-                className='clouds-1-sprite clouds'
-                id='clouds-1-sprite'
-              />
-              <div
-                className='clouds-2-sprite clouds'
-                id='clouds-2-sprite'
-              />
-              <div
-                className='clouds-3-sprite clouds'
-                id='clouds-3-sprite'
-              />
-              <div
-                className='clouds-1-sprite clouds'
-                id='clouds-4-sprite'
-              />
-              <div
-                className='clouds-2-sprite clouds'
-                id='clouds-5-sprite'
-              />
-              <div
-                className='clouds-3-sprite clouds'
-                id='clouds-6-sprite'
-              />
+              id='gameboard-wrapper'
+            >
+              <div className='gameboard-ground' id='gameboard-ground-1' />
+              <div className='gameboard-ground' id='gameboard-ground-2' />
+              <div className='gameboard-ground' id='gameboard-ground-3' />
+              <div className='gameboard-ground' id='gameboard-ground-4' />
+              <div className='clouds-1-sprite clouds' id='clouds-1-sprite' />
+              <div className='clouds-2-sprite clouds' id='clouds-2-sprite' />
+              <div className='clouds-3-sprite clouds' id='clouds-3-sprite' />
+              <div className='clouds-1-sprite clouds' id='clouds-4-sprite' />
+              <div className='clouds-2-sprite clouds' id='clouds-5-sprite' />
+              <div className='clouds-3-sprite clouds' id='clouds-6-sprite' />
               {/* <div
                 className='bush-1-sprite bush'
                 id='bush-1-sprite-1'
@@ -1320,20 +1394,14 @@ export default class Sidescroller extends Component {
                 className='box-sprite-1 box'
                 id='box-sprite-70'
               /> */}
-              <div
-                className='enemy-sprite'
-                id='enemy-1-sprite'
-              >
+              <div className='enemy-sprite' id='enemy-1-sprite'>
                 {/* <img
                   src={require('../../../assets/enemy-spritesheet.png')}
                   alt='enemy sprite'
                   id='enemy-spritesheet'
                 /> */}
               </div>
-              <div
-                className='player-sprite'
-                id='player-sprite'
-              >
+              <div className='player-sprite' id='player-sprite'>
                 {/* <img
                   src={require('../../../assets/player-spritesheet.png')}
                   alt='player sprite'
@@ -1346,7 +1414,7 @@ export default class Sidescroller extends Component {
             </div>
             <div
               className='pause-button'
-              style={{display: !this.state.menuState ? 'flex' : 'none'}}
+              style={{ display: !this.state.menuState ? 'flex' : 'none' }}
               onClick={this.handleGameState.bind(this, 'pauseMenu')}
             />
             <div className='timer'>

@@ -1,8 +1,4 @@
-import {
-  getWidth,
-  getHeight,
-  getStyle
-} from './helpers'
+import { getWidth, getHeight, getStyle } from './helpers'
 import * as CONSTANTS from './constants'
 
 // export function moveClouds () {
@@ -102,8 +98,23 @@ export function checkCollision (
 
   if (spritesWithBoxCollider.length > 0) {
     for (let index in spritesWithBoxCollider) {
-      if (spritesWithBoxCollider[index] !== spriteId1 && checkCollision(spritesWithBoxCollider, spriteId1, newSpritePositionXId1, newSpritePositionYId1, spritesWithBoxCollider[index])) {
-        return checkCollision(spritesWithBoxCollider, spriteId1, newSpritePositionXId1, newSpritePositionYId1, spritesWithBoxCollider[index])
+      if (
+        spritesWithBoxCollider[index] !== spriteId1 &&
+        checkCollision(
+          spritesWithBoxCollider,
+          spriteId1,
+          newSpritePositionXId1,
+          newSpritePositionYId1,
+          spritesWithBoxCollider[index]
+        )
+      ) {
+        return checkCollision(
+          spritesWithBoxCollider,
+          spriteId1,
+          newSpritePositionXId1,
+          newSpritePositionYId1,
+          spritesWithBoxCollider[index]
+        )
       }
     }
   }
@@ -148,7 +159,10 @@ export function checkCollisionX (
     if (
       // check for x-left collision
       spriteBoundingBoxRight1 >= spriteBoundingBoxLeft2 - 1 &&
-      spriteBoundingBoxRight2 - (spriteBoundingBoxRight2 - spriteBoundingBoxLeft2) - 1 >= spriteBoundingBoxLeft1 &&
+      spriteBoundingBoxRight2 -
+        (spriteBoundingBoxRight2 - spriteBoundingBoxLeft2) -
+        1 >=
+        spriteBoundingBoxLeft1 &&
       spriteBoundingBoxTop1 <= spriteBoundingBoxBottom2 - 2 &&
       spriteBoundingBoxTop2 + 2 <= spriteBoundingBoxBottom1
     ) {
@@ -168,8 +182,23 @@ export function checkCollisionX (
 
   if (spritesWithBoxCollider.length > 0) {
     for (let index in spritesWithBoxCollider) {
-      if (spritesWithBoxCollider[index] !== spriteId1 && checkCollisionX(spritesWithBoxCollider, spriteId1, newSpritePositionXId1, newSpritePositionYId1, spritesWithBoxCollider[index])) {
-        return checkCollisionX(spritesWithBoxCollider, spriteId1, newSpritePositionXId1, newSpritePositionYId1, spritesWithBoxCollider[index])
+      if (
+        spritesWithBoxCollider[index] !== spriteId1 &&
+        checkCollisionX(
+          spritesWithBoxCollider,
+          spriteId1,
+          newSpritePositionXId1,
+          newSpritePositionYId1,
+          spritesWithBoxCollider[index]
+        )
+      ) {
+        return checkCollisionX(
+          spritesWithBoxCollider,
+          spriteId1,
+          newSpritePositionXId1,
+          newSpritePositionYId1,
+          spritesWithBoxCollider[index]
+        )
       }
     }
   }
@@ -215,7 +244,10 @@ export function checkCollisionY (
       // check for y-top collision
       spriteBoundingBoxRight1 >= spriteBoundingBoxLeft2 &&
       spriteBoundingBoxRight2 >= spriteBoundingBoxLeft1 &&
-      spriteBoundingBoxTop1 <= spriteBoundingBoxBottom2 - (spriteBoundingBoxBottom2 - spriteBoundingBoxTop2) - 1 &&
+      spriteBoundingBoxTop1 <=
+        spriteBoundingBoxBottom2 -
+          (spriteBoundingBoxBottom2 - spriteBoundingBoxTop2) -
+          1 &&
       spriteBoundingBoxTop2 - 1 <= spriteBoundingBoxBottom1
     ) {
       return 'y-top'
@@ -235,8 +267,23 @@ export function checkCollisionY (
 
   if (spritesWithBoxCollider.length > 0) {
     for (let index in spritesWithBoxCollider) {
-      if (spritesWithBoxCollider[index] !== spriteId1 && checkCollisionY(spritesWithBoxCollider, spriteId1, newSpritePositionXId1, newSpritePositionYId1, spritesWithBoxCollider[index])) {
-        return checkCollisionY(spritesWithBoxCollider, spriteId1, newSpritePositionXId1, newSpritePositionYId1, spritesWithBoxCollider[index])
+      if (
+        spritesWithBoxCollider[index] !== spriteId1 &&
+        checkCollisionY(
+          spritesWithBoxCollider,
+          spriteId1,
+          newSpritePositionXId1,
+          newSpritePositionYId1,
+          spritesWithBoxCollider[index]
+        )
+      ) {
+        return checkCollisionY(
+          spritesWithBoxCollider,
+          spriteId1,
+          newSpritePositionXId1,
+          newSpritePositionYId1,
+          spritesWithBoxCollider[index]
+        )
       }
     }
   }
@@ -303,8 +350,11 @@ export function checkCollisionY (
 //   }
 // }
 
-export function movePlayerSpriteLeft (spritePositionX, ...spritesWithBoxCollider) {
-  let [ ...spritesWithBoxColliderArray ] = spritesWithBoxCollider
+export function movePlayerSpriteLeft (
+  spritePositionX,
+  ...spritesWithBoxCollider
+) {
+  let [...spritesWithBoxColliderArray] = spritesWithBoxCollider
   let newSpritePositionX = spritePositionX
 
   if (newSpritePositionX > 0) {
@@ -314,7 +364,11 @@ export function movePlayerSpriteLeft (spritePositionX, ...spritesWithBoxCollider
   // Checks if the movement_speed put the sprite beyond gameboard bounds
   if (newSpritePositionX <= 0) newSpritePositionX = 0
 
-  let collisionDetected = checkCollisionX(spritesWithBoxColliderArray, CONSTANTS.PLAYER_SPRITE, newSpritePositionX)
+  let collisionDetected = checkCollisionX(
+    spritesWithBoxColliderArray,
+    CONSTANTS.PLAYER_SPRITE,
+    newSpritePositionX
+  )
   if (collisionDetected === 'x-right') {
     newSpritePositionX = spritePositionX
   }
@@ -322,8 +376,11 @@ export function movePlayerSpriteLeft (spritePositionX, ...spritesWithBoxCollider
   return newSpritePositionX
 }
 
-export function movePlayerSpriteRight (spritePositionX, ...spritesWithBoxCollider) {
-  let [ ...spritesWithBoxColliderArray ] = spritesWithBoxCollider
+export function movePlayerSpriteRight (
+  spritePositionX,
+  ...spritesWithBoxCollider
+) {
+  let [...spritesWithBoxColliderArray] = spritesWithBoxCollider
   let newSpritePositionX = spritePositionX
   let spriteWidth = getWidth(CONSTANTS.PLAYER_SPRITE)
 
@@ -336,7 +393,11 @@ export function movePlayerSpriteRight (spritePositionX, ...spritesWithBoxCollide
     newSpritePositionX = CONSTANTS.BOARD_WIDTH - spriteWidth
   }
 
-  let collisionDetected = checkCollisionX(spritesWithBoxColliderArray, CONSTANTS.PLAYER_SPRITE, newSpritePositionX)
+  let collisionDetected = checkCollisionX(
+    spritesWithBoxColliderArray,
+    CONSTANTS.PLAYER_SPRITE,
+    newSpritePositionX
+  )
   if (collisionDetected === 'x-left') {
     newSpritePositionX = spritePositionX
   }
@@ -345,12 +406,17 @@ export function movePlayerSpriteRight (spritePositionX, ...spritesWithBoxCollide
 }
 
 export function movePlayerSpriteUp (spritePositionY, ...spritesWithBoxCollider) {
-  let [ ...spritesWithBoxColliderArray ] = spritesWithBoxCollider
+  let [...spritesWithBoxColliderArray] = spritesWithBoxCollider
   let newSpritePositionY = spritePositionY
 
   newSpritePositionY -= CONSTANTS.PLAYER_JUMP_MOVEMENT_SPEED
 
-  let collisionDetected = checkCollisionY(spritesWithBoxColliderArray, CONSTANTS.PLAYER_SPRITE, null, newSpritePositionY)
+  let collisionDetected = checkCollisionY(
+    spritesWithBoxColliderArray,
+    CONSTANTS.PLAYER_SPRITE,
+    null,
+    newSpritePositionY
+  )
   if (collisionDetected === 'y-bottom') {
     newSpritePositionY = spritePositionY
   }
@@ -358,7 +424,10 @@ export function movePlayerSpriteUp (spritePositionY, ...spritesWithBoxCollider) 
   return newSpritePositionY
 }
 
-export function movePlayerSpriteDown (spritePositionY, ...spritesWithBoxCollider) {
+export function movePlayerSpriteDown (
+  spritePositionY,
+  ...spritesWithBoxCollider
+) {
   // let [ ...spritesWithBoxColliderArray ] = spritesWithBoxCollider
   let newSpritePositionY = spritePositionY
 
@@ -371,7 +440,8 @@ export function movePlayerSpriteDown (spritePositionY, ...spritesWithBoxCollider
 }
 
 export function centerCameraX (newSpritePositionX) {
-  let middleOfScreen = (CONSTANTS.SCREEN_WIDTH - getWidth(CONSTANTS.PLAYER_SPRITE)) / 2
+  let middleOfScreen =
+    (CONSTANTS.SCREEN_WIDTH - getWidth(CONSTANTS.PLAYER_SPRITE)) / 2
   let newCameraPositionX
 
   if (newSpritePositionX >= middleOfScreen) {

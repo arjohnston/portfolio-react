@@ -87,11 +87,17 @@ export default class Simon extends Component {
         delete this.animationEndCallback
       }
 
-      this.setState({
-        boardSpaceActive: location
-      }, function () {
-        this.animationEndCallback = setTimeout(callback, this.state.gamePieceActiveSpeed)
-      })
+      this.setState(
+        {
+          boardSpaceActive: location
+        },
+        function () {
+          this.animationEndCallback = setTimeout(
+            callback,
+            this.state.gamePieceActiveSpeed
+          )
+        }
+      )
     }
   }
 
@@ -118,8 +124,8 @@ export default class Simon extends Component {
   }
 
   playerMove (e) {
-    let arrayOfMoves = [ ...this.state.arrayOfMoves ]
-    let playerArrayOfMoves = [ ...this.state.playerArrayOfMoves ]
+    let arrayOfMoves = [...this.state.arrayOfMoves]
+    let playerArrayOfMoves = [...this.state.playerArrayOfMoves]
 
     if (arrayOfMoves.length <= playerArrayOfMoves.length) {
       // disable player moves, enable computer moves
@@ -142,49 +148,70 @@ export default class Simon extends Component {
   }
 
   render () {
-    const Game = () =>
+    const Game = () => (
       <div
-        className={`simon-game ${!this.state.settingsMenuOpen ? 'is-open' : ''}`}>
-        <div
-          className='settings-button'
-          onClick={this.toggleMenu.bind(this)}
-        >
+        className={`simon-game ${
+          !this.state.settingsMenuOpen ? 'is-open' : ''
+        }`}
+      >
+        <div className='settings-button' onClick={this.toggleMenu.bind(this)}>
           Settings
         </div>
-        <div
-          className='settings-button'
-          onClick={this.toggleStart.bind(this)}
-        >
+        <div className='settings-button' onClick={this.toggleStart.bind(this)}>
           {this.state.gameInProgress ? 'Reset' : 'Start'}
         </div>
         <div>
           <svg className='simon-gameboard-wrapper'>
             <path
               onClick={this.playerMove.bind(this, 1)}
-              className={`simon-gameboard-top-left ${this.state.boardSpaceActive === 1 ? 'simon-boardpiece-active' : ''}`}
+              className={`simon-gameboard-top-left ${
+                this.state.boardSpaceActive === 1
+                  ? 'simon-boardpiece-active'
+                  : ''
+              }`}
               d='M0.6,156.1h99.3c1.9-30.5,26.3-54.9,56.8-56.8V0C71.4,2,2.6,70.8,0.6,156.1z'
               // include gaussian blur for these. How to remove blur if it's clicked?
             />
             <path
               onClick={this.playerMove.bind(this, 2)}
-              className={`simon-gameboard-top-right ${this.state.boardSpaceActive === 2 ? 'simon-boardpiece-active' : ''}`}
+              className={`simon-gameboard-top-right ${
+                this.state.boardSpaceActive === 2
+                  ? 'simon-boardpiece-active'
+                  : ''
+              }`}
               d='M221,156.1h99.3C318.4,70.8,249.6,2,164.3,0v99.3C194.8,101.2,219.2,125.6,221,156.1z'
             />
             <path
               onClick={this.playerMove.bind(this, 3)}
-              className={`simon-gameboard-bottom-left ${this.state.boardSpaceActive === 3 ? 'simon-boardpiece-active' : ''}`}
+              className={`simon-gameboard-bottom-left ${
+                this.state.boardSpaceActive === 3
+                  ? 'simon-boardpiece-active'
+                  : ''
+              }`}
               d='M99.9,163.7H0.6c2,85.3,70.8,154.1,156.1,156v-99.3C126.2,218.5,101.8,194.2,99.9,163.7z'
             />
             <path
               onClick={this.playerMove.bind(this, 4)}
-              className={`simon-gameboard-bottom-right ${this.state.boardSpaceActive === 4 ? 'simon-boardpiece-active' : ''}`}
+              className={`simon-gameboard-bottom-right ${
+                this.state.boardSpaceActive === 4
+                  ? 'simon-boardpiece-active'
+                  : ''
+              }`}
               d='M164.3,220.4v99.3c85.3-2,154.1-70.7,156.1-156H221C219.2,194.2,194.8,218.5,164.3,220.4z'
             />
-            <circle className='simon-gameboard-center-circle' cx='160.6' cy='159.7' r='54.8' />
+            <circle
+              className='simon-gameboard-center-circle'
+              cx='160.6'
+              cy='159.7'
+              r='54.8'
+            />
           </svg>
-          <span className='simon-scoreboard'>{this.state.gameInProgress ? this.state.arrayOfMoves.length : '- -'}</span>
+          <span className='simon-scoreboard'>
+            {this.state.gameInProgress ? this.state.arrayOfMoves.length : '- -'}
+          </span>
         </div>
       </div>
+    )
 
     return (
       <div>

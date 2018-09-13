@@ -15,11 +15,10 @@ export default class Portfolio extends Component {
                 <img src='/images/projects/eu.png' alt='Emergency University' />
               </div>
               <div className='project-content'>
-                <h2>
-                  Emergency University
-                </h2>
+                <h2>Emergency University</h2>
                 <p>
-                  A react site, powered by next.js. Built from scratch for Emergency University inc.
+                  A react site, powered by next.js. Built from scratch for
+                  Emergency University inc.
                 </p>
               </div>
               <div className='project-right-arrow'>
@@ -32,9 +31,7 @@ export default class Portfolio extends Component {
                 <img src='/images/projects/mario.png' alt='sidescroller' />
               </div>
               <div className='project-content'>
-                <h2>
-                  Pixelated
-                </h2>
+                <h2>Pixelated</h2>
                 <p>
                   A sidescroller RPG built with create-react-app. Built for fun
                 </p>
@@ -46,14 +43,16 @@ export default class Portfolio extends Component {
 
             <Link className='project' to='/projects/markdown-editor'>
               <div className='project-image-wrapper'>
-                <img src='/images/projects/markdown.png' alt='markdown previewer' />
+                <img
+                  src='/images/projects/markdown.png'
+                  alt='markdown previewer'
+                />
               </div>
               <div className='project-content'>
-                <h2>
-                  Markdown Editor
-                </h2>
+                <h2>Markdown Editor</h2>
                 <p>
-                  Inspired by the FreeCodeCamp cirriculum, this is a build tool for Github's markdown files.
+                  Inspired by the FreeCodeCamp cirriculum, this is a build tool
+                  for Github's markdown files.
                 </p>
               </div>
               <div className='project-right-arrow'>
@@ -66,11 +65,11 @@ export default class Portfolio extends Component {
                 <img src='/images/projects/simon.png' alt='simon says' />
               </div>
               <div className='project-content'>
-                <h2>
-                  Simon Says
-                </h2>
+                <h2>Simon Says</h2>
                 <p>
-                  A Simon Says game, inspired by the FreeCodeCamp cirriculum. Built originally with vanilla javascript, now converted to React.js using create-react-app.
+                  A Simon Says game, inspired by the FreeCodeCamp cirriculum.
+                  Built originally with vanilla javascript, now converted to
+                  React.js using create-react-app.
                 </p>
               </div>
               <div className='project-right-arrow'>
@@ -83,11 +82,10 @@ export default class Portfolio extends Component {
                 <img src='/images/projects/tictactoe.png' alt='tic tac toe' />
               </div>
               <div className='project-content'>
-                <h2>
-                  Tic Tac Toe
-                </h2>
+                <h2>Tic Tac Toe</h2>
                 <p>
-                  Inspired by the FreeCodeCamp cirriculum, this is a fully functional tic-tac-toe game, against a variable difficulty AI.
+                  Inspired by the FreeCodeCamp cirriculum, this is a fully
+                  functional tic-tac-toe game, against a variable difficulty AI.
                 </p>
               </div>
               <div className='project-right-arrow'>

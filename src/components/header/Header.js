@@ -57,7 +57,7 @@ export class Header extends Component {
 
     if (scrolledFromTop > 0 && scrolledFromTop < 200) {
       headerBackgroundOpacity = scrolledFromTop / 200
-      logoHeight = 60 - (scrolledFromTop / 10)
+      logoHeight = 60 - scrolledFromTop / 10
     } else if (scrolledFromTop < 1) {
       headerBackgroundOpacity = 0
       logoHeight = 60
@@ -77,10 +77,25 @@ export class Header extends Component {
     let project = pathArray.length > 2 ? pathArray[pathArray.length - 1] : null
 
     return (
-      <div className='header-wrapper' style={{backgroundColor: `rgba(13, 115, 119, ${this.state.headerBackgroundOpacity})`, borderBottom: `1px solid rgba(34, 40, 49, ${this.state.headerBackgroundOpacity})`}}>
+      <div
+        className='header-wrapper'
+        style={{
+          backgroundColor: `rgba(13, 115, 119, ${
+            this.state.headerBackgroundOpacity
+          })`,
+          borderBottom: `1px solid rgba(34, 40, 49, ${
+            this.state.headerBackgroundOpacity
+          })`
+        }}
+      >
         <nav className='header'>
           <Link className='active' to='/'>
-            <img src={logo} alt='Andrew Johnston' className='logo' style={{height: `${this.state.logoHeight}px`}} />
+            <img
+              src={logo}
+              alt='Andrew Johnston'
+              className='logo'
+              style={{ height: `${this.state.logoHeight}px` }}
+            />
           </Link>
 
           <ul className='nav'>
@@ -96,7 +111,19 @@ export class Header extends Component {
               </NavLink>
             </li>
             <li>&nbsp;/&nbsp;</li>
-            {project ? <li><NavLink exact activeClassName='active' to={`/projects/${project}`}>{project}</NavLink></li> : ''}
+            {project ? (
+              <li>
+                <NavLink
+                  exact
+                  activeClassName='active'
+                  to={`/projects/${project}`}
+                >
+                  {project}
+                </NavLink>
+              </li>
+            ) : (
+              ''
+            )}
           </ul>
         </nav>
       </div>

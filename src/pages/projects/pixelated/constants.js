@@ -1,4 +1,4 @@
-export const KEY_VALUES = {SPACE_BAR: 32, LEFT_ARROW: 37, RIGHT_ARROW: 39}
+export const KEY_VALUES = { SPACE_BAR: 32, LEFT_ARROW: 37, RIGHT_ARROW: 39 }
 export const UP_ARROW = 38
 export const DOWN_ARROW = 40
 

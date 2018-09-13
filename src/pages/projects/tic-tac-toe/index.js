@@ -17,24 +17,23 @@ export default class Tictactoe extends Component {
       opponent: null,
       result: '',
       playerTurn: false,
-      board: [
-        ['', '', ''],
-        ['', '', ''],
-        ['', '', '']
-      ],
+      board: [['', '', ''], ['', '', ''], ['', '', '']],
       moveCounter: 0,
       minMaxTurnCount: 0
     }
   }
 
   selection (selection) {
-    this.setState({
-      selected: selection,
-      opponent: selection === 'X' ? 'O' : 'X',
-      playerTurn: selection === 'X'
-    }, () => {
-      if (!this.state.playerTurn) this.AI()
-    })
+    this.setState(
+      {
+        selected: selection,
+        opponent: selection === 'X' ? 'O' : 'X',
+        playerTurn: selection === 'X'
+      },
+      () => {
+        if (!this.state.playerTurn) this.AI()
+      }
+    )
   }
 
   minimax (board, player) {
@@ -46,7 +45,9 @@ export default class Tictactoe extends Component {
     let turnCount = this.state.minMaxTurnCount
 
     // Base case for finding leaf nodes
-    if (turnCount <= 0 || this.checkWinCondition() || !moves) return this.evaluate(board)
+    if (turnCount <= 0 || this.checkWinCondition() || !moves) {
+      return this.evaluate(board)
+    }
 
     // Maximize
     if (player === marker) {
@@ -84,7 +85,7 @@ export default class Tictactoe extends Component {
     // let turnCount = this.state.moveCounter
     // turnCount++
 
-    this.setState((prevState) => {
+    this.setState(prevState => {
       return { minMaxTurnCount: prevState.turnCount++ }
     })
 
@@ -104,7 +105,11 @@ export default class Tictactoe extends Component {
   }
 
   getBestMove () {
-    let board = [[...this.state.board[0]], [...this.state.board[1]], [...this.state.board[2]]]
+    let board = [
+      [...this.state.board[0]],
+      [...this.state.board[1]],
+      [...this.state.board[2]]
+    ]
     let bestScore = MIN
     let currScore
     let bestMove = null
@@ -196,30 +201,40 @@ export default class Tictactoe extends Component {
     // const MAX = 10
     // const MIN = -10
     // let turnCount = state.moveCounter
-    let board = [[...this.state.board[0]], [...this.state.board[1]], [...this.state.board[2]]]
+    let board = [
+      [...this.state.board[0]],
+      [...this.state.board[1]],
+      [...this.state.board[2]]
+    ]
     let move
-    this.setState({
-      minMaxTurnCount: this.state.moveCounter
-    }, () => {
-      move = this.getBestMove()
+    this.setState(
+      {
+        minMaxTurnCount: this.state.moveCounter
+      },
+      () => {
+        move = this.getBestMove()
 
-      try {
-        // console.log('move[0]: ', parseInt(move[0]))
-        // console.log('move[1]: ', parseInt(move[0]))
-        console.log('move: ', move)
-        board[parseInt(move[0], 10)][parseInt(move[1], 10)] = marker
-        // console.log(parseInt(move, 10))
-        // console.log(move[0])
-        // console.log(move[1])
-      } catch (error) {
-        console.log(error)
+        try {
+          // console.log('move[0]: ', parseInt(move[0]))
+          // console.log('move[1]: ', parseInt(move[0]))
+          console.log('move: ', move)
+          board[parseInt(move[0], 10)][parseInt(move[1], 10)] = marker
+          // console.log(parseInt(move, 10))
+          // console.log(move[0])
+          // console.log(move[1])
+        } catch (error) {
+          console.log(error)
+        }
+
+        this.setState(
+          {
+            board: board,
+            playerTurn: true
+          },
+          () => this.checkWinCondition()
+        )
       }
-
-      this.setState({
-        board: board,
-        playerTurn: true
-      }, () => this.checkWinCondition())
-    })
+    )
     // let move = this.getBestMove()
 
     // function minimax (board, player) {
@@ -374,7 +389,7 @@ export default class Tictactoe extends Component {
 
   handleClick (e) {
     if (this.state.playerTurn) {
-      let board = [ ...this.state.board ]
+      let board = [...this.state.board]
       let row = parseInt(e.target.id[0], 10)
       let col = parseInt(e.target.id[1], 10)
       let moveCounter = this.state.moveCounter
@@ -386,63 +401,73 @@ export default class Tictactoe extends Component {
         }
       }
 
-      this.setState({
-        board: board,
-        playerTurn: false,
-        moveCounter: moveCounter
-      }, () => this.checkWinCondition())
+      this.setState(
+        {
+          board: board,
+          playerTurn: false,
+          moveCounter: moveCounter
+        },
+        () => this.checkWinCondition()
+      )
     }
   }
 
   resetGame (e) {
     let callback = () => {
-      this.setState({
-        result: '',
-        board: [
-          ['', '', ''],
-          ['', '', ''],
-          ['', '', '']
-        ],
-        moveCounter: 0,
-        playerTurn: this.state.selected === 'X'
-      }, () => {
-        if (!this.state.playerTurn) this.AI()
-      })
+      this.setState(
+        {
+          result: '',
+          board: [['', '', ''], ['', '', ''], ['', '', '']],
+          moveCounter: 0,
+          playerTurn: this.state.selected === 'X'
+        },
+        () => {
+          if (!this.state.playerTurn) this.AI()
+        }
+      )
 
       delete this.gameEndCallback
     }
 
-    this.setState({
-      result: e.winner
-    }, () => {
-      this.gameEndCallback = setTimeout(callback, 2000)
-    })
+    this.setState(
+      {
+        result: e.winner
+      },
+      () => {
+        this.gameEndCallback = setTimeout(callback, 2000)
+      }
+    )
   }
 
   checkWinCondition () {
-    let board = [ ...this.state.board ]
+    let board = [...this.state.board]
     let winner = null
 
     // Check diagonal
-    if (board[1][1] !== '' &&
-      ((board[0][0] === board[1][1] &&
-        board[2][2] === board[1][1]) || (board[0][2] === board[1][1] &&
-          board[2][0] === board[1][1]))) {
+    if (
+      board[1][1] !== '' &&
+      ((board[0][0] === board[1][1] && board[2][2] === board[1][1]) ||
+        (board[0][2] === board[1][1] && board[2][0] === board[1][1]))
+    ) {
       winner = board[1][1]
     } else {
       // Check horizontal
       for (let row in board) {
-        if (board[row][0] !== '' &&
-        board[row][0] === board[row][1] &&
-        board[row][2] === board[row][1]) {
+        if (
+          board[row][0] !== '' &&
+          board[row][0] === board[row][1] &&
+          board[row][2] === board[row][1]
+        ) {
           winner = board[row][0]
         }
       }
       // Check vertical
       for (let col in board) {
-        if (board[0][col] !== '' &&
-        board[0][col] === board[1][col] &&
-        board[1][col] === board[2][col]) {
+        if (
+          board[0][col] !== '' &&
+          board[0][col] === board[1][col] &&
+          board[1][col] === board[2][col]
+        ) {
           winner = board[0][col]
         }
       }
@@ -474,55 +499,91 @@ export default class Tictactoe extends Component {
               <button
                 onClick={this.selection.bind(this, 'X')}
                 className={`
-                  ${this.state.selected === null ? 'hover' : ''} ${this.state.selected === 'X' ? 'selected' : ''}
+                  ${this.state.selected === null ? 'hover' : ''} ${
+        this.state.selected === 'X' ? 'selected' : ''
+      }
                   `}
                 disabled={this.state.selected}
               >
-                  X
+                X
               </button>
               <button
                 onClick={this.selection.bind(this, 'O')}
                 className={`
-                  ${this.state.selected === null ? 'hover' : ''} ${this.state.selected === 'O' ? 'selected' : ''}
+                  ${this.state.selected === null ? 'hover' : ''} ${
+        this.state.selected === 'O' ? 'selected' : ''
+      }
                   `}
                 disabled={this.state.selected}
               >
-                  O
+                O
               </button>
             </div>
             <div className='result'>{this.state.result}</div>
-            <table className={`tic-tac-toe-gameboard${this.state.selected ? ' active' : ''}`} onClick={this.handleClick.bind(this)}>
+            <table
+              className={`tic-tac-toe-gameboard${
+                this.state.selected ? ' active' : ''
+              }`}
+              onClick={this.handleClick.bind(this)}
+            >
               <tbody>
                 <tr>
-                  <td id='00' className={this.state.board[0][0] !== '' ? 'selected' : ''}>
+                  <td
+                    id='00'
+                    className={this.state.board[0][0] !== '' ? 'selected' : ''}
+                  >
                     {this.state.board[0][0]}
                   </td>
-                  <td id='01' className={this.state.board[0][1] !== '' ? 'selected' : ''}>
+                  <td
+                    id='01'
+                    className={this.state.board[0][1] !== '' ? 'selected' : ''}
+                  >
                     {this.state.board[0][1]}
                   </td>
-                  <td id='02' className={this.state.board[0][2] !== '' ? 'selected' : ''}>
+                  <td
+                    id='02'
+                    className={this.state.board[0][2] !== '' ? 'selected' : ''}
+                  >
                     {this.state.board[0][2]}
                   </td>
                 </tr>
                 <tr>
-                  <td id='10' className={this.state.board[1][0] !== '' ? 'selected' : ''}>
+                  <td
+                    id='10'
+                    className={this.state.board[1][0] !== '' ? 'selected' : ''}
+                  >
                     {this.state.board[1][0]}
                   </td>
-                  <td id='11' className={this.state.board[1][1] !== '' ? 'selected' : ''}>
+                  <td
+                    id='11'
+                    className={this.state.board[1][1] !== '' ? 'selected' : ''}
+                  >
                     {this.state.board[1][1]}
                   </td>
-                  <td id='12' className={this.state.board[1][2] !== '' ? 'selected' : ''}>
+                  <td
+                    id='12'
+                    className={this.state.board[1][2] !== '' ? 'selected' : ''}
+                  >
                     {this.state.board[1][2]}
                   </td>
                 </tr>
                 <tr>
-                  <td id='20' className={this.state.board[2][0] !== '' ? 'selected' : ''}>
+                  <td
+                    id='20'
+                    className={this.state.board[2][0] !== '' ? 'selected' : ''}
+                  >
                     {this.state.board[2][0]}
                   </td>
-                  <td id='21' className={this.state.board[2][1] !== '' ? 'selected' : ''}>
+                  <td
+                    id='21'
+                    className={this.state.board[2][1] !== '' ? 'selected' : ''}
+                  >
                     {this.state.board[2][1]}
                   </td>
-                  <td id='22' className={this.state.board[2][2] !== '' ? 'selected' : ''}>
+                  <td
+                    id='22'
+                    className={this.state.board[2][2] !== '' ? 'selected' : ''}
+                  >
                     {this.state.board[2][2]}
                   </td>
                 </tr>

@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom'
 import * as CONSTANTS from './constants'
 
 export function getWidth (spriteId) {
-  return ReactDOM.findDOMNode(document.getElementById(spriteId)).getBoundingClientRect().width
+  return ReactDOM.findDOMNode(
+    document.getElementById(spriteId)
+  ).getBoundingClientRect().width
 }
 
 export function getHeight (spriteId) {
-  return ReactDOM.findDOMNode(document.getElementById(spriteId)).getBoundingClientRect().height
+  return ReactDOM.findDOMNode(
+    document.getElementById(spriteId)
+  ).getBoundingClientRect().height
 }
 
 export function getStyle (spriteId) {
@@ -15,7 +19,7 @@ export function getStyle (spriteId) {
 }
 
 export function handleKeyDown (e, ...movementQueue) {
-  let [ ...queue ] = movementQueue
+  let [...queue] = movementQueue
 
   let keyIndex = Object.values(CONSTANTS.KEY_VALUES).indexOf(e.keyCode)
 
@@ -48,7 +52,7 @@ export function handleKeyDown (e, ...movementQueue) {
 }
 
 export function handleKeyUp (e, ...movementQueue) {
-  let [ ...queue ] = movementQueue
+  let [...queue] = movementQueue
 
   let keyIndex = Object.values(CONSTANTS.KEY_VALUES).indexOf(e.keyCode)
 

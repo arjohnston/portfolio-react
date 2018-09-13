@@ -16,6 +16,30 @@
     "build": "react-scripts build",
     "deploy": "react-scripts build && firebase deploy",
     "test": "react-scripts test --env=jsdom",
+    "lint": "prettier 'src/components/**/*.js' 'src/pages/**/*.js' --write --single-quote --no-semi && standard --fix",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "lint-staged": "^7.2.2",
+    "precommit": "lint-staged",
+    "prettier": "^1.14.2",
+    "standard": "^12.0.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote --no-semi",
+      "standard --fix",
+      "git add"
+    ]
+  },
+  "standard": {
+    "globals": [
+      "fetch"
+    ],
+    "parser": "babel-eslint",
+    "ignore": [
+      "build/"
+    ]
   }
 }
