@@ -3,7 +3,7 @@ import './card.css'
 
 const Link = require('react-router-dom').Link
 
-export default class Card extends Component {
+export class HomeCard extends Component {
   render () {
     let classList = this.props.size ? this.props.size : ''
 
@@ -46,6 +46,35 @@ export default class Card extends Component {
   }
 }
 
-Card.defaultProps = {
+HomeCard.defaultProps = {
   size: 'one-by-one'
+}
+
+export class ProjectCard extends Component {
+  render () {
+    return (
+      <Link className='project' to={this.props.projectLink}>
+        <div className='project-image-wrapper'>
+          <picture>
+            <source
+              type='image/webp'
+              srcSet={this.props.image.replace(/\.[^/.]+$/, '.webp')}
+            />
+            <img src={this.props.image} alt={this.props.name} />
+          </picture>
+        </div>
+        <div className='project-content'>
+          <h2>{this.props.name}</h2>
+          <p>{this.props.description}</p>
+
+          {this.props.languageIcon && (
+            <img src={this.props.languageIcon} alt='Project Language' />
+          )}
+        </div>
+        <div className='project-right-arrow'>
+          <img src='/svg/right-arrow.svg' alt='right arrow' />
+        </div>
+      </Link>
+    )
+  }
 }

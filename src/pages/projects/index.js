@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
+import { ProjectCard } from '../../components/card/Card'
 import { Helmet } from 'react-helmet'
 import ContentSection from '../../components/content-section/ContentSection'
 import './projects.css'
-
-var Link = require('react-router-dom').Link
 
 export default class extends Component {
   render () {
@@ -19,121 +18,69 @@ export default class extends Component {
         </Helmet>
         <ContentSection>
           <div className='pane-800 center'>
-            <Link className='project' to='/projects/emergency-university'>
-              <div className='project-image-wrapper'>
-                <picture>
-                  <source type='image/webp' srcSet='/images/projects/eu.webp' />
-                  <img
-                    src='/images/projects/eu.png'
-                    alt='Emergency University'
-                  />
-                </picture>
-              </div>
-              <div className='project-content'>
-                <h2>Emergency University</h2>
-                <p>
-                  A react site, powered by next.js. Built from scratch for
-                  Emergency University inc.
-                </p>
-              </div>
-              <div className='project-right-arrow'>
-                <img src='/svg/right-arrow.svg' alt='right arrow' />
-              </div>
-            </Link>
+            <ProjectCard
+              name='Custom Dashboard'
+              description='A fully custom dashboard, built on MERN, utilized as a content management system for Emergency University.'
+              image='/images/projects/dashboard.png'
+              projectLink='/projects/dashboard'
+              languageIcon='/svg/language-icons/react.svg'
+            />
 
-            <Link className='project' to='/projects/pixelated'>
-              <div className='project-image-wrapper'>
-                <picture>
-                  <source
-                    type='image/webp'
-                    srcSet='/images/projects/mario.webp'
-                  />
-                  <img
-                    src='/images/projects/mario.png'
-                    alt='Sidescroller RPG'
-                  />
-                </picture>
-              </div>
-              <div className='project-content'>
-                <h2>Pixelated</h2>
-                <p>
-                  A sidescroller RPG built with create-react-app. Built for fun
-                </p>
-              </div>
-              <div className='project-right-arrow'>
-                <img src='/svg/right-arrow.svg' alt='right arrow' />
-              </div>
-            </Link>
+            <ProjectCard
+              name='Emergency University'
+              description='A react site, powered by next.js. Built from scratch for Emergency University inc.'
+              image='/images/projects/eu.png'
+              projectLink='/projects/emergency-university'
+              languageIcon='/svg/language-icons/react.svg'
+            />
 
-            <Link className='project' to='/projects/markdown-editor'>
-              <div className='project-image-wrapper'>
-                <picture>
-                  <source
-                    type='image/webp'
-                    srcSet='/images/projects/markdown.webp'
-                  />
-                  <img
-                    src='/images/projects/markdown.png'
-                    alt='Markdown Editor'
-                  />
-                </picture>
-              </div>
-              <div className='project-content'>
-                <h2>Markdown Editor</h2>
-                <p>
-                  Inspired by the FreeCodeCamp cirriculum, this is a build tool
-                  for Github's markdown files.
-                </p>
-              </div>
-              <div className='project-right-arrow'>
-                <img src='/svg/right-arrow.svg' alt='right arrow' />
-              </div>
-            </Link>
+            <ProjectCard
+              name='www.massnotification.com'
+              description='A subsidary website built using Next.js for Emergency University.'
+              image='/images/projects/mass-notification.png'
+              projectLink='/projects/mass-notification'
+              languageIcon='/svg/language-icons/react.svg'
+            />
 
-            <Link className='project' to='/projects/simon'>
-              <div className='project-image-wrapper'>
-                <picture>
-                  <source
-                    type='image/webp'
-                    srcSet='/images/projects/simon.webp'
-                  />
-                  <img src='/images/projects/simon.png' alt='Simon Says' />
-                </picture>
-              </div>
-              <div className='project-content'>
-                <h2>Simon Says</h2>
-                <p>
-                  A Simon Says game, inspired by the FreeCodeCamp cirriculum.
-                  Built originally with vanilla javascript, now converted to
-                  React.js using create-react-app.
-                </p>
-              </div>
-              <div className='project-right-arrow'>
-                <img src='/svg/right-arrow.svg' alt='right arrow' />
-              </div>
-            </Link>
+            <ProjectCard
+              name='Pixelated'
+              description='A sidescroller RPG built with create-react-app. Built for fun'
+              image='/images/projects/mario.png'
+              projectLink='/projects/pixelated'
+              languageIcon='/svg/language-icons/react.svg'
+            />
 
-            <Link className='project' to='/projects/tic-tac-toe'>
-              <div className='project-image-wrapper'>
-                <picture>
-                  <source
-                    type='image/webp'
-                    srcSet='/images/projects/tictactoe.webp'
-                  />
-                  <img src='/images/projects/tictactoe.png' alt='Tic Tac Toe' />
-                </picture>
-              </div>
-              <div className='project-content'>
-                <h2>Tic Tac Toe</h2>
-                <p>
-                  Inspired by the FreeCodeCamp cirriculum, this is a fully
-                  functional tic-tac-toe game, against a variable difficulty AI.
-                </p>
-              </div>
-              <div className='project-right-arrow'>
-                <img src='/svg/right-arrow.svg' alt='right arrow' />
-              </div>
-            </Link>
+            <ProjectCard
+              name='Markdown Editor'
+              description='Inspired by the FreeCodeCamp cirriculum, this is a build toolfor Githubs markdown files.'
+              image='/images/projects/markdown.png'
+              projectLink='/projects/markdown-editor'
+              languageIcon='/svg/language-icons/react.svg'
+            />
+
+            <ProjectCard
+              name='Simon Says'
+              description='A Simon Says game, inspired by the FreeCodeCamp cirriculum. Built originally with vanilla javascript, now converted to React.js using create-react-app.'
+              image='/images/projects/simon.png'
+              projectLink='/projects/simon'
+              languageIcon='/svg/language-icons/react.svg'
+            />
+
+            <ProjectCard
+              name='Tic Tac Toe'
+              description='Inspired by the FreeCodeCamp cirriculum, this is a fully functional tic-tac-toe game, against a variable difficulty AI.'
+              image='/images/projects/tictactoe.png'
+              projectLink='/projects/tic-tac-toe'
+              languageIcon='/svg/language-icons/react.svg'
+            />
+
+            <ProjectCard
+              name='Boilerplates'
+              description='Some boilerplates created to make new projects even easier to start.'
+              image='/images/projects/boilerplates.png'
+              projectLink='/projects/boilerplates'
+              languageIcon='/svg/language-icons/react.svg'
+            />
           </div>
         </ContentSection>
       </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Card from '../../components/card/Card'
+import { HomeCard } from '../../components/card/Card'
 import { Helmet } from 'react-helmet'
 import './home.css'
 const Link = require('react-router-dom').Link
@@ -143,7 +143,7 @@ export default class Home extends Component {
           >
             <div className='grid'>
               <div className='grid-section'>
-                <Card
+                <HomeCard
                   size='four-by-four'
                   name='Emergency University'
                   projectLink='/projects/emergency-university'
@@ -154,7 +154,7 @@ export default class Home extends Component {
               </div>
 
               <div className='grid-section'>
-                <Card
+                <HomeCard
                   name='Pixelated'
                   projectLink='/projects/pixelated'
                   image='/images/projects/mario.png'
@@ -162,7 +162,7 @@ export default class Home extends Component {
                   githubLink='#'
                 />
 
-                <Card
+                <HomeCard
                   name='Tic Tac Toe'
                   projectLink='/projects/tic-tac-toe'
                   image='/images/projects/tictactoe.png'
@@ -170,7 +170,7 @@ export default class Home extends Component {
                   githubLink='#'
                 />
 
-                <Card
+                <HomeCard
                   name='Markdown Editor'
                   projectLink='/projects/markdown-editor'
                   image='/images/projects/markdown.png'
@@ -178,7 +178,7 @@ export default class Home extends Component {
                   githubLink='#'
                 />
 
-                <Card
+                <HomeCard
                   name='Simon Says'
                   projectLink='/projects/simon'
                   image='/images/projects/simon.png'
