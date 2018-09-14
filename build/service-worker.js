@@ -1,8 +1,8 @@
 'use strict'
 var precacheConfig = [
-    ['/index.html', '4d661fdad4708630245e355afb1a18a3'],
-    ['/static/css/main.bda11fe4.css', 'a0248ffd3b44179927d1cea7e61ed235'],
-    ['/static/js/main.70725615.js', '49d5a4a6690ca50079dc25f796ed0f01'],
+    ['/index.html', '1a06e95cfa033620c34e6186c24bdca6'],
+    ['/static/css/main.1f2d4eac.css', '09389487e1a57a276d0f506cfa8d1e06'],
+    ['/static/js/main.e85a2441.js', '61130ed4605722f844fec7512100edbe'],
     ['/static/media/logo.d8da14f9.svg', 'd8da14f97b845c9eb66e7857bb104bcf']
   ],
   cacheName =

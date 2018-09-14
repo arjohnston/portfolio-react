@@ -1,18 +1,33 @@
 import React, { Component } from 'react'
+import { Helmet } from 'react-helmet'
 import ContentSection from '../../components/content-section/ContentSection'
 import './projects.css'
 
 var Link = require('react-router-dom').Link
 
-export default class Portfolio extends Component {
+export default class extends Component {
   render () {
     return (
       <div className='project-wrapper'>
+        <Helmet>
+          <title>projects</title>
+          <meta
+            name='description'
+            content='Andrew Johnston is a web developer, specialized in react.js for professional and recreational use.'
+          />
+          <link rel='canonical' href='https://arjohnston.io/projects' />
+        </Helmet>
         <ContentSection>
           <div className='pane-800 center'>
             <Link className='project' to='/projects/emergency-university'>
               <div className='project-image-wrapper'>
-                <img src='/images/projects/eu.png' alt='Emergency University' />
+                <picture>
+                  <source type='image/webp' srcSet='/images/projects/eu.webp' />
+                  <img
+                    src='/images/projects/eu.png'
+                    alt='Emergency University'
+                  />
+                </picture>
               </div>
               <div className='project-content'>
                 <h2>Emergency University</h2>
@@ -28,7 +43,16 @@ export default class Portfolio extends Component {
 
             <Link className='project' to='/projects/pixelated'>
               <div className='project-image-wrapper'>
-                <img src='/images/projects/mario.png' alt='sidescroller' />
+                <picture>
+                  <source
+                    type='image/webp'
+                    srcSet='/images/projects/mario.webp'
+                  />
+                  <img
+                    src='/images/projects/mario.png'
+                    alt='Sidescroller RPG'
+                  />
+                </picture>
               </div>
               <div className='project-content'>
                 <h2>Pixelated</h2>
@@ -43,10 +67,16 @@ export default class Portfolio extends Component {
 
             <Link className='project' to='/projects/markdown-editor'>
               <div className='project-image-wrapper'>
-                <img
-                  src='/images/projects/markdown.png'
-                  alt='markdown previewer'
-                />
+                <picture>
+                  <source
+                    type='image/webp'
+                    srcSet='/images/projects/markdown.webp'
+                  />
+                  <img
+                    src='/images/projects/markdown.png'
+                    alt='Markdown Editor'
+                  />
+                </picture>
               </div>
               <div className='project-content'>
                 <h2>Markdown Editor</h2>
@@ -62,7 +92,13 @@ export default class Portfolio extends Component {
 
             <Link className='project' to='/projects/simon'>
               <div className='project-image-wrapper'>
-                <img src='/images/projects/simon.png' alt='simon says' />
+                <picture>
+                  <source
+                    type='image/webp'
+                    srcSet='/images/projects/simon.webp'
+                  />
+                  <img src='/images/projects/simon.png' alt='Simon Says' />
+                </picture>
               </div>
               <div className='project-content'>
                 <h2>Simon Says</h2>
@@ -79,7 +115,13 @@ export default class Portfolio extends Component {
 
             <Link className='project' to='/projects/tic-tac-toe'>
               <div className='project-image-wrapper'>
-                <img src='/images/projects/tictactoe.png' alt='tic tac toe' />
+                <picture>
+                  <source
+                    type='image/webp'
+                    srcSet='/images/projects/tictactoe.webp'
+                  />
+                  <img src='/images/projects/tictactoe.png' alt='Tic Tac Toe' />
+                </picture>
               </div>
               <div className='project-content'>
                 <h2>Tic Tac Toe</h2>

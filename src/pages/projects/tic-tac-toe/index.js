@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Helmet } from 'react-helmet'
 import './tictactoe.css'
 import ContentSection from '../../../components/content-section/ContentSection'
 
@@ -491,6 +492,17 @@ export default class Tictactoe extends Component {
   render () {
     return (
       <div>
+        <Helmet>
+          <title>Tic Tac Toe</title>
+          <meta
+            name='description'
+            content='A classic that anyone can play. This Tic Tac Toe game is made with React.js.'
+          />
+          <link
+            rel='canonical'
+            href='https://arjohnston.io/projects/tic-tac-toe'
+          />
+        </Helmet>
         <ContentSection>
           <div className='pane-800 center'>
             <h3>Tic-Tac-Toe</h3>

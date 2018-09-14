@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Helmet } from 'react-helmet'
 import './markdown.css'
 import ContentSection from '../../../components/content-section/ContentSection'
 const marked = require('marked')
@@ -27,6 +28,17 @@ export default class Markdown extends Component {
   render () {
     return (
       <div>
+        <Helmet>
+          <title>Markdown Editor</title>
+          <meta
+            name='description'
+            content='Markdown Editor is a web-based text editor that accepts input, and spits out README.md text for your github profile.'
+          />
+          <link
+            rel='canonical'
+            href='https://arjohnston.io/projects/markdown-editor'
+          />
+        </Helmet>
         <ContentSection>
           <div className='pane-800 center'>
             <h3>Markdown Editor</h3>

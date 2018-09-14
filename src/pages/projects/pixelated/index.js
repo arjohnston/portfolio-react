@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Helmet } from 'react-helmet'
 
 import initialState from './initial-state'
 import * as CONSTANTS from './constants'
@@ -926,6 +927,17 @@ export default class Sidescroller extends Component {
   render () {
     return (
       <div>
+        <Helmet>
+          <title>Pixelated</title>
+          <meta
+            name='description'
+            content='Pixelated is a simple sidescrolling RPG, where the object is to get to the end as quickly as possible. How fast can you do it?'
+          />
+          <link
+            rel='canonical'
+            href='https://arjohnston.io/projects/pixelated'
+          />
+        </Helmet>
         <ContentSection>
           <div
             className={`pane center gameboard-foreground ${

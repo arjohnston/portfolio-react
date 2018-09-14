@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Helmet } from 'react-helmet'
 import './simon.css'
 import Settings from './Settings'
 import ContentSection from '../../../components/content-section/ContentSection'
@@ -154,6 +155,14 @@ export default class Simon extends Component {
           !this.state.settingsMenuOpen ? 'is-open' : ''
         }`}
       >
+        <Helmet>
+          <title>Simon Says</title>
+          <meta
+            name='description'
+            content='A web-based recreation of the symbolic game, Simon Says.'
+          />
+          <link rel='canonical' href='https://arjohnston.io/projects/simon' />
+        </Helmet>
         <div className='settings-button' onClick={this.toggleMenu.bind(this)}>
           Settings
         </div>
