@@ -1,7 +1,7 @@
 'use strict'
 var precacheConfig = [
-    ['/index.html', '1a06e95cfa033620c34e6186c24bdca6'],
-    ['/static/css/main.1f2d4eac.css', '09389487e1a57a276d0f506cfa8d1e06'],
+    ['/index.html', '4af066c481d4633248791e4878cc7924'],
+    ['/static/css/main.ce686bd8.css', 'd5397733999806edb966478e64580b2c'],
     ['/static/js/main.e85a2441.js', '61130ed4605722f844fec7512100edbe'],
     ['/static/media/logo.d8da14f9.svg', 'd8da14f97b845c9eb66e7857bb104bcf']
   ],
