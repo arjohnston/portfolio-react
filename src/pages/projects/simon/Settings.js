@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './simon.css'
+import './style.css'
 
 export default class Settings extends Component {
   render () {

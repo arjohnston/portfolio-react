@@ -1,5 +1,7 @@
 .layout-wrapper {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -27,4 +29,20 @@ section {
 
 li {
   list-style: none;
+}
+
+.hero {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: auto;
+  padding-top: 72px;
+  padding-bottom: 72px;
 }

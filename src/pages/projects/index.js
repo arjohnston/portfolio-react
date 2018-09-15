@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
-import { ProjectCard } from '../../components/card/Card'
 import { Helmet } from 'react-helmet'
-import ContentSection from '../../components/content-section/ContentSection'
-import './projects.css'
+
+import Card from '../../components/card/Card'
 
 export default class extends Component {
   render () {
     return (
-      <div className='project-wrapper'>
+      <div style={{ paddingTop: '48px' }}>
         <Helmet>
           <title>projects</title>
           <meta
@@ -16,73 +15,123 @@ export default class extends Component {
           />
           <link rel='canonical' href='https://arjohnston.io/projects' />
         </Helmet>
-        <ContentSection>
-          <div className='pane-800 center'>
-            <ProjectCard
-              name='Custom Dashboard'
-              description='A fully custom dashboard, built on MERN, utilized as a content management system for Emergency University.'
-              image='/images/projects/dashboard.png'
-              projectLink='/projects/dashboard'
-              languageIcon='/svg/language-icons/react.svg'
-            />
+        <div className='grid' style={{ margin: '72px 0' }}>
+          <div className='grid-row'>
+            <div className='grid-section width-40'>
+              <Card
+                size='four-by-four'
+                name='Custom Dashboard'
+                projectLink='/projects/dashboard'
+                image='/images/projects/dashboard.png'
+                languageIcon='/svg/language-icons/react.svg'
+                githubLink='https://github.com/arjohnston/eu-cms'
+              />
+            </div>
 
-            <ProjectCard
-              name='Emergency University'
-              description='A react site, powered by next.js. Built from scratch for Emergency University inc.'
-              image='/images/projects/eu.png'
-              projectLink='/projects/emergency-university'
-              languageIcon='/svg/language-icons/react.svg'
-            />
+            <div className='grid-section width-20'>
+              <Card
+                size='two-by-one'
+                name='Boilerplates'
+                projectLink='/projects/boilerplates'
+                image='/images/projects/boilerplates.png'
+                languageIcon='/svg/language-icons/react.svg'
+                githubLink='https://github.com/arjohnston/boilerplates'
+              />
 
-            <ProjectCard
-              name='www.massnotification.com'
-              description='A subsidary website built using Next.js for Emergency University.'
-              image='/images/projects/mass-notification.png'
-              projectLink='/projects/mass-notification'
-              languageIcon='/svg/language-icons/react.svg'
-            />
+              <Card
+                size='two-by-one'
+                name='Simon Says'
+                projectLink='/projects/simon'
+                image='/images/projects/simon.png'
+                languageIcon='/svg/language-icons/react.svg'
+                githubLink='https://github.com/arjohnston/portfolio-react/tree/master/src/pages/projects/simon'
+              />
+            </div>
 
-            <ProjectCard
-              name='Pixelated'
-              description='A sidescroller RPG built with create-react-app. Built for fun'
-              image='/images/projects/mario.png'
-              projectLink='/projects/pixelated'
-              languageIcon='/svg/language-icons/react.svg'
-            />
-
-            <ProjectCard
-              name='Markdown Editor'
-              description='Inspired by the FreeCodeCamp cirriculum, this is a build toolfor Githubs markdown files.'
-              image='/images/projects/markdown.png'
-              projectLink='/projects/markdown-editor'
-              languageIcon='/svg/language-icons/react.svg'
-            />
-
-            <ProjectCard
-              name='Simon Says'
-              description='A Simon Says game, inspired by the FreeCodeCamp cirriculum. Built originally with vanilla javascript, now converted to React.js using create-react-app.'
-              image='/images/projects/simon.png'
-              projectLink='/projects/simon'
-              languageIcon='/svg/language-icons/react.svg'
-            />
-
-            <ProjectCard
-              name='Tic Tac Toe'
-              description='Inspired by the FreeCodeCamp cirriculum, this is a fully functional tic-tac-toe game, against a variable difficulty AI.'
-              image='/images/projects/tictactoe.png'
-              projectLink='/projects/tic-tac-toe'
-              languageIcon='/svg/language-icons/react.svg'
-            />
-
-            <ProjectCard
-              name='Boilerplates'
-              description='Some boilerplates created to make new projects even easier to start.'
-              image='/images/projects/boilerplates.png'
-              projectLink='/projects/boilerplates'
-              languageIcon='/svg/language-icons/react.svg'
-            />
+            <div className='grid-section width-40'>
+              <Card
+                size='four-by-four'
+                name='Emergency University'
+                projectLink='/projects/emergency-university'
+                image='/images/projects/eu.png'
+                languageIcon='/svg/language-icons/react.svg'
+                githubLink='https://github.com/arjohnston/eu-react'
+              />
+            </div>
           </div>
-        </ContentSection>
+
+          <div className='grid-row'>
+            <div className='grid-section width-20'>
+              <Card
+                size='two-by-one'
+                name='Markdown Editor'
+                projectLink='/projects/markdown-editor'
+                image='/images/projects/markdown.png'
+                languageIcon='/svg/language-icons/react.svg'
+                githubLink='https://github.com/arjohnston/portfolio-react/tree/master/src/pages/projects/markdown-editor'
+              />
+              <Card
+                size='two-by-one'
+                name='Tic Tac Toe'
+                projectLink='/projects/tic-tac-toe'
+                image='/images/projects/tictactoe.png'
+                languageIcon='/svg/language-icons/react.svg'
+                githubLink='https://github.com/arjohnston/portfolio-react/tree/master/src/pages/projects/tic-tac-toe'
+              />
+            </div>
+
+            <div className='grid-section width-40'>
+              <Card
+                size='two-by-one'
+                name='www.massnotification.com'
+                projectLink='/projects/mass-notification'
+                image='/images/projects/mass-notification.png'
+                languageIcon='/svg/language-icons/react.svg'
+                githubLink='#'
+              />
+              <Card
+                size='two-by-one'
+                name='Bloc'
+                projectLink='/projects/bloc'
+                image='/images/projects/bloc.png'
+                languageIcon='/svg/language-icons/swift.svg'
+                githubLink='https://github.com/arjohnston/Bloc'
+              />
+            </div>
+
+            <div className='grid-section width-40'>
+              <Card
+                size='two-by-one'
+                name='Pixelated'
+                projectLink='/projects/pixelated'
+                image='/images/projects/mario.png'
+                languageIcon='/svg/language-icons/react.svg'
+                githubLink='https://github.com/arjohnston/portfolio-react/tree/master/src/pages/projects/pixelated'
+              />
+              <Card
+                size='two-by-one'
+                name='Directions'
+                projectLink='/projects/directions'
+                image='/images/projects/directions.png'
+                languageIcon='/svg/language-icons/swift.svg'
+                githubLink='https://github.com/arjohnston/Directions'
+              />
+            </div>
+          </div>
+
+          <div className='grid-row'>
+            <div className='grid-section width-40'>
+              <Card
+                size='two-by-one'
+                name='portfolio'
+                projectLink='/projects/portfolio'
+                image='/images/projects/portfolio.png'
+                languageIcon='/svg/language-icons/react.svg'
+                githubLink='https://github.com/arjohnston/portfolio-react'
+              />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

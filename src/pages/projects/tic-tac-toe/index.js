@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
-import './tictactoe.css'
-import ContentSection from '../../../components/content-section/ContentSection'
+
+// import ContentSection from '../../../components/content-section/ContentSection'
+import './style.css'
 
 const TIE = 'The game was a draw!'
 const PLAYER = 'You won the game!'
@@ -20,7 +21,8 @@ export default class Tictactoe extends Component {
       playerTurn: false,
       board: [['', '', ''], ['', '', ''], ['', '', '']],
       moveCounter: 0,
-      minMaxTurnCount: 0
+      minMaxTurnCount: 0,
+      underConstructionMessageShown: true
     }
   }
 
@@ -503,106 +505,181 @@ export default class Tictactoe extends Component {
             href='https://arjohnston.io/projects/tic-tac-toe'
           />
         </Helmet>
-        <ContentSection>
-          <div className='pane-800 center'>
-            <h3>Tic-Tac-Toe</h3>
-            <div className='selection'>
-              Play as:
-              <button
-                onClick={this.selection.bind(this, 'X')}
-                className={`
-                  ${this.state.selected === null ? 'hover' : ''} ${
-        this.state.selected === 'X' ? 'selected' : ''
-      }
-                  `}
-                disabled={this.state.selected}
-              >
-                X
-              </button>
-              <button
-                onClick={this.selection.bind(this, 'O')}
-                className={`
-                  ${this.state.selected === null ? 'hover' : ''} ${
-        this.state.selected === 'O' ? 'selected' : ''
-      }
-                  `}
-                disabled={this.state.selected}
-              >
-                O
-              </button>
-            </div>
-            <div className='result'>{this.state.result}</div>
-            <table
-              className={`tic-tac-toe-gameboard${
-                this.state.selected ? ' active' : ''
-              }`}
-              onClick={this.handleClick.bind(this)}
+        {this.state.underConstructionMessageShown && (
+          <div
+            style={{
+              padding: '72px 0',
+              maxWidth: '600px',
+              margin: 'auto',
+              display: 'flex',
+              flexDirection: 'column'
+            }}
+          >
+            <h3>
+              This app is under construction, feel free to preview it as-is or
+              view the progress in the code.
+            </h3>
+            <picture style={{ width: '100%' }}>
+              <source type='image/webp' srcSet='/images/construction.webp' />
+              <img
+                style={{ width: '100%' }}
+                src='/images/construction.png'
+                alt='Under Construction'
+              />
+            </picture>
+            <div
+              style={{ color: 'white', cursor: 'pointer', margin: '12px auto' }}
+              className='portfolio-cta'
+              onClick={() =>
+                this.setState({ underConstructionMessageShown: false })
+              }
             >
-              <tbody>
-                <tr>
-                  <td
-                    id='00'
-                    className={this.state.board[0][0] !== '' ? 'selected' : ''}
-                  >
-                    {this.state.board[0][0]}
-                  </td>
-                  <td
-                    id='01'
-                    className={this.state.board[0][1] !== '' ? 'selected' : ''}
-                  >
-                    {this.state.board[0][1]}
-                  </td>
-                  <td
-                    id='02'
-                    className={this.state.board[0][2] !== '' ? 'selected' : ''}
-                  >
-                    {this.state.board[0][2]}
-                  </td>
-                </tr>
-                <tr>
-                  <td
-                    id='10'
-                    className={this.state.board[1][0] !== '' ? 'selected' : ''}
-                  >
-                    {this.state.board[1][0]}
-                  </td>
-                  <td
-                    id='11'
-                    className={this.state.board[1][1] !== '' ? 'selected' : ''}
-                  >
-                    {this.state.board[1][1]}
-                  </td>
-                  <td
-                    id='12'
-                    className={this.state.board[1][2] !== '' ? 'selected' : ''}
-                  >
-                    {this.state.board[1][2]}
-                  </td>
-                </tr>
-                <tr>
-                  <td
-                    id='20'
-                    className={this.state.board[2][0] !== '' ? 'selected' : ''}
-                  >
-                    {this.state.board[2][0]}
-                  </td>
-                  <td
-                    id='21'
-                    className={this.state.board[2][1] !== '' ? 'selected' : ''}
-                  >
-                    {this.state.board[2][1]}
-                  </td>
-                  <td
-                    id='22'
-                    className={this.state.board[2][2] !== '' ? 'selected' : ''}
-                  >
-                    {this.state.board[2][2]}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+              preview game
+            </div>
+            <a
+              style={{ margin: '12px auto' }}
+              className='portfolio-cta'
+              href='https://github.com/arjohnston/portfolio-react/tree/master/src/pages/projects/tic-tac-toe'
+              target='_blank'
+              rel='noopener noreferrer'
+              title='Visit my Github profile'
+            >
+              view code
+            </a>
           </div>
-        </ContentSection>
+        )}
+        {!this.state.underConstructionMessageShown && (
+          // <ContentSection>
+          <div className='app-wrapper'>
+            <div>
+              <h3>Tic-Tac-Toe</h3>
+              <div className='selection'>
+                Play as:
+                <button
+                  onClick={this.selection.bind(this, 'X')}
+                  className={`
+                  ${this.state.selected === null ? 'hover' : ''} ${
+            this.state.selected === 'X' ? 'selected' : ''
+          }
+                  `}
+                  disabled={this.state.selected}
+                >
+                  X
+                </button>
+                <button
+                  onClick={this.selection.bind(this, 'O')}
+                  className={`
+                  ${this.state.selected === null ? 'hover' : ''} ${
+            this.state.selected === 'O' ? 'selected' : ''
+          }
+                  `}
+                  disabled={this.state.selected}
+                >
+                  O
+                </button>
+              </div>
+              <div className='result'>{this.state.result}</div>
+              <table
+                className={`tic-tac-toe-gameboard${
+                  this.state.selected ? ' active' : ''
+                }`}
+                onClick={this.handleClick.bind(this)}
+              >
+                <tbody>
+                  <tr>
+                    <td
+                      id='00'
+                      className={
+                        this.state.board[0][0] !== '' ? 'selected' : ''
+                      }
+                    >
+                      {this.state.board[0][0]}
+                    </td>
+                    <td
+                      id='01'
+                      className={
+                        this.state.board[0][1] !== '' ? 'selected' : ''
+                      }
+                    >
+                      {this.state.board[0][1]}
+                    </td>
+                    <td
+                      id='02'
+                      className={
+                        this.state.board[0][2] !== '' ? 'selected' : ''
+                      }
+                    >
+                      {this.state.board[0][2]}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      id='10'
+                      className={
+                        this.state.board[1][0] !== '' ? 'selected' : ''
+                      }
+                    >
+                      {this.state.board[1][0]}
+                    </td>
+                    <td
+                      id='11'
+                      className={
+                        this.state.board[1][1] !== '' ? 'selected' : ''
+                      }
+                    >
+                      {this.state.board[1][1]}
+                    </td>
+                    <td
+                      id='12'
+                      className={
+                        this.state.board[1][2] !== '' ? 'selected' : ''
+                      }
+                    >
+                      {this.state.board[1][2]}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      id='20'
+                      className={
+                        this.state.board[2][0] !== '' ? 'selected' : ''
+                      }
+                    >
+                      {this.state.board[2][0]}
+                    </td>
+                    <td
+                      id='21'
+                      className={
+                        this.state.board[2][1] !== '' ? 'selected' : ''
+                      }
+                    >
+                      {this.state.board[2][1]}
+                    </td>
+                    <td
+                      id='22'
+                      className={
+                        this.state.board[2][2] !== '' ? 'selected' : ''
+                      }
+                    >
+                      {this.state.board[2][2]}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <a
+              className='portfolio-cta'
+              href='https://github.com/arjohnston/portfolio-react/tree/master/src/pages/projects/tic-tac-toe'
+              target='_blank'
+              rel='noopener noreferrer'
+              title='Visit my Github profile'
+            >
+              view code
+            </a>
+            {/* </ContentSection> */}
+          </div>
+        )}
       </div>
     )
   }

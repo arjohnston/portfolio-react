@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import './footer.css'
+
 import SocialButtons from '../SocialButtons'
+import './style.css'
 
 export default class Footer extends Component {
   render () {

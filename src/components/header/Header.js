@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import './header.css'
-import logo from './logo.svg'
 import { withRouter } from 'react-router'
+import { Link, NavLink } from 'react-router-dom'
 
-const Link = require('react-router-dom').Link
-const NavLink = require('react-router-dom').NavLink
+import './style.css'
+import logo from './logo.svg'
 
 export class Header extends Component {
   constructor () {

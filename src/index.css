@@ -46,26 +46,3 @@ h3 {
   letter-spacing: 1px;
   font-weight: 400;
 }
-
-.grid {
-  width: 100%;
-  display: flex;
-  max-width: 1250px;
-  margin: auto;
-}
-
-.grid-section {
-  width: 50%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 900px) {
-  .grid {
-    flex-direction: column;
-  }
-
-  .grid-section {
-    width: 100%;
-  }
-}

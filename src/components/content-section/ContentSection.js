@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './content-section.css'
+import './style.css'
 
 export default class ContentSection extends Component {
   render () {

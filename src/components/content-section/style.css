@@ -1,11 +1,21 @@
 .content-section {
   max-width: 1250px;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   margin: auto;
-  min-height: calc(100vh - 206px);
+  /* min-height: calc(100vh - 206px); */
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.pane {
+  padding: 12px;
+}
+
+.pane img {
+  box-shadow: 0 4px 25px rgba(0,0,0,0.38);
+  display: block;
+  margin: auto;
 }
 
 .pane-50 {

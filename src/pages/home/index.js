@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { HomeCard } from '../../components/card/Card'
 import { Helmet } from 'react-helmet'
+import { Link } from 'react-router-dom'
+
+import Card from '../../components/card/Card'
 import './home.css'
-const Link = require('react-router-dom').Link
 
 const heroText = ['web developer.', 'creator.', 'designer.']
 const HERO_TEXT_ANIMATION_INTERVAL = 1500
@@ -129,7 +130,9 @@ export default class Home extends Component {
           <link rel='canonical' href='https://arjohnston.io/' />
         </Helmet>
         <div className='home-wrapper'>
-          <section className={`hero${this.state.pageLoaded ? ' active' : ''}`}>
+          <section
+            className={`home-hero${this.state.pageLoaded ? ' active' : ''}`}
+          >
             <div className='hero-wrapper'>
               <h1>andrew johnston</h1>
               <span style={this.state.heroTextStyle}>
@@ -142,49 +145,86 @@ export default class Home extends Component {
             className={`portfolio${this.state.pageLoaded ? ' active' : ''}`}
           >
             <div className='grid'>
-              <div className='grid-section'>
-                <HomeCard
-                  size='four-by-four'
-                  name='Emergency University'
-                  projectLink='/projects/emergency-university'
-                  image='/images/projects/eu.png'
-                  languageIcon='/svg/language-icons/react.svg'
-                  githubLink='#'
-                />
+              <h1 style={{ marginBottom: '60px', fontWeight: '200' }}>
+                notable projects
+              </h1>
+              <div className='grid-row'>
+                <div className='grid-section width-40'>
+                  <Card
+                    size='four-by-four'
+                    name='Custom Dashboard'
+                    projectLink='/projects/dashboard'
+                    image='/images/projects/dashboard.png'
+                    languageIcon='/svg/language-icons/react.svg'
+                    githubLink='https://github.com/arjohnston/eu-cms'
+                  />
+                </div>
+
+                <div className='grid-section width-20'>
+                  <Card
+                    size='two-by-one'
+                    name='Boilerplates'
+                    projectLink='/projects/boilerplates'
+                    image='/images/projects/boilerplates.png'
+                    languageIcon='/svg/language-icons/react.svg'
+                    githubLink='https://github.com/arjohnston/boilerplates'
+                  />
+
+                  <Card
+                    size='two-by-one'
+                    name='Simon Says'
+                    projectLink='/projects/simon'
+                    image='/images/projects/simon.png'
+                    languageIcon='/svg/language-icons/react.svg'
+                    githubLink='https://github.com/arjohnston/portfolio-react/tree/master/src/pages/projects/simon'
+                  />
+                </div>
+
+                <div className='grid-section width-40'>
+                  <Card
+                    size='four-by-four'
+                    name='Emergency University'
+                    projectLink='/projects/emergency-university'
+                    image='/images/projects/eu.png'
+                    languageIcon='/svg/language-icons/react.svg'
+                    githubLink='https://github.com/arjohnston/eu-react'
+                  />
+                </div>
               </div>
 
-              <div className='grid-section'>
-                <HomeCard
-                  name='Pixelated'
-                  projectLink='/projects/pixelated'
-                  image='/images/projects/mario.png'
-                  languageIcon='/svg/language-icons/react.svg'
-                  githubLink='#'
-                />
+              <div className='grid-row'>
+                <div className='grid-section width-20'>
+                  <Card
+                    size='two-by-one'
+                    name='Markdown Editor'
+                    projectLink='/projects/markdown-editor'
+                    image='/images/projects/markdown.png'
+                    languageIcon='/svg/language-icons/react.svg'
+                    githubLink='https://github.com/arjohnston/portfolio-react/tree/master/src/pages/projects/markdown-editor'
+                  />
+                </div>
 
-                <HomeCard
-                  name='Tic Tac Toe'
-                  projectLink='/projects/tic-tac-toe'
-                  image='/images/projects/tictactoe.png'
-                  languageIcon='/svg/language-icons/react.svg'
-                  githubLink='#'
-                />
+                <div className='grid-section width-40'>
+                  <Card
+                    size='two-by-one'
+                    name='www.massnotification.com'
+                    projectLink='/projects/mass-notification'
+                    image='/images/projects/mass-notification.png'
+                    languageIcon='/svg/language-icons/react.svg'
+                    githubLink='#'
+                  />
+                </div>
 
-                <HomeCard
-                  name='Markdown Editor'
-                  projectLink='/projects/markdown-editor'
-                  image='/images/projects/markdown.png'
-                  languageIcon='/svg/language-icons/react.svg'
-                  githubLink='#'
-                />
-
-                <HomeCard
-                  name='Simon Says'
-                  projectLink='/projects/simon'
-                  image='/images/projects/simon.png'
-                  languageIcon='/svg/language-icons/react.svg'
-                  githubLink='#'
-                />
+                <div className='grid-section width-40'>
+                  <Card
+                    size='two-by-one'
+                    name='Pixelated'
+                    projectLink='/projects/pixelated'
+                    image='/images/projects/mario.png'
+                    languageIcon='/svg/language-icons/react.svg'
+                    githubLink='https://github.com/arjohnston/portfolio-react/tree/master/src/pages/projects/pixelated'
+                  />
+                </div>
               </div>
             </div>
 

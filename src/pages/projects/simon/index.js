@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
-import './simon.css'
+
 import Settings from './Settings'
-import ContentSection from '../../../components/content-section/ContentSection'
+// import ContentSection from '../../../components/content-section/ContentSection'
+import './style.css'
 
 export default class Simon extends Component {
   constructor (props) {
@@ -18,7 +19,8 @@ export default class Simon extends Component {
       boardSpaceActive: null,
       arrayOfMoves: [],
       playerArrayOfMoves: [],
-      winCondition: 20
+      winCondition: 20,
+      underConstructionMessageShown: true
     }
   }
 
@@ -224,22 +226,79 @@ export default class Simon extends Component {
 
     return (
       <div>
-        <ContentSection>
-          <div className='pane-800 center'>
-            <h3 className='game-title'>simon says</h3>
-            <Game />
-            <Settings
-              menuOpen={this.state.settingsMenuOpen}
-              toggleMenu={this.toggleMenu.bind(this)}
-              toggleSound={this.toggleSound.bind(this)}
-              toggleStrictMode={this.toggleStrictMode.bind(this)}
-              setDifficulty={this.setDifficulty.bind(this)}
-              difficulty={this.state.gameDifficulty}
-              strictMode={this.state.strictMode}
-              sound={this.state.sound}
-            />
+        {this.state.underConstructionMessageShown && (
+          <div
+            style={{
+              padding: '72px 0',
+              maxWidth: '600px',
+              margin: 'auto',
+              display: 'flex',
+              flexDirection: 'column'
+            }}
+          >
+            <h3>
+              This app is under construction, feel free to preview it as-is or
+              view the progress in the code.
+            </h3>
+            <picture style={{ width: '100%' }}>
+              <source type='image/webp' srcSet='/images/construction.webp' />
+              <img
+                style={{ width: '100%' }}
+                src='/images/construction.png'
+                alt='Under Construction'
+              />
+            </picture>
+            <div
+              style={{ color: 'white', cursor: 'pointer', margin: '12px auto' }}
+              className='portfolio-cta'
+              onClick={() =>
+                this.setState({ underConstructionMessageShown: false })
+              }
+            >
+              preview game
+            </div>
+            <a
+              style={{ margin: '12px auto' }}
+              className='portfolio-cta'
+              href='https://github.com/arjohnston/portfolio-react/tree/master/src/pages/projects/simon'
+              target='_blank'
+              rel='noopener noreferrer'
+              title='Visit my Github profile'
+            >
+              view code
+            </a>
           </div>
-        </ContentSection>
+        )}
+        {!this.state.underConstructionMessageShown && (
+          // <ContentSection>
+          <div className='app-wrapper'>
+            <div>
+              <h3 className='game-title'>simon says</h3>
+              <Game />
+              <Settings
+                menuOpen={this.state.settingsMenuOpen}
+                toggleMenu={this.toggleMenu.bind(this)}
+                toggleSound={this.toggleSound.bind(this)}
+                toggleStrictMode={this.toggleStrictMode.bind(this)}
+                setDifficulty={this.setDifficulty.bind(this)}
+                difficulty={this.state.gameDifficulty}
+                strictMode={this.state.strictMode}
+                sound={this.state.sound}
+              />
+            </div>
+
+            <a
+              className='portfolio-cta'
+              href='https://github.com/arjohnston/portfolio-react/tree/master/src/pages/projects/simon'
+              target='_blank'
+              rel='noopener noreferrer'
+              title='Visit my Github profile'
+            >
+              view code
+            </a>
+            {/* </ContentSection> */}
+          </div>
+        )}
       </div>
     )
   }

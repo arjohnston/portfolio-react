@@ -22,8 +22,8 @@ import {
   centerCameraX
 } from './movement'
 
-import './pixelated.css'
-import ContentSection from '../../../components/content-section/ContentSection'
+import './style.css'
+// import ContentSection from '../../../components/content-section/ContentSection'
 
 // full screen game eventually
 // game name = pixels
@@ -58,10 +58,12 @@ export default class Sidescroller extends Component {
     super(props)
 
     this.state = initialState
+    this.state.underConstructionMessageShown = true
   }
 
   componentDidMount () {
-    this.loadGame()
+    // commented out because of underConstructionMessageShown
+    // this.loadGame()
   }
 
   componentWillMount () {
@@ -938,505 +940,569 @@ export default class Sidescroller extends Component {
             href='https://arjohnston.io/projects/pixelated'
           />
         </Helmet>
-        <ContentSection>
+        {this.state.underConstructionMessageShown && (
           <div
-            className={`pane center gameboard-foreground ${
-              this.state.mouseTimer < 2 ? 'show-mouse' : ''
-            }`}
-            id='gameboard-foreground'
             style={{
-              height: CONSTANTS.SCREEN_HEIGHT,
-              width: CONSTANTS.SCREEN_WIDTH,
-              backgroundColor: '#AACDF8'
+              padding: '72px 0',
+              maxWidth: '600px',
+              margin: 'auto',
+              display: 'flex',
+              flexDirection: 'column'
             }}
-            onMouseMove={this.showMouse.bind(this)}
           >
+            <h3>
+              This app is under construction, feel free to preview it as-is or
+              view the progress in the code.
+            </h3>
+            <picture style={{ width: '100%' }}>
+              <source type='image/webp' srcSet='/images/construction.webp' />
+              <img
+                style={{ width: '100%' }}
+                src='/images/construction.png'
+                alt='Under Construction'
+              />
+            </picture>
             <div
-              className='game-menu'
-              style={{ display: this.state.menuState ? 'flex' : 'none' }}
+              style={{ color: 'white', cursor: 'pointer', margin: '12px auto' }}
+              className='portfolio-cta'
+              onClick={() =>
+                this.setState({ underConstructionMessageShown: false })
+              }
+            >
+              preview game
+            </div>
+            <a
+              style={{ margin: '12px auto' }}
+              className='portfolio-cta'
+              href='https://github.com/arjohnston/portfolio-react/tree/master/src/pages/projects/pixelated'
+              target='_blank'
+              rel='noopener noreferrer'
+              title='Visit my Github profile'
+            >
+              view code
+            </a>
+          </div>
+        )}
+        {!this.state.underConstructionMessageShown && (
+          <div className='app-wrapper'>
+            {/* // <ContentSection> */}
+            <div
+              className={`gameboard-foreground ${
+                this.state.mouseTimer < 2 ? 'show-mouse' : ''
+              }`}
+              id='gameboard-foreground'
+              style={{
+                height: CONSTANTS.SCREEN_HEIGHT,
+                width: CONSTANTS.SCREEN_WIDTH,
+                backgroundColor: '#AACDF8'
+              }}
+              onMouseMove={this.showMouse.bind(this)}
             >
               <div
-                style={{
-                  display:
-                    this.state.menuState === 'startMenu' ? 'flex' : 'none'
-                }}
+                className='game-menu'
+                style={{ display: this.state.menuState ? 'flex' : 'none' }}
               >
-                <img
-                  src='/svg/projects/pixelated/pixelated-logo.svg'
-                  alt='Pixels'
-                />
-                <button onClick={this.handleGameState.bind(this, 'startGame')}>
-                  Start
-                </button>
-                <button
-                  onClick={this.handleGameState.bind(this, 'showControlMenu')}
-                >
-                  Controls
-                </button>
-              </div>
-              <div
-                style={{
-                  display:
-                    this.state.menuState === 'pauseMenu' ? 'flex' : 'none'
-                }}
-              >
-                <img
-                  src='/svg/projects/pixelated/pixelated-logo.svg'
-                  alt='Pixels'
-                />
-                <button onClick={this.handleGameState.bind(this, 'resumeGame')}>
-                  Resume
-                </button>
-                <button
-                  onClick={this.handleGameState.bind(this, 'showControlMenu')}
-                >
-                  Controls
-                </button>
-              </div>
-              <div
-                className='control-menu'
-                style={{
-                  display:
-                    this.state.menuState === 'showControlMenu' ? 'flex' : 'none'
-                }}
-              >
-                <span
+                <div
                   style={{
-                    color: 'white',
-                    textAlign: 'center',
-                    marginBottom: '20px'
+                    display:
+                      this.state.menuState === 'startMenu' ? 'flex' : 'none'
                   }}
                 >
-                  Use the keyboard to control
-                </span>
-                <div>
-                  <svg width='30' height='30' viewBox='0 0 40 40'>
-                    <path fill='#fff' d='M20 5v7h14v16h-14v7l-15-15 15-15z' />
-                  </svg>
-                  Move left (left-arrow)
+                  <img
+                    src='/svg/projects/pixelated/pixelated-logo.svg'
+                    alt='Pixels'
+                  />
+                  <button
+                    onClick={this.handleGameState.bind(this, 'startGame')}
+                  >
+                    Start
+                  </button>
+                  <button
+                    onClick={this.handleGameState.bind(this, 'showControlMenu')}
+                  >
+                    Controls
+                  </button>
                 </div>
-                <div>
-                  <svg width='30' height='30' viewBox='0 0 40 40'>
-                    <path
-                      fill='#fff'
-                      d='M35 20l-15 15v-7h-14v-16h14v-7l15 15z'
-                    />
-                  </svg>
-                  Move right (right-arrow)
-                </div>
-                <div>
-                  <svg width='36' height='36' viewBox='0 0 48 48'>
-                    <path
-                      fill='#fff'
-                      d='M36 18h4.031v12h-32.063v-12h4.031v7.969h24v-7.969z'
-                    />
-                  </svg>
-                  Jump (space-bar)
-                </div>
-                <button
-                  onClick={this.handleGameState.bind(
-                    this,
-                    this.state.gameInProgress ? 'pauseMenu' : 'startMenu'
-                  )}
+                <div
+                  style={{
+                    display:
+                      this.state.menuState === 'pauseMenu' ? 'flex' : 'none'
+                  }}
                 >
-                  Return
-                </button>
+                  <img
+                    src='/svg/projects/pixelated/pixelated-logo.svg'
+                    alt='Pixels'
+                  />
+                  <button
+                    onClick={this.handleGameState.bind(this, 'resumeGame')}
+                  >
+                    Resume
+                  </button>
+                  <button
+                    onClick={this.handleGameState.bind(this, 'showControlMenu')}
+                  >
+                    Controls
+                  </button>
+                </div>
+                <div
+                  className='control-menu'
+                  style={{
+                    display:
+                      this.state.menuState === 'showControlMenu'
+                        ? 'flex'
+                        : 'none'
+                  }}
+                >
+                  <span
+                    style={{
+                      color: 'white',
+                      textAlign: 'center',
+                      marginBottom: '20px'
+                    }}
+                  >
+                    Use the keyboard to control
+                  </span>
+                  <div>
+                    <svg width='30' height='30' viewBox='0 0 40 40'>
+                      <path fill='#fff' d='M20 5v7h14v16h-14v7l-15-15 15-15z' />
+                    </svg>
+                    Move left (left-arrow)
+                  </div>
+                  <div>
+                    <svg width='30' height='30' viewBox='0 0 40 40'>
+                      <path
+                        fill='#fff'
+                        d='M35 20l-15 15v-7h-14v-16h14v-7l15 15z'
+                      />
+                    </svg>
+                    Move right (right-arrow)
+                  </div>
+                  <div>
+                    <svg width='36' height='36' viewBox='0 0 48 48'>
+                      <path
+                        fill='#fff'
+                        d='M36 18h4.031v12h-32.063v-12h4.031v7.969h24v-7.969z'
+                      />
+                    </svg>
+                    Jump (space-bar)
+                  </div>
+                  <button
+                    onClick={this.handleGameState.bind(
+                      this,
+                      this.state.gameInProgress ? 'pauseMenu' : 'startMenu'
+                    )}
+                  >
+                    Return
+                  </button>
+                </div>
+              </div>
+              <div
+                className='gameboard-wrapper'
+                style={{
+                  width: CONSTANTS.BOARD_WIDTH,
+                  height: CONSTANTS.SCREEN_HEIGHT,
+                  transition: 'transform 0.3s'
+                }}
+                id='gameboard-wrapper'
+              >
+                <div className='gameboard-ground' id='gameboard-ground-1' />
+                <div className='gameboard-ground' id='gameboard-ground-2' />
+                <div className='gameboard-ground' id='gameboard-ground-3' />
+                <div className='gameboard-ground' id='gameboard-ground-4' />
+                <div className='clouds-1-sprite clouds' id='clouds-1-sprite' />
+                <div className='clouds-2-sprite clouds' id='clouds-2-sprite' />
+                <div className='clouds-3-sprite clouds' id='clouds-3-sprite' />
+                <div className='clouds-1-sprite clouds' id='clouds-4-sprite' />
+                <div className='clouds-2-sprite clouds' id='clouds-5-sprite' />
+                <div className='clouds-3-sprite clouds' id='clouds-6-sprite' />
+                {/* <div
+                  className='bush-1-sprite bush'
+                  id='bush-1-sprite-1'
+                /> */}
+                {/* <div
+                  className='bush-1-sprite bush'
+                  id='bush-1-sprite-2'
+                /> */}
+                {/* <div
+                  className='bush-1-sprite bush'
+                  id='bush-1-sprite-3'
+                />
+                <div
+                  className='bush-1-sprite bush'
+                  id='bush-1-sprite-4'
+                />
+                <div
+                  className='bush-1-sprite bush'
+                  id='bush-1-sprite-5'
+                />
+                <div
+                  className='bush-1-sprite bush'
+                  id='bush-1-sprite-6'
+                />
+                <div
+                  className='bush-1-sprite bush'
+                  id='bush-1-sprite-7'
+                />
+                <div
+                  className='bush-1-sprite bush'
+                  id='bush-1-sprite-8'
+                />
+                <div
+                  className='bush-1-sprite bush'
+                  id='bush-1-sprite-9'
+                />
+                <div
+                  className='bush-2-sprite bush'
+                  id='bush-2-sprite-1'
+                />
+                <div
+                  className='bush-2-sprite bush'
+                  id='bush-2-sprite-2'
+                />
+                <div
+                  className='bush-2-sprite bush'
+                  id='bush-2-sprite-3'
+                />
+                <div
+                  className='bush-2-sprite bush'
+                  id='bush-2-sprite-4'
+                />
+                <div
+                  className='bush-2-sprite bush'
+                  id='bush-2-sprite-5'
+                />
+                <div
+                  className='bush-2-sprite bush'
+                  id='bush-2-sprite-6'
+                />
+                <div
+                  className='bush-2-sprite bush'
+                  id='bush-2-sprite-7'
+                /> */}
+                {/* <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-1'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-2'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-3'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-4'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-5'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-6'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-7'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-8'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-9'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-10'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-11'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-12'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-13'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-14'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-15'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-16'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-17'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-18'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-19'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-20'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-21'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-22'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-23'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-24'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-25'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-26'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-27'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-28'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-29'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-30'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-31'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-32'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-33'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-34'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-35'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-36'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-37'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-38'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-39'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-40'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-41'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-42'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-43'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-44'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-45'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-46'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-47'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-48'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-49'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-50'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-51'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-52'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-53'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-54'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-55'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-56'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-57'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-58'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-59'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-60'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-61'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-62'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-63'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-64'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-65'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-66'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-67'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-68'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-69'
+                />
+                <div
+                  className='box-sprite-1 box'
+                  id='box-sprite-70'
+                /> */}
+                <div className='enemy-sprite' id='enemy-1-sprite'>
+                  {/* <img
+                    src={require('../../../assets/enemy-spritesheet.png')}
+                    alt='enemy sprite'
+                    id='enemy-spritesheet'
+                  /> */}
+                </div>
+                <div className='player-sprite' id='player-sprite'>
+                  {/* <img
+                    src={require('../../../assets/player-spritesheet.png')}
+                    alt='player sprite'
+                    id='player-spritesheet'
+                  /> */}
+                </div>
+              </div>
+              <div className='score-wrapper'>
+                <div className='score-coin' />x{this.state.score}
+              </div>
+              <div
+                className='pause-button'
+                style={{ display: !this.state.menuState ? 'flex' : 'none' }}
+                onClick={this.handleGameState.bind(this, 'pauseMenu')}
+              />
+              <div className='timer'>
+                <svg width='24' height='24' viewBox='0 0 24 24'>
+                  <path d='M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z' />
+                </svg>
+                {this.state.gameTime}
               </div>
             </div>
-            <div
-              className='gameboard-wrapper'
-              style={{
-                width: CONSTANTS.BOARD_WIDTH,
-                height: CONSTANTS.SCREEN_HEIGHT,
-                transition: 'transform 0.3s'
-              }}
-              id='gameboard-wrapper'
+
+            <a
+              className='portfolio-cta'
+              href='https://github.com/arjohnston/portfolio-react/tree/master/src/pages/projects/pixelated'
+              target='_blank'
+              rel='noopener noreferrer'
+              title='Visit my Github profile'
             >
-              <div className='gameboard-ground' id='gameboard-ground-1' />
-              <div className='gameboard-ground' id='gameboard-ground-2' />
-              <div className='gameboard-ground' id='gameboard-ground-3' />
-              <div className='gameboard-ground' id='gameboard-ground-4' />
-              <div className='clouds-1-sprite clouds' id='clouds-1-sprite' />
-              <div className='clouds-2-sprite clouds' id='clouds-2-sprite' />
-              <div className='clouds-3-sprite clouds' id='clouds-3-sprite' />
-              <div className='clouds-1-sprite clouds' id='clouds-4-sprite' />
-              <div className='clouds-2-sprite clouds' id='clouds-5-sprite' />
-              <div className='clouds-3-sprite clouds' id='clouds-6-sprite' />
-              {/* <div
-                className='bush-1-sprite bush'
-                id='bush-1-sprite-1'
-              /> */}
-              {/* <div
-                className='bush-1-sprite bush'
-                id='bush-1-sprite-2'
-              /> */}
-              {/* <div
-                className='bush-1-sprite bush'
-                id='bush-1-sprite-3'
-              />
-              <div
-                className='bush-1-sprite bush'
-                id='bush-1-sprite-4'
-              />
-              <div
-                className='bush-1-sprite bush'
-                id='bush-1-sprite-5'
-              />
-              <div
-                className='bush-1-sprite bush'
-                id='bush-1-sprite-6'
-              />
-              <div
-                className='bush-1-sprite bush'
-                id='bush-1-sprite-7'
-              />
-              <div
-                className='bush-1-sprite bush'
-                id='bush-1-sprite-8'
-              />
-              <div
-                className='bush-1-sprite bush'
-                id='bush-1-sprite-9'
-              />
-              <div
-                className='bush-2-sprite bush'
-                id='bush-2-sprite-1'
-              />
-              <div
-                className='bush-2-sprite bush'
-                id='bush-2-sprite-2'
-              />
-              <div
-                className='bush-2-sprite bush'
-                id='bush-2-sprite-3'
-              />
-              <div
-                className='bush-2-sprite bush'
-                id='bush-2-sprite-4'
-              />
-              <div
-                className='bush-2-sprite bush'
-                id='bush-2-sprite-5'
-              />
-              <div
-                className='bush-2-sprite bush'
-                id='bush-2-sprite-6'
-              />
-              <div
-                className='bush-2-sprite bush'
-                id='bush-2-sprite-7'
-              /> */}
-              {/* <div
-                className='box-sprite-1 box'
-                id='box-sprite-1'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-2'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-3'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-4'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-5'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-6'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-7'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-8'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-9'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-10'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-11'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-12'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-13'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-14'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-15'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-16'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-17'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-18'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-19'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-20'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-21'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-22'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-23'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-24'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-25'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-26'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-27'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-28'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-29'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-30'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-31'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-32'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-33'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-34'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-35'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-36'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-37'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-38'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-39'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-40'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-41'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-42'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-43'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-44'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-45'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-46'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-47'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-48'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-49'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-50'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-51'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-52'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-53'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-54'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-55'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-56'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-57'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-58'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-59'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-60'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-61'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-62'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-63'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-64'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-65'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-66'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-67'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-68'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-69'
-              />
-              <div
-                className='box-sprite-1 box'
-                id='box-sprite-70'
-              /> */}
-              <div className='enemy-sprite' id='enemy-1-sprite'>
-                {/* <img
-                  src={require('../../../assets/enemy-spritesheet.png')}
-                  alt='enemy sprite'
-                  id='enemy-spritesheet'
-                /> */}
-              </div>
-              <div className='player-sprite' id='player-sprite'>
-                {/* <img
-                  src={require('../../../assets/player-spritesheet.png')}
-                  alt='player sprite'
-                  id='player-spritesheet'
-                /> */}
-              </div>
-            </div>
-            <div className='score-wrapper'>
-              <div className='score-coin' />x{this.state.score}
-            </div>
-            <div
-              className='pause-button'
-              style={{ display: !this.state.menuState ? 'flex' : 'none' }}
-              onClick={this.handleGameState.bind(this, 'pauseMenu')}
-            />
-            <div className='timer'>
-              <svg width='24' height='24' viewBox='0 0 24 24'>
-                <path d='M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z' />
-              </svg>
-              {this.state.gameTime}
-            </div>
+              view code
+            </a>
           </div>
-        </ContentSection>
+        )
+        // </ContentSection>
+        }
       </div>
     )
   }
