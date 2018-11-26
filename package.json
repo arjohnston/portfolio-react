@@ -6,12 +6,12 @@
   "author": "Andrew Johnston",
   "dependencies": {
     "babel-core": "^6.26.3",
-    "marked": "^0.3.12",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "marked": "^0.5.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
-    "react-router-dom": "^4.1.2",
-    "react-scripts": "^1.1.5",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.1",
     "standard": "^12.0.1"
   },
   "scripts": {
@@ -24,11 +24,10 @@
     "precommit": "lint-staged"
   },
   "devDependencies": {
-    "eslint": "^5.5.0",
-    "eslint-plugin-node": "7.0.1",
-    "husky": "^0.14.3",
-    "lint-staged": "^7.2.2",
-    "prettier": "^1.14.2"
+    "eslint-plugin-node": "^8.0.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.2"
   },
   "lint-staged": {
     "*.js": [
@@ -44,5 +43,11 @@
     "ignore": [
       "build/"
     ]
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
