@@ -5,12 +5,7 @@
     24: function(e, t, a) {
       e.exports = a.p + 'static/media/logo.d8da14f9.svg'
     },
-    26: function(e, t, a) {
-      e.exports = a(66)
-    },
-    31: function(e, t, a) {},
-    36: function(e, t, a) {},
-    41: function(e, t) {
+    26: function(e, t) {
       e.exports = {
         gameInProgress: !1,
         gameLoopTimer: null,
@@ -30,15 +25,20 @@
         animation: null
       }
     },
+    27: function(e, t, a) {
+      e.exports = a(57)
+    },
+    32: function(e, t, a) {},
+    41: function(e, t, a) {},
     42: function(e, t, a) {},
-    44: function(e, t, a) {},
+    43: function(e, t, a) {},
+    51: function(e, t, a) {},
+    52: function(e, t, a) {},
     53: function(e, t, a) {},
+    54: function(e, t, a) {},
     55: function(e, t, a) {},
-    57: function(e, t, a) {},
-    60: function(e, t, a) {},
-    62: function(e, t, a) {},
-    64: function(e, t, a) {},
-    66: function(e, t, a) {
+    56: function(e, t, a) {},
+    57: function(e, t, a) {
       'use strict'
       a.r(t)
       var n = a(0),
@@ -70,17 +70,15 @@
             console.error('Error during service worker registration:', e)
           })
       }
-      a(31)
-      var c = a(2),
-        m = a(3),
-        u = a(5),
-        p = a(4),
-        d = a(6),
-        g = a(69),
-        h = a(70),
-        v = a(39),
-        b = a(67),
-        E = (function(e) {
+      a(32)
+      var c = a(1),
+        m = a(2),
+        u = a(4),
+        p = a(3),
+        d = a(5),
+        g = a(8),
+        h = a(9),
+        v = (function(e) {
           function t() {
             return (
               Object(c.a)(this, t),
@@ -106,13 +104,11 @@
             t
           )
         })(n.Component),
-        f = Object(b.a)(E),
-        y = a(13),
-        j = a(38),
-        w = a(68),
-        k = (a(36), a(24)),
-        x = a.n(k),
-        N = (function(e) {
+        b = Object(h.e)(v),
+        E = a(13),
+        f = (a(41), a(24)),
+        y = a.n(f),
+        j = (function(e) {
           function t() {
             var e
             return (
@@ -122,7 +118,7 @@
                 headerBackgroundOpacity: 1
               }),
               (e.handleScroll = e.handleScroll.bind(
-                Object(y.a)(Object(y.a)(e))
+                Object(E.a)(Object(E.a)(e))
               )),
               e
             )
@@ -197,10 +193,10 @@
                       'nav',
                       { className: 'header' },
                       i.a.createElement(
-                        j.a,
+                        g.b,
                         { className: 'active', to: '/' },
                         i.a.createElement('img', {
-                          src: x.a,
+                          src: y.a,
                           alt: 'Andrew Johnston',
                           className: 'logo',
                           style: {
@@ -215,7 +211,7 @@
                           'li',
                           null,
                           i.a.createElement(
-                            w.a,
+                            g.c,
                             { exact: !0, activeClassName: 'active', to: '/' },
                             'arjohnston.io'
                           )
@@ -225,7 +221,7 @@
                           'li',
                           null,
                           i.a.createElement(
-                            w.a,
+                            g.c,
                             {
                               exact: !0,
                               activeClassName: 'active',
@@ -240,7 +236,7 @@
                               'li',
                               null,
                               i.a.createElement(
-                                w.a,
+                                g.c,
                                 {
                                   exact: !0,
                                   activeClassName: 'active',
@@ -259,8 +255,8 @@
             t
           )
         })(n.Component),
-        O = Object(b.a)(N),
-        S = function() {
+        w = Object(h.e)(j),
+        k = function() {
           return i.a.createElement(
             'a',
             {
@@ -326,7 +322,7 @@
             )
           )
         },
-        M = function() {
+        x = function() {
           return i.a.createElement(
             'a',
             {
@@ -388,7 +384,7 @@
             )
           )
         },
-        C = function() {
+        N = function() {
           return i.a.createElement(
             'a',
             {
@@ -417,16 +413,16 @@
             )
           )
         },
-        T = function() {
+        O = function() {
           return i.a.createElement(
             'div',
             { className: 'buttons' },
-            i.a.createElement(S, null),
-            i.a.createElement(M, null),
-            i.a.createElement(C, null)
+            i.a.createElement(k, null),
+            i.a.createElement(x, null),
+            i.a.createElement(N, null)
           )
         },
-        L = (a(42),
+        S = (a(42),
         (function(e) {
           function t() {
             return (
@@ -451,7 +447,7 @@
                     i.a.createElement(
                       'div',
                       { className: 'social' },
-                      i.a.createElement(T, null)
+                      i.a.createElement(O, null)
                     )
                   )
                 }
@@ -460,7 +456,7 @@
             t
           )
         })(n.Component)),
-        F = (a(44),
+        M = (a(43),
         (function(e) {
           function t() {
             return (
@@ -477,9 +473,9 @@
                   return i.a.createElement(
                     'div',
                     { className: 'layout-wrapper' },
-                    i.a.createElement(O, null),
+                    i.a.createElement(w, null),
                     this.props.children,
-                    i.a.createElement(L, null)
+                    i.a.createElement(S, null)
                   )
                 }
               }
@@ -487,8 +483,8 @@
             t
           )
         })(n.Component)),
-        q = a(8),
-        I = (a(53),
+        C = a(7),
+        T = (a(51),
         (function(e) {
           function t() {
             return (
@@ -507,7 +503,7 @@
                     'div',
                     { className: 'card '.concat(e) },
                     i.a.createElement(
-                      j.a,
+                      g.b,
                       { to: this.props.projectLink, className: 'card-cta' },
                       i.a.createElement(
                         'picture',
@@ -529,7 +525,7 @@
                       'div',
                       { className: 'project-info-wrapper' },
                       i.a.createElement(
-                        j.a,
+                        g.b,
                         { to: this.props.projectLink },
                         i.a.createElement(
                           'div',
@@ -560,7 +556,7 @@
                           i.a.createElement('span', null, 'view code')
                         ),
                         i.a.createElement(
-                          j.a,
+                          g.b,
                           { to: this.props.projectLink },
                           i.a.createElement('img', {
                             src: '/svg/play.svg',
@@ -577,10 +573,10 @@
             t
           )
         })(n.Component))
-      I.defaultProps = { size: 'one-by-one' }
-      a(55)
-      var A = ['web developer.', 'creator.', 'designer.'],
-        P = (function(e) {
+      T.defaultProps = { size: 'one-by-one' }
+      a(52)
+      var L = ['web developer.', 'creator.', 'designer.'],
+        F = (function(e) {
           function t() {
             var e
             return (
@@ -630,7 +626,7 @@
                     {
                       animating: !0,
                       heroTextIndex:
-                        this.state.heroTextIndex >= A.length - 1 ||
+                        this.state.heroTextIndex >= L.length - 1 ||
                         null === this.state.heroTextIndex
                           ? 0
                           : this.state.heroTextIndex + 1
@@ -682,7 +678,7 @@
                     'div',
                     null,
                     i.a.createElement(
-                      q.Helmet,
+                      C.Helmet,
                       null,
                       i.a.createElement('title', null, 'andrew johnston'),
                       i.a.createElement('meta', {
@@ -712,7 +708,7 @@
                           i.a.createElement(
                             'span',
                             { style: this.state.heroTextStyle },
-                            A[e]
+                            L[e]
                           )
                         )
                       ),
@@ -739,7 +735,7 @@
                             i.a.createElement(
                               'div',
                               { className: 'grid-section width-40' },
-                              i.a.createElement(I, {
+                              i.a.createElement(T, {
                                 size: 'four-by-four',
                                 name: 'Custom Dashboard',
                                 projectLink: '/projects/dashboard',
@@ -752,7 +748,7 @@
                             i.a.createElement(
                               'div',
                               { className: 'grid-section width-20' },
-                              i.a.createElement(I, {
+                              i.a.createElement(T, {
                                 size: 'two-by-one',
                                 name: 'Boilerplates',
                                 projectLink: '/projects/boilerplates',
@@ -761,7 +757,7 @@
                                 githubLink:
                                   'https://github.com/arjohnston/boilerplates'
                               }),
-                              i.a.createElement(I, {
+                              i.a.createElement(T, {
                                 size: 'two-by-one',
                                 name: 'Simon Says',
                                 projectLink: '/projects/simon',
@@ -774,7 +770,7 @@
                             i.a.createElement(
                               'div',
                               { className: 'grid-section width-40' },
-                              i.a.createElement(I, {
+                              i.a.createElement(T, {
                                 size: 'four-by-four',
                                 name: 'Emergency University',
                                 projectLink: '/projects/emergency-university',
@@ -791,7 +787,7 @@
                             i.a.createElement(
                               'div',
                               { className: 'grid-section width-20' },
-                              i.a.createElement(I, {
+                              i.a.createElement(T, {
                                 size: 'two-by-one',
                                 name: 'Markdown Editor',
                                 projectLink: '/projects/markdown-editor',
@@ -804,7 +800,7 @@
                             i.a.createElement(
                               'div',
                               { className: 'grid-section width-40' },
-                              i.a.createElement(I, {
+                              i.a.createElement(T, {
                                 size: 'two-by-one',
                                 name: 'www.massnotification.com',
                                 projectLink: '/projects/mass-notification',
@@ -816,7 +812,7 @@
                             i.a.createElement(
                               'div',
                               { className: 'grid-section width-40' },
-                              i.a.createElement(I, {
+                              i.a.createElement(T, {
                                 size: 'two-by-one',
                                 name: 'Pixelated',
                                 projectLink: '/projects/pixelated',
@@ -829,7 +825,7 @@
                           )
                         ),
                         i.a.createElement(
-                          j.a,
+                          g.b,
                           { className: 'portfolio-cta', to: '/projects/' },
                           'view all projects'
                         )
@@ -885,7 +881,7 @@
             t
           )
         })(n.Component),
-        D = (function(e) {
+        q = (function(e) {
           function t() {
             return (
               Object(c.a)(this, t),
@@ -902,7 +898,7 @@
                     'div',
                     { style: { paddingTop: '48px' } },
                     i.a.createElement(
-                      q.Helmet,
+                      C.Helmet,
                       null,
                       i.a.createElement('title', null, 'projects'),
                       i.a.createElement('meta', {
@@ -924,7 +920,7 @@
                         i.a.createElement(
                           'div',
                           { className: 'grid-section width-40' },
-                          i.a.createElement(I, {
+                          i.a.createElement(T, {
                             size: 'four-by-four',
                             name: 'Custom Dashboard',
                             projectLink: '/projects/dashboard',
@@ -936,7 +932,7 @@
                         i.a.createElement(
                           'div',
                           { className: 'grid-section width-20' },
-                          i.a.createElement(I, {
+                          i.a.createElement(T, {
                             size: 'two-by-one',
                             name: 'Boilerplates',
                             projectLink: '/projects/boilerplates',
@@ -945,7 +941,7 @@
                             githubLink:
                               'https://github.com/arjohnston/boilerplates'
                           }),
-                          i.a.createElement(I, {
+                          i.a.createElement(T, {
                             size: 'two-by-one',
                             name: 'Simon Says',
                             projectLink: '/projects/simon',
@@ -958,7 +954,7 @@
                         i.a.createElement(
                           'div',
                           { className: 'grid-section width-40' },
-                          i.a.createElement(I, {
+                          i.a.createElement(T, {
                             size: 'four-by-four',
                             name: 'Emergency University',
                             projectLink: '/projects/emergency-university',
@@ -974,7 +970,7 @@
                         i.a.createElement(
                           'div',
                           { className: 'grid-section width-20' },
-                          i.a.createElement(I, {
+                          i.a.createElement(T, {
                             size: 'two-by-one',
                             name: 'Markdown Editor',
                             projectLink: '/projects/markdown-editor',
@@ -983,7 +979,7 @@
                             githubLink:
                               'https://github.com/arjohnston/portfolio-react/tree/master/src/pages/projects/markdown-editor'
                           }),
-                          i.a.createElement(I, {
+                          i.a.createElement(T, {
                             size: 'two-by-one',
                             name: 'Tic Tac Toe',
                             projectLink: '/projects/tic-tac-toe',
@@ -996,7 +992,7 @@
                         i.a.createElement(
                           'div',
                           { className: 'grid-section width-40' },
-                          i.a.createElement(I, {
+                          i.a.createElement(T, {
                             size: 'two-by-one',
                             name: 'www.massnotification.com',
                             projectLink: '/projects/mass-notification',
@@ -1004,7 +1000,7 @@
                             languageIcon: '/svg/language-icons/react.svg',
                             githubLink: '#'
                           }),
-                          i.a.createElement(I, {
+                          i.a.createElement(T, {
                             size: 'two-by-one',
                             name: 'Bloc',
                             projectLink: '/projects/bloc',
@@ -1016,7 +1012,7 @@
                         i.a.createElement(
                           'div',
                           { className: 'grid-section width-40' },
-                          i.a.createElement(I, {
+                          i.a.createElement(T, {
                             size: 'two-by-one',
                             name: 'Pixelated',
                             projectLink: '/projects/pixelated',
@@ -1025,7 +1021,7 @@
                             githubLink:
                               'https://github.com/arjohnston/portfolio-react/tree/master/src/pages/projects/pixelated'
                           }),
-                          i.a.createElement(I, {
+                          i.a.createElement(T, {
                             size: 'two-by-one',
                             name: 'Directions',
                             projectLink: '/projects/directions',
@@ -1042,7 +1038,7 @@
                         i.a.createElement(
                           'div',
                           { className: 'grid-section width-40' },
-                          i.a.createElement(I, {
+                          i.a.createElement(T, {
                             size: 'two-by-one',
                             name: 'portfolio',
                             projectLink: '/projects/portfolio',
@@ -1061,8 +1057,8 @@
             t
           )
         })(n.Component),
-        z = a(7),
-        B = (a(57),
+        I = a(6),
+        A = (a(53),
         (function(e) {
           function t(e) {
             var a
@@ -1117,9 +1113,9 @@
                   if (t === r) {
                     for (var l in ((a = -10), i)) {
                       var s = [
-                        Object(z.a)(e[0]),
-                        Object(z.a)(e[1]),
-                        Object(z.a)(e[2])
+                        Object(I.a)(e[0]),
+                        Object(I.a)(e[1]),
+                        Object(I.a)(e[2])
                       ]
                       this.makeMove(s, r, i[l]),
                         (n = this.minimax(s, o)) > a && (a = n)
@@ -1129,9 +1125,9 @@
                   if (t === o) {
                     for (var c in ((a = 10), i)) {
                       var m = [
-                        Object(z.a)(e[0]),
-                        Object(z.a)(e[1]),
-                        Object(z.a)(e[2])
+                        Object(I.a)(e[0]),
+                        Object(I.a)(e[1]),
+                        Object(I.a)(e[2])
                       ]
                       this.makeMove(m, o, i[c]),
                         (n = this.minimax(m, r)) < a && (a = n)
@@ -1168,9 +1164,9 @@
                 value: function() {
                   var e,
                     t = [
-                      Object(z.a)(this.state.board[0]),
-                      Object(z.a)(this.state.board[1]),
-                      Object(z.a)(this.state.board[2])
+                      Object(I.a)(this.state.board[0]),
+                      Object(I.a)(this.state.board[1]),
+                      Object(I.a)(this.state.board[2])
                     ],
                     a = -10,
                     n = null,
@@ -1179,9 +1175,9 @@
                     o = 'X' === this.state.selected ? 'O' : 'X',
                     l = this.state.selected,
                     s = [
-                      Object(z.a)(t[0]),
-                      Object(z.a)(t[1]),
-                      Object(z.a)(t[2])
+                      Object(I.a)(t[0]),
+                      Object(I.a)(t[1]),
+                      Object(I.a)(t[2])
                     ]
                   if ((console.log('called getBestMove'), 0 === r))
                     return [1, 1]
@@ -1264,9 +1260,9 @@
                     t = this,
                     a = 'X' === this.state.selected ? 'O' : 'X',
                     n = [
-                      Object(z.a)(this.state.board[0]),
-                      Object(z.a)(this.state.board[1]),
-                      Object(z.a)(this.state.board[2])
+                      Object(I.a)(this.state.board[0]),
+                      Object(I.a)(this.state.board[1]),
+                      Object(I.a)(this.state.board[2])
                     ]
                   this.setState(
                     { minMaxTurnCount: this.state.moveCounter },
@@ -1290,7 +1286,7 @@
                 value: function(e) {
                   var t = this
                   if (this.state.playerTurn) {
-                    var a = Object(z.a)(this.state.board),
+                    var a = Object(I.a)(this.state.board),
                       n = parseInt(e.target.id[0], 10),
                       i = parseInt(e.target.id[1], 10),
                       r = this.state.moveCounter
@@ -1333,7 +1329,7 @@
               {
                 key: 'checkWinCondition',
                 value: function() {
-                  var e = Object(z.a)(this.state.board),
+                  var e = Object(I.a)(this.state.board),
                     t = null
                   if (
                     '' !== e[1][1] &&
@@ -1370,7 +1366,7 @@
                     'div',
                     null,
                     i.a.createElement(
-                      q.Helmet,
+                      C.Helmet,
                       null,
                       i.a.createElement('title', null, 'Tic Tac Toe'),
                       i.a.createElement('meta', {
@@ -1645,7 +1641,7 @@
             t
           )
         })(n.Component)),
-        G = (a(21),
+        P = (a(21),
         (function(e) {
           function t() {
             return (
@@ -1793,7 +1789,7 @@
             t
           )
         })(n.Component)),
-        H = (function(e) {
+        D = (function(e) {
           function t(e) {
             var a
             return (
@@ -1902,8 +1898,8 @@
               {
                 key: 'playerMove',
                 value: function(e) {
-                  var t = Object(z.a)(this.state.arrayOfMoves),
-                    a = Object(z.a)(this.state.playerArrayOfMoves)
+                  var t = Object(I.a)(this.state.arrayOfMoves),
+                    a = Object(I.a)(this.state.playerArrayOfMoves)
                   t.length,
                     a.length,
                     a.push(e),
@@ -2002,7 +1998,7 @@
                                 )
                               },
                               i.a.createElement(
-                                q.Helmet,
+                                C.Helmet,
                                 null,
                                 i.a.createElement('title', null, 'Simon Says'),
                                 i.a.createElement('meta', {
@@ -2094,7 +2090,7 @@
                               )
                             )
                           }, null),
-                          i.a.createElement(G, {
+                          i.a.createElement(P, {
                             menuOpen: this.state.settingsMenuOpen,
                             toggleMenu: this.toggleMenu.bind(this),
                             toggleSound: this.toggleSound.bind(this),
@@ -2125,17 +2121,17 @@
             t
           )
         })(n.Component),
-        U = a(40),
-        J = a.n(U),
-        W = (a(60),
+        z = a(25),
+        B = a.n(z),
+        G = (a(54),
         'Heading\n =======\n\nSub-heading\n-----------\n\n### Another deeper heading\n\nParagraphs are separated\nby a blank line.\n\nLeave 2 spaces at the end of a line to do a  \nline break\n\nText attributes *italic*, **bold**, `monospace`, ~~strikethrough~~ .\n\nShopping list:\n* apples\n* oranges\n* pears\n\nNumbered list:\n1. apples\n2. oranges\n3. pears'),
-        R = (function(e) {
+        H = (function(e) {
           function t(e) {
             var a
             return (
               Object(c.a)(this, t),
               ((a = Object(u.a)(this, Object(p.a)(t).call(this, e))).state = {
-                text: W,
+                text: G,
                 underConstructionMessageShown: !0
               }),
               a
@@ -2160,7 +2156,7 @@
                     'div',
                     null,
                     i.a.createElement(
-                      q.Helmet,
+                      C.Helmet,
                       null,
                       i.a.createElement('title', null, 'Markdown Editor'),
                       i.a.createElement('meta', {
@@ -2259,7 +2255,7 @@
                             i.a.createElement('div', {
                               className: 'markdown-output',
                               dangerouslySetInnerHTML: {
-                                __html: J()(this.state.text)
+                                __html: B()(this.state.text)
                               }
                             })
                           )
@@ -2284,31 +2280,31 @@
             t
           )
         })(n.Component),
-        _ = a(41),
-        V = a.n(_),
-        X = { SPACE_BAR: 32, LEFT_ARROW: 37, RIGHT_ARROW: 39 },
-        Q = 38,
-        Y = 40,
-        $ = 1e4,
-        K = 1e3,
-        Z = 'player-sprite',
-        ee = 'enemy-1-sprite',
-        te = 5,
-        ae = 4
-      function ne(e) {
+        U = a(26),
+        J = a.n(U),
+        W = { SPACE_BAR: 32, LEFT_ARROW: 37, RIGHT_ARROW: 39 },
+        R = 38,
+        _ = 40,
+        V = 1e4,
+        X = 1e3,
+        Q = 'player-sprite',
+        Y = 'enemy-1-sprite',
+        $ = 5,
+        K = 4
+      function Z(e) {
         return o.a
           .findDOMNode(document.getElementById(e))
           .getBoundingClientRect().width
       }
-      function ie(e) {
+      function ee(e) {
         return o.a
           .findDOMNode(document.getElementById(e))
           .getBoundingClientRect().height
       }
-      function re(e) {
+      function te(e) {
         return o.a.findDOMNode(document.getElementById(e)).style
       }
-      function oe(e, t) {
+      function ae(e, t) {
         var a =
             arguments.length > 2 && void 0 !== arguments[2]
               ? arguments[2]
@@ -2321,29 +2317,29 @@
             arguments.length > 4 && void 0 !== arguments[4]
               ? arguments[4]
               : null,
-          r = re(t),
+          r = te(t),
           o = parseInt(r.left, 10),
-          l = o + ne(t),
+          l = o + Z(t),
           s = parseInt(r.top, 10),
-          c = s + ie(t)
+          c = s + ee(t)
         if (
-          (a && (l = (o = a) + ne(t)), n && (c = (s = n) + ie(t)), null !== i)
+          (a && (l = (o = a) + Z(t)), n && (c = (s = n) + ee(t)), null !== i)
         ) {
-          var m = re(i),
+          var m = te(i),
             u = parseInt(m.left, 10),
-            p = u + ne(i),
+            p = u + Z(i),
             d = parseInt(m.top, 10),
-            g = d + ie(i)
+            g = d + ee(i)
           return l >= u - 1 && p - (p - u) - 1 >= o && s <= g - 2 && d + 2 <= c
             ? 'x-left'
             : o <= p + 1 && u <= o && s <= g - 2 && d + 2 <= c && 'x-right'
         }
         if (e.length > 0)
           for (var h in e)
-            if (e[h] !== t && oe(e, t, a, n, e[h])) return oe(e, t, a, n, e[h])
+            if (e[h] !== t && ae(e, t, a, n, e[h])) return ae(e, t, a, n, e[h])
         return !1
       }
-      function le(e, t) {
+      function ne(e, t) {
         var a =
             arguments.length > 2 && void 0 !== arguments[2]
               ? arguments[2]
@@ -2356,36 +2352,36 @@
             arguments.length > 4 && void 0 !== arguments[4]
               ? arguments[4]
               : null,
-          r = re(t),
+          r = te(t),
           o = parseInt(r.left, 10),
-          l = o + ne(t),
+          l = o + Z(t),
           s = parseInt(r.top, 10),
-          c = s + ie(t)
+          c = s + ee(t)
         if (
-          (a && (l = (o = a) + ne(t)), n && (c = (s = n) + ie(t)), null !== i)
+          (a && (l = (o = a) + Z(t)), n && (c = (s = n) + ee(t)), null !== i)
         ) {
-          var m = re(i),
+          var m = te(i),
             u = parseInt(m.left, 10),
-            p = u + ne(i),
+            p = u + Z(i),
             d = parseInt(m.top, 10),
-            g = d + ie(i)
+            g = d + ee(i)
           return l >= u && p >= o && s <= g - (g - d) - 1 && d - 1 <= c
             ? 'y-top'
             : l >= u && p >= o && s <= g + 1 && g + 1 <= c && 'y-bottom'
         }
         if (e.length > 0)
           for (var h in e)
-            if (e[h] !== t && le(e, t, a, n, e[h])) return le(e, t, a, n, e[h])
+            if (e[h] !== t && ne(e, t, a, n, e[h])) return ne(e, t, a, n, e[h])
         return !1
       }
-      a(62)
-      var se = (function(e) {
+      a(55)
+      var ie = (function(e) {
           function t(e) {
             var a
             return (
               Object(c.a)(this, t),
               ((a = Object(u.a)(this, Object(p.a)(t).call(this, e))).state =
-                V.a),
+                J.a),
               (a.state.underConstructionMessageShown = !0),
               a
             )
@@ -2443,14 +2439,14 @@
                       )
                         a[n - 1] = arguments[n]
                       var i = a.slice(0),
-                        r = Object.values(X).indexOf(e.keyCode)
+                        r = Object.values(W).indexOf(e.keyCode)
                       if (
-                        ((e.keyCode !== Q && e.keyCode !== Y) ||
+                        ((e.keyCode !== R && e.keyCode !== _) ||
                           e.preventDefault(),
                         r > -1)
                       ) {
                         e.preventDefault()
-                        var o = Object.keys(X)[r],
+                        var o = Object.keys(W)[r],
                           l = !0
                         for (var s in i) i[s] === o && (l = !1)
                         return (
@@ -2459,7 +2455,7 @@
                       }
                     }.apply(
                       void 0,
-                      [e].concat(Object(z.a)(this.state.movementQueue))
+                      [e].concat(Object(I.a)(this.state.movementQueue))
                     ),
                     a = null
                   if (t) {
@@ -2481,16 +2477,16 @@
                       )
                         a[n - 1] = arguments[n]
                       var i = a.slice(0),
-                        r = Object.values(X).indexOf(e.keyCode)
+                        r = Object.values(W).indexOf(e.keyCode)
                       if (r > -1) {
                         e.preventDefault()
-                        var o = Object.keys(X)[r]
+                        var o = Object.keys(W)[r]
                         for (var l in i) i[l] === o && i.splice(l, 1)
                         return i
                       }
                     }.apply(
                       void 0,
-                      [e].concat(Object(z.a)(this.state.movementQueue))
+                      [e].concat(Object(I.a)(this.state.movementQueue))
                     ),
                     a = !1,
                     n = null
@@ -2508,36 +2504,36 @@
               {
                 key: 'loadGame',
                 value: function() {
-                  re('gameboard-wrapper').left = '0px'
-                  var e = re('clouds-1-sprite')
-                  ;(e.left = 0.05 * $ + 'px'), (e.top = '72px')
-                  var t = re('clouds-2-sprite')
-                  ;(t.left = 0.7 * $ + 'px'), (t.top = '120px')
-                  var a = re('clouds-3-sprite')
-                  ;(a.left = 0.4 * $ + 'px'), (a.top = '30px')
-                  var n = re('clouds-4-sprite')
-                  ;(n.left = 0.6 * $ + 'px'), (n.top = '72px')
-                  var i = re('clouds-5-sprite')
-                  ;(i.left = 0.2 * $ + 'px'), (i.top = '120px')
-                  var r = re('clouds-6-sprite')
-                  ;(r.left = 0.9 * $ + 'px'), (r.top = '30px')
-                  var o = re('gameboard-ground-1'),
-                    l = ie('gameboard-ground-1')
+                  te('gameboard-wrapper').left = '0px'
+                  var e = te('clouds-1-sprite')
+                  ;(e.left = 0.05 * V + 'px'), (e.top = '72px')
+                  var t = te('clouds-2-sprite')
+                  ;(t.left = 0.7 * V + 'px'), (t.top = '120px')
+                  var a = te('clouds-3-sprite')
+                  ;(a.left = 0.4 * V + 'px'), (a.top = '30px')
+                  var n = te('clouds-4-sprite')
+                  ;(n.left = 0.6 * V + 'px'), (n.top = '72px')
+                  var i = te('clouds-5-sprite')
+                  ;(i.left = 0.2 * V + 'px'), (i.top = '120px')
+                  var r = te('clouds-6-sprite')
+                  ;(r.left = 0.9 * V + 'px'), (r.top = '30px')
+                  var o = te('gameboard-ground-1'),
+                    l = ee('gameboard-ground-1')
                   ;(o.top = 600 - l + 'px'),
                     (o.left = '0px'),
                     (o.width = '1500px')
-                  var s = re('gameboard-ground-2'),
-                    c = ie('gameboard-ground-2')
+                  var s = te('gameboard-ground-2'),
+                    c = ee('gameboard-ground-2')
                   ;(s.top = 600 - c + 'px'),
                     (s.left = '1650px'),
                     (s.width = '2800px')
-                  var m = re('gameboard-ground-3'),
-                    u = ie('gameboard-ground-3')
+                  var m = te('gameboard-ground-3'),
+                    u = ee('gameboard-ground-3')
                   ;(m.top = 600 - u + 'px'),
                     (m.left = '5725px'),
                     (m.width = '3400px')
-                  var p = re('gameboard-ground-4'),
-                    d = ie('gameboard-ground-4')
+                  var p = te('gameboard-ground-4'),
+                    d = ee('gameboard-ground-4')
                   ;(p.top = 600 - d + 'px'),
                     (p.left = '9275px'),
                     (p.width = '725px')
@@ -2551,20 +2547,20 @@
                     e.push('gameboard-ground-2'),
                     e.push('gameboard-ground-3'),
                     e.push('gameboard-ground-4')
-                  var t = re(Z)
+                  var t = te(Q)
                   ;(t.height = '50px'),
                     (t.width = '50px'),
                     (t.visibility = 'visible'),
                     (t.top = '400px'),
                     (t.left = '0px'),
-                    e.push(Z)
-                  var a = re(ee)
+                    e.push(Q)
+                  var a = te(Y)
                   ;(a.height = '40px'),
                     (a.width = '40px'),
-                    (a.top = 500 - ie(ee) + 'px'),
+                    (a.top = 500 - ee(Y) + 'px'),
                     (a.left = '1800px'),
                     (a.visibility = 'visible'),
-                    e.push(ee),
+                    e.push(Y),
                     this.setState({ spritesWithBoxCollider: e }),
                     this.startIntervals()
                 }
@@ -2627,7 +2623,7 @@
                 value: function() {
                   this.movePlayerSprite.apply(
                     this,
-                    Object(z.a)(this.state.movementQueue)
+                    Object(I.a)(this.state.movementQueue)
                   )
                 }
               },
@@ -2662,7 +2658,7 @@
                 key: 'checkIfPlayerSpriteShouldFall',
                 value: function() {
                   if (!this.state.playerSpriteJumping)
-                    return 'y-top' !== le(this.state.spritesWithBoxCollider, Z)
+                    return 'y-top' !== ne(this.state.spritesWithBoxCollider, Q)
                 }
               },
               {
@@ -2678,12 +2674,12 @@
                     i = !1,
                     r = !1,
                     o = !1,
-                    l = re(Z),
+                    l = te(Q),
                     s = parseInt(l.left, 10),
                     c = parseInt(l.top, 10),
                     m = s,
                     u = c,
-                    p = re('gameboard-wrapper'),
+                    p = te('gameboard-wrapper'),
                     d = parseFloat(p.left, 10),
                     g = this.checkIfPlayerSpriteShouldFall()
                   if (n.length > 0)
@@ -2716,15 +2712,15 @@
                         var i = a.slice(0),
                           r = e
                         return (
-                          r > 0 && (r -= te),
+                          r > 0 && (r -= $),
                           r <= 0 && (r = 0),
-                          'x-right' === oe(i, Z, r) && (r = e),
+                          'x-right' === ae(i, Q, r) && (r = e),
                           r
                         )
                       }.apply(
                         void 0,
                         [s].concat(
-                          Object(z.a)(this.state.spritesWithBoxCollider)
+                          Object(I.a)(this.state.spritesWithBoxCollider)
                         )
                       )),
                     r &&
@@ -2739,17 +2735,17 @@
                           a[n - 1] = arguments[n]
                         var i = a.slice(0),
                           r = e,
-                          o = ne(Z)
+                          o = Z(Q)
                         return (
-                          r + o < $ && (r += te),
-                          r + o >= $ && (r = $ - o),
-                          'x-left' === oe(i, Z, r) && (r = e),
+                          r + o < V && (r += $),
+                          r + o >= V && (r = V - o),
+                          'x-left' === ae(i, Q, r) && (r = e),
                           r
                         )
                       }.apply(
                         void 0,
                         [s].concat(
-                          Object(z.a)(this.state.spritesWithBoxCollider)
+                          Object(I.a)(this.state.spritesWithBoxCollider)
                         )
                       )),
                     o &&
@@ -2776,30 +2772,30 @@
                               var i = e
                               return (
                                 'y-bottom' ===
-                                  le(a.slice(0), Z, null, (i -= ae)) && (i = e),
+                                  ne(a.slice(0), Q, null, (i -= K)) && (i = e),
                                 i
                               )
                             }.apply(
                               void 0,
                               [c].concat(
-                                Object(z.a)(this.state.spritesWithBoxCollider)
+                                Object(I.a)(this.state.spritesWithBoxCollider)
                               )
                             )) === c &&
                             this.falsifyPlayerSpriteJumpingState())),
                     g &&
                       (u = function(e) {
                         var t = e
-                        return (t += ae)
+                        return (t += K)
                       }.apply(
                         void 0,
                         [c].concat(
-                          Object(z.a)(this.state.spritesWithBoxCollider)
+                          Object(I.a)(this.state.spritesWithBoxCollider)
                         )
                       )),
                     (d = (function(e) {
                       var t,
-                        a = (K - ne(Z)) / 2
-                      return e >= a && (t = e - a), t + K > $ && (t = $ - K), -t
+                        a = (X - Z(Q)) / 2
+                      return e >= a && (t = e - a), t + X > V && (t = V - X), -t
                     })(m)),
                     (l.left = m + 'px'),
                     (l.top = u + 'px'),
@@ -2831,7 +2827,7 @@
                     'div',
                     null,
                     i.a.createElement(
-                      q.Helmet,
+                      C.Helmet,
                       null,
                       i.a.createElement('title', null, 'Pixelated'),
                       i.a.createElement('meta', {
@@ -2918,7 +2914,7 @@
                             id: 'gameboard-foreground',
                             style: {
                               height: 600,
-                              width: K,
+                              width: X,
                               backgroundColor: '#AACDF8'
                             },
                             onMouseMove: this.showMouse.bind(this)
@@ -3096,7 +3092,7 @@
                             {
                               className: 'gameboard-wrapper',
                               style: {
-                                width: $,
+                                width: V,
                                 height: 600,
                                 transition: 'transform 0.3s'
                               },
@@ -3208,7 +3204,7 @@
             t
           )
         })(n.Component),
-        ce = (a(64),
+        re = (a(56),
         (function(e) {
           function t() {
             return (
@@ -3234,7 +3230,7 @@
             t
           )
         })(n.Component)),
-        me = (function(e) {
+        oe = (function(e) {
           function t() {
             return (
               Object(c.a)(this, t),
@@ -3251,7 +3247,7 @@
                     'div',
                     { style: { backgroundColor: '#393E46' } },
                     i.a.createElement(
-                      q.Helmet,
+                      C.Helmet,
                       null,
                       i.a.createElement('title', null, 'Boilerplates'),
                       i.a.createElement('meta', {
@@ -3272,7 +3268,7 @@
                       }
                     }),
                     i.a.createElement(
-                      ce,
+                      re,
                       null,
                       i.a.createElement(
                         'div',
@@ -3286,7 +3282,7 @@
                       )
                     ),
                     i.a.createElement(
-                      ce,
+                      re,
                       null,
                       i.a.createElement(
                         'div',
@@ -3320,7 +3316,7 @@
                       )
                     ),
                     i.a.createElement(
-                      ce,
+                      re,
                       null,
                       i.a.createElement(
                         'div',
@@ -3354,7 +3350,647 @@
                       )
                     ),
                     i.a.createElement(
-                      ce,
+                      re,
+                      null,
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        ),
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                        )
+                      ),
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'picture',
+                          null,
+                          i.a.createElement('source', {
+                            type: 'image/webp',
+                            srcSet: '/images/projects/boilerplates.webp'
+                          }),
+                          i.a.createElement('img', {
+                            src: '/images/projects/boilerplates.png',
+                            alt: 'TEMP'
+                          })
+                        )
+                      )
+                    )
+                  )
+                }
+              }
+            ]),
+            t
+          )
+        })(n.Component),
+        le = (function(e) {
+          function t() {
+            return (
+              Object(c.a)(this, t),
+              Object(u.a)(this, Object(p.a)(t).apply(this, arguments))
+            )
+          }
+          return (
+            Object(d.a)(t, e),
+            Object(m.a)(t, [
+              {
+                key: 'render',
+                value: function() {
+                  return i.a.createElement(
+                    'div',
+                    { style: { backgroundColor: '#393E46' } },
+                    i.a.createElement(
+                      C.Helmet,
+                      null,
+                      i.a.createElement('title', null, 'Bloc'),
+                      i.a.createElement('meta', {
+                        name: 'description',
+                        content:
+                          'Andrew Johnston is a web developer, specialized in react.js for professional and recreational use.'
+                      }),
+                      i.a.createElement('link', {
+                        rel: 'canonical',
+                        href: 'https://arjohnston.io/projects/bloc'
+                      })
+                    ),
+                    i.a.createElement('div', {
+                      className: 'hero',
+                      style: {
+                        backgroundImage:
+                          'url(/images/projects/boilerplates.png)'
+                      }
+                    }),
+                    i.a.createElement(
+                      re,
+                      null,
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane-800 center' },
+                        i.a.createElement('h1', null, 'Bloc'),
+                        i.a.createElement(
+                          'span',
+                          null,
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                        )
+                      )
+                    ),
+                    i.a.createElement(
+                      re,
+                      null,
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        ),
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                        )
+                      ),
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'picture',
+                          null,
+                          i.a.createElement('source', {
+                            type: 'image/webp',
+                            srcSet: '/images/projects/boilerplates.webp'
+                          }),
+                          i.a.createElement('img', {
+                            src: '/images/projects/boilerplates.png',
+                            alt: 'TEMP'
+                          })
+                        )
+                      )
+                    ),
+                    i.a.createElement(
+                      re,
+                      null,
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'picture',
+                          null,
+                          i.a.createElement('source', {
+                            type: 'image/webp',
+                            srcSet: '/images/projects/boilerplates.webp'
+                          }),
+                          i.a.createElement('img', {
+                            src: '/images/projects/boilerplates.png',
+                            alt: 'TEMP'
+                          })
+                        )
+                      ),
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        ),
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                        )
+                      )
+                    ),
+                    i.a.createElement(
+                      re,
+                      null,
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        ),
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                        )
+                      ),
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'picture',
+                          null,
+                          i.a.createElement('source', {
+                            type: 'image/webp',
+                            srcSet: '/images/projects/boilerplates.webp'
+                          }),
+                          i.a.createElement('img', {
+                            src: '/images/projects/boilerplates.png',
+                            alt: 'TEMP'
+                          })
+                        )
+                      )
+                    )
+                  )
+                }
+              }
+            ]),
+            t
+          )
+        })(n.Component),
+        se = (function(e) {
+          function t() {
+            return (
+              Object(c.a)(this, t),
+              Object(u.a)(this, Object(p.a)(t).apply(this, arguments))
+            )
+          }
+          return (
+            Object(d.a)(t, e),
+            Object(m.a)(t, [
+              {
+                key: 'render',
+                value: function() {
+                  return i.a.createElement(
+                    'div',
+                    { style: { backgroundColor: '#393E46' } },
+                    i.a.createElement(
+                      C.Helmet,
+                      null,
+                      i.a.createElement('title', null, 'Directions'),
+                      i.a.createElement('meta', {
+                        name: 'description',
+                        content:
+                          'Andrew Johnston is a web developer, specialized in react.js for professional and recreational use.'
+                      }),
+                      i.a.createElement('link', {
+                        rel: 'canonical',
+                        href: 'https://arjohnston.io/projects/bloc'
+                      })
+                    ),
+                    i.a.createElement('div', {
+                      className: 'hero',
+                      style: {
+                        backgroundImage:
+                          'url(/images/projects/boilerplates.png)'
+                      }
+                    }),
+                    i.a.createElement(
+                      re,
+                      null,
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane-800 center' },
+                        i.a.createElement('h1', null, 'Directions'),
+                        i.a.createElement(
+                          'span',
+                          null,
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                        )
+                      )
+                    ),
+                    i.a.createElement(
+                      re,
+                      null,
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        ),
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                        )
+                      ),
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'picture',
+                          null,
+                          i.a.createElement('source', {
+                            type: 'image/webp',
+                            srcSet: '/images/projects/boilerplates.webp'
+                          }),
+                          i.a.createElement('img', {
+                            src: '/images/projects/boilerplates.png',
+                            alt: 'TEMP'
+                          })
+                        )
+                      )
+                    ),
+                    i.a.createElement(
+                      re,
+                      null,
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'picture',
+                          null,
+                          i.a.createElement('source', {
+                            type: 'image/webp',
+                            srcSet: '/images/projects/boilerplates.webp'
+                          }),
+                          i.a.createElement('img', {
+                            src: '/images/projects/boilerplates.png',
+                            alt: 'TEMP'
+                          })
+                        )
+                      ),
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        ),
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                        )
+                      )
+                    ),
+                    i.a.createElement(
+                      re,
+                      null,
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        ),
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                        )
+                      ),
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'picture',
+                          null,
+                          i.a.createElement('source', {
+                            type: 'image/webp',
+                            srcSet: '/images/projects/boilerplates.webp'
+                          }),
+                          i.a.createElement('img', {
+                            src: '/images/projects/boilerplates.png',
+                            alt: 'TEMP'
+                          })
+                        )
+                      )
+                    )
+                  )
+                }
+              }
+            ]),
+            t
+          )
+        })(n.Component),
+        ce = (function(e) {
+          function t() {
+            return (
+              Object(c.a)(this, t),
+              Object(u.a)(this, Object(p.a)(t).apply(this, arguments))
+            )
+          }
+          return (
+            Object(d.a)(t, e),
+            Object(m.a)(t, [
+              {
+                key: 'render',
+                value: function() {
+                  return i.a.createElement(
+                    'div',
+                    { style: { backgroundColor: '#393E46' } },
+                    i.a.createElement(
+                      C.Helmet,
+                      null,
+                      i.a.createElement('title', null, 'Dashboard'),
+                      i.a.createElement('meta', {
+                        name: 'description',
+                        content:
+                          'Andrew Johnston is a web developer, specialized in react.js for professional and recreational use.'
+                      }),
+                      i.a.createElement('link', {
+                        rel: 'canonical',
+                        href: 'https://arjohnston.io/projects/bloc'
+                      })
+                    ),
+                    i.a.createElement('div', {
+                      className: 'hero',
+                      style: {
+                        backgroundImage:
+                          'url(/images/projects/boilerplates.png)'
+                      }
+                    }),
+                    i.a.createElement(
+                      re,
+                      null,
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane-800 center' },
+                        i.a.createElement('h1', null, 'Dashboard'),
+                        i.a.createElement(
+                          'span',
+                          null,
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                        )
+                      )
+                    ),
+                    i.a.createElement(
+                      re,
+                      null,
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        ),
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                        )
+                      ),
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'picture',
+                          null,
+                          i.a.createElement('source', {
+                            type: 'image/webp',
+                            srcSet: '/images/projects/boilerplates.webp'
+                          }),
+                          i.a.createElement('img', {
+                            src: '/images/projects/boilerplates.png',
+                            alt: 'TEMP'
+                          })
+                        )
+                      )
+                    ),
+                    i.a.createElement(
+                      re,
+                      null,
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'picture',
+                          null,
+                          i.a.createElement('source', {
+                            type: 'image/webp',
+                            srcSet: '/images/projects/boilerplates.webp'
+                          }),
+                          i.a.createElement('img', {
+                            src: '/images/projects/boilerplates.png',
+                            alt: 'TEMP'
+                          })
+                        )
+                      ),
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        ),
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                        )
+                      )
+                    ),
+                    i.a.createElement(
+                      re,
+                      null,
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        ),
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                        )
+                      ),
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'picture',
+                          null,
+                          i.a.createElement('source', {
+                            type: 'image/webp',
+                            srcSet: '/images/projects/boilerplates.webp'
+                          }),
+                          i.a.createElement('img', {
+                            src: '/images/projects/boilerplates.png',
+                            alt: 'TEMP'
+                          })
+                        )
+                      )
+                    )
+                  )
+                }
+              }
+            ]),
+            t
+          )
+        })(n.Component),
+        me = (function(e) {
+          function t() {
+            return (
+              Object(c.a)(this, t),
+              Object(u.a)(this, Object(p.a)(t).apply(this, arguments))
+            )
+          }
+          return (
+            Object(d.a)(t, e),
+            Object(m.a)(t, [
+              {
+                key: 'render',
+                value: function() {
+                  return i.a.createElement(
+                    'div',
+                    { style: { backgroundColor: '#393E46' } },
+                    i.a.createElement(
+                      C.Helmet,
+                      null,
+                      i.a.createElement('title', null, 'Emergency University'),
+                      i.a.createElement('meta', {
+                        name: 'description',
+                        content:
+                          'Andrew Johnston is a web developer, specialized in react.js for professional and recreational use.'
+                      }),
+                      i.a.createElement('link', {
+                        rel: 'canonical',
+                        href: 'https://arjohnston.io/projects/bloc'
+                      })
+                    ),
+                    i.a.createElement('div', {
+                      className: 'hero',
+                      style: {
+                        backgroundImage:
+                          'url(/images/projects/boilerplates.png)'
+                      }
+                    }),
+                    i.a.createElement(
+                      re,
+                      null,
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane-800 center' },
+                        i.a.createElement('h1', null, 'Emergency University'),
+                        i.a.createElement(
+                          'span',
+                          null,
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                        )
+                      )
+                    ),
+                    i.a.createElement(
+                      re,
+                      null,
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        ),
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                        )
+                      ),
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'picture',
+                          null,
+                          i.a.createElement('source', {
+                            type: 'image/webp',
+                            srcSet: '/images/projects/boilerplates.webp'
+                          }),
+                          i.a.createElement('img', {
+                            src: '/images/projects/boilerplates.png',
+                            alt: 'TEMP'
+                          })
+                        )
+                      )
+                    ),
+                    i.a.createElement(
+                      re,
+                      null,
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'picture',
+                          null,
+                          i.a.createElement('source', {
+                            type: 'image/webp',
+                            srcSet: '/images/projects/boilerplates.webp'
+                          }),
+                          i.a.createElement('img', {
+                            src: '/images/projects/boilerplates.png',
+                            alt: 'TEMP'
+                          })
+                        )
+                      ),
+                      i.a.createElement(
+                        'div',
+                        { className: 'pane pane-50' },
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        ),
+                        i.a.createElement(
+                          'p',
+                          null,
+                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                        )
+                      )
+                    ),
+                    i.a.createElement(
+                      re,
                       null,
                       i.a.createElement(
                         'div',
@@ -3411,9 +4047,9 @@
                     'div',
                     { style: { backgroundColor: '#393E46' } },
                     i.a.createElement(
-                      q.Helmet,
+                      C.Helmet,
                       null,
-                      i.a.createElement('title', null, 'Bloc'),
+                      i.a.createElement('title', null, 'Mass Notifications'),
                       i.a.createElement('meta', {
                         name: 'description',
                         content:
@@ -3432,12 +4068,12 @@
                       }
                     }),
                     i.a.createElement(
-                      ce,
+                      re,
                       null,
                       i.a.createElement(
                         'div',
                         { className: 'pane-800 center' },
-                        i.a.createElement('h1', null, 'Bloc'),
+                        i.a.createElement('h1', null, 'Mass Notifications'),
                         i.a.createElement(
                           'span',
                           null,
@@ -3446,7 +4082,7 @@
                       )
                     ),
                     i.a.createElement(
-                      ce,
+                      re,
                       null,
                       i.a.createElement(
                         'div',
@@ -3480,7 +4116,7 @@
                       )
                     ),
                     i.a.createElement(
-                      ce,
+                      re,
                       null,
                       i.a.createElement(
                         'div',
@@ -3514,7 +4150,7 @@
                       )
                     ),
                     i.a.createElement(
-                      ce,
+                      re,
                       null,
                       i.a.createElement(
                         'div',
@@ -3571,9 +4207,9 @@
                     'div',
                     { style: { backgroundColor: '#393E46' } },
                     i.a.createElement(
-                      q.Helmet,
+                      C.Helmet,
                       null,
-                      i.a.createElement('title', null, 'Directions'),
+                      i.a.createElement('title', null, 'Portfolio'),
                       i.a.createElement('meta', {
                         name: 'description',
                         content:
@@ -3592,12 +4228,12 @@
                       }
                     }),
                     i.a.createElement(
-                      ce,
+                      re,
                       null,
                       i.a.createElement(
                         'div',
                         { className: 'pane-800 center' },
-                        i.a.createElement('h1', null, 'Directions'),
+                        i.a.createElement('h1', null, 'Portfolio'),
                         i.a.createElement(
                           'span',
                           null,
@@ -3606,7 +4242,7 @@
                       )
                     ),
                     i.a.createElement(
-                      ce,
+                      re,
                       null,
                       i.a.createElement(
                         'div',
@@ -3640,7 +4276,7 @@
                       )
                     ),
                     i.a.createElement(
-                      ce,
+                      re,
                       null,
                       i.a.createElement(
                         'div',
@@ -3674,7 +4310,7 @@
                       )
                     ),
                     i.a.createElement(
-                      ce,
+                      re,
                       null,
                       i.a.createElement(
                         'div',
@@ -3729,144 +4365,20 @@
                 value: function() {
                   return i.a.createElement(
                     'div',
-                    { style: { backgroundColor: '#393E46' } },
+                    { className: 'error-wrapper' },
                     i.a.createElement(
-                      q.Helmet,
-                      null,
-                      i.a.createElement('title', null, 'Dashboard'),
-                      i.a.createElement('meta', {
-                        name: 'description',
-                        content:
-                          'Andrew Johnston is a web developer, specialized in react.js for professional and recreational use.'
-                      }),
-                      i.a.createElement('link', {
-                        rel: 'canonical',
-                        href: 'https://arjohnston.io/projects/bloc'
-                      })
-                    ),
-                    i.a.createElement('div', {
-                      className: 'hero',
-                      style: {
-                        backgroundImage:
-                          'url(/images/projects/boilerplates.png)'
-                      }
-                    }),
-                    i.a.createElement(
-                      ce,
-                      null,
+                      'div',
+                      {
+                        className: 'pane-600 center',
+                        style: { paddingTop: '72px' }
+                      },
                       i.a.createElement(
-                        'div',
-                        { className: 'pane-800 center' },
-                        i.a.createElement('h1', null, 'Dashboard'),
-                        i.a.createElement(
-                          'span',
-                          null,
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                        )
+                        'h1',
+                        null,
+                        "Whoops, looks like the page doesn't exist. Try visiting one of the projects below."
                       )
                     ),
-                    i.a.createElement(
-                      ce,
-                      null,
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-                        ),
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                        )
-                      ),
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'picture',
-                          null,
-                          i.a.createElement('source', {
-                            type: 'image/webp',
-                            srcSet: '/images/projects/boilerplates.webp'
-                          }),
-                          i.a.createElement('img', {
-                            src: '/images/projects/boilerplates.png',
-                            alt: 'TEMP'
-                          })
-                        )
-                      )
-                    ),
-                    i.a.createElement(
-                      ce,
-                      null,
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'picture',
-                          null,
-                          i.a.createElement('source', {
-                            type: 'image/webp',
-                            srcSet: '/images/projects/boilerplates.webp'
-                          }),
-                          i.a.createElement('img', {
-                            src: '/images/projects/boilerplates.png',
-                            alt: 'TEMP'
-                          })
-                        )
-                      ),
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-                        ),
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                        )
-                      )
-                    ),
-                    i.a.createElement(
-                      ce,
-                      null,
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-                        ),
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                        )
-                      ),
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'picture',
-                          null,
-                          i.a.createElement('source', {
-                            type: 'image/webp',
-                            srcSet: '/images/projects/boilerplates.webp'
-                          }),
-                          i.a.createElement('img', {
-                            src: '/images/projects/boilerplates.png',
-                            alt: 'TEMP'
-                          })
-                        )
-                      )
-                    )
+                    i.a.createElement(q, null)
                   )
                 }
               }
@@ -3888,590 +4400,74 @@
                 key: 'render',
                 value: function() {
                   return i.a.createElement(
-                    'div',
-                    { style: { backgroundColor: '#393E46' } },
-                    i.a.createElement(
-                      q.Helmet,
-                      null,
-                      i.a.createElement('title', null, 'Emergency University'),
-                      i.a.createElement('meta', {
-                        name: 'description',
-                        content:
-                          'Andrew Johnston is a web developer, specialized in react.js for professional and recreational use.'
-                      }),
-                      i.a.createElement('link', {
-                        rel: 'canonical',
-                        href: 'https://arjohnston.io/projects/bloc'
-                      })
-                    ),
-                    i.a.createElement('div', {
-                      className: 'hero',
-                      style: {
-                        backgroundImage:
-                          'url(/images/projects/boilerplates.png)'
-                      }
-                    }),
-                    i.a.createElement(
-                      ce,
-                      null,
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane-800 center' },
-                        i.a.createElement('h1', null, 'Emergency University'),
-                        i.a.createElement(
-                          'span',
-                          null,
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                        )
-                      )
-                    ),
-                    i.a.createElement(
-                      ce,
-                      null,
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-                        ),
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                        )
-                      ),
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'picture',
-                          null,
-                          i.a.createElement('source', {
-                            type: 'image/webp',
-                            srcSet: '/images/projects/boilerplates.webp'
-                          }),
-                          i.a.createElement('img', {
-                            src: '/images/projects/boilerplates.png',
-                            alt: 'TEMP'
-                          })
-                        )
-                      )
-                    ),
-                    i.a.createElement(
-                      ce,
-                      null,
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'picture',
-                          null,
-                          i.a.createElement('source', {
-                            type: 'image/webp',
-                            srcSet: '/images/projects/boilerplates.webp'
-                          }),
-                          i.a.createElement('img', {
-                            src: '/images/projects/boilerplates.png',
-                            alt: 'TEMP'
-                          })
-                        )
-                      ),
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-                        ),
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                        )
-                      )
-                    ),
-                    i.a.createElement(
-                      ce,
-                      null,
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-                        ),
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                        )
-                      ),
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'picture',
-                          null,
-                          i.a.createElement('source', {
-                            type: 'image/webp',
-                            srcSet: '/images/projects/boilerplates.webp'
-                          }),
-                          i.a.createElement('img', {
-                            src: '/images/projects/boilerplates.png',
-                            alt: 'TEMP'
-                          })
-                        )
-                      )
-                    )
-                  )
-                }
-              }
-            ]),
-            t
-          )
-        })(n.Component),
-        he = (function(e) {
-          function t() {
-            return (
-              Object(c.a)(this, t),
-              Object(u.a)(this, Object(p.a)(t).apply(this, arguments))
-            )
-          }
-          return (
-            Object(d.a)(t, e),
-            Object(m.a)(t, [
-              {
-                key: 'render',
-                value: function() {
-                  return i.a.createElement(
-                    'div',
-                    { style: { backgroundColor: '#393E46' } },
-                    i.a.createElement(
-                      q.Helmet,
-                      null,
-                      i.a.createElement('title', null, 'Mass Notifications'),
-                      i.a.createElement('meta', {
-                        name: 'description',
-                        content:
-                          'Andrew Johnston is a web developer, specialized in react.js for professional and recreational use.'
-                      }),
-                      i.a.createElement('link', {
-                        rel: 'canonical',
-                        href: 'https://arjohnston.io/projects/bloc'
-                      })
-                    ),
-                    i.a.createElement('div', {
-                      className: 'hero',
-                      style: {
-                        backgroundImage:
-                          'url(/images/projects/boilerplates.png)'
-                      }
-                    }),
-                    i.a.createElement(
-                      ce,
-                      null,
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane-800 center' },
-                        i.a.createElement('h1', null, 'Mass Notifications'),
-                        i.a.createElement(
-                          'span',
-                          null,
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                        )
-                      )
-                    ),
-                    i.a.createElement(
-                      ce,
-                      null,
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-                        ),
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                        )
-                      ),
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'picture',
-                          null,
-                          i.a.createElement('source', {
-                            type: 'image/webp',
-                            srcSet: '/images/projects/boilerplates.webp'
-                          }),
-                          i.a.createElement('img', {
-                            src: '/images/projects/boilerplates.png',
-                            alt: 'TEMP'
-                          })
-                        )
-                      )
-                    ),
-                    i.a.createElement(
-                      ce,
-                      null,
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'picture',
-                          null,
-                          i.a.createElement('source', {
-                            type: 'image/webp',
-                            srcSet: '/images/projects/boilerplates.webp'
-                          }),
-                          i.a.createElement('img', {
-                            src: '/images/projects/boilerplates.png',
-                            alt: 'TEMP'
-                          })
-                        )
-                      ),
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-                        ),
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                        )
-                      )
-                    ),
-                    i.a.createElement(
-                      ce,
-                      null,
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-                        ),
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                        )
-                      ),
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'picture',
-                          null,
-                          i.a.createElement('source', {
-                            type: 'image/webp',
-                            srcSet: '/images/projects/boilerplates.webp'
-                          }),
-                          i.a.createElement('img', {
-                            src: '/images/projects/boilerplates.png',
-                            alt: 'TEMP'
-                          })
-                        )
-                      )
-                    )
-                  )
-                }
-              }
-            ]),
-            t
-          )
-        })(n.Component),
-        ve = (function(e) {
-          function t() {
-            return (
-              Object(c.a)(this, t),
-              Object(u.a)(this, Object(p.a)(t).apply(this, arguments))
-            )
-          }
-          return (
-            Object(d.a)(t, e),
-            Object(m.a)(t, [
-              {
-                key: 'render',
-                value: function() {
-                  return i.a.createElement(
-                    'div',
-                    { style: { backgroundColor: '#393E46' } },
-                    i.a.createElement(
-                      q.Helmet,
-                      null,
-                      i.a.createElement('title', null, 'Portfolio'),
-                      i.a.createElement('meta', {
-                        name: 'description',
-                        content:
-                          'Andrew Johnston is a web developer, specialized in react.js for professional and recreational use.'
-                      }),
-                      i.a.createElement('link', {
-                        rel: 'canonical',
-                        href: 'https://arjohnston.io/projects/bloc'
-                      })
-                    ),
-                    i.a.createElement('div', {
-                      className: 'hero',
-                      style: {
-                        backgroundImage:
-                          'url(/images/projects/boilerplates.png)'
-                      }
-                    }),
-                    i.a.createElement(
-                      ce,
-                      null,
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane-800 center' },
-                        i.a.createElement('h1', null, 'Portfolio'),
-                        i.a.createElement(
-                          'span',
-                          null,
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                        )
-                      )
-                    ),
-                    i.a.createElement(
-                      ce,
-                      null,
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-                        ),
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                        )
-                      ),
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'picture',
-                          null,
-                          i.a.createElement('source', {
-                            type: 'image/webp',
-                            srcSet: '/images/projects/boilerplates.webp'
-                          }),
-                          i.a.createElement('img', {
-                            src: '/images/projects/boilerplates.png',
-                            alt: 'TEMP'
-                          })
-                        )
-                      )
-                    ),
-                    i.a.createElement(
-                      ce,
-                      null,
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'picture',
-                          null,
-                          i.a.createElement('source', {
-                            type: 'image/webp',
-                            srcSet: '/images/projects/boilerplates.webp'
-                          }),
-                          i.a.createElement('img', {
-                            src: '/images/projects/boilerplates.png',
-                            alt: 'TEMP'
-                          })
-                        )
-                      ),
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-                        ),
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                        )
-                      )
-                    ),
-                    i.a.createElement(
-                      ce,
-                      null,
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-                        ),
-                        i.a.createElement(
-                          'p',
-                          null,
-                          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                        )
-                      ),
-                      i.a.createElement(
-                        'div',
-                        { className: 'pane pane-50' },
-                        i.a.createElement(
-                          'picture',
-                          null,
-                          i.a.createElement('source', {
-                            type: 'image/webp',
-                            srcSet: '/images/projects/boilerplates.webp'
-                          }),
-                          i.a.createElement('img', {
-                            src: '/images/projects/boilerplates.png',
-                            alt: 'TEMP'
-                          })
-                        )
-                      )
-                    )
-                  )
-                }
-              }
-            ]),
-            t
-          )
-        })(n.Component),
-        be = (function(e) {
-          function t() {
-            return (
-              Object(c.a)(this, t),
-              Object(u.a)(this, Object(p.a)(t).apply(this, arguments))
-            )
-          }
-          return (
-            Object(d.a)(t, e),
-            Object(m.a)(t, [
-              {
-                key: 'render',
-                value: function() {
-                  return i.a.createElement(
-                    'div',
-                    { className: 'error-wrapper' },
-                    i.a.createElement(
-                      'div',
-                      {
-                        className: 'pane-600 center',
-                        style: { paddingTop: '72px' }
-                      },
-                      i.a.createElement(
-                        'h1',
-                        null,
-                        "Whoops, looks like the page doesn't exist. Try visiting one of the projects below."
-                      )
-                    ),
-                    i.a.createElement(D, null)
-                  )
-                }
-              }
-            ]),
-            t
-          )
-        })(n.Component),
-        Ee = (function(e) {
-          function t() {
-            return (
-              Object(c.a)(this, t),
-              Object(u.a)(this, Object(p.a)(t).apply(this, arguments))
-            )
-          }
-          return (
-            Object(d.a)(t, e),
-            Object(m.a)(t, [
-              {
-                key: 'render',
-                value: function() {
-                  return i.a.createElement(
                     g.a,
                     null,
                     i.a.createElement(
-                      f,
+                      b,
                       null,
                       i.a.createElement(
-                        F,
+                        M,
                         null,
                         i.a.createElement(
-                          h.a,
+                          h.c,
                           null,
-                          i.a.createElement(v.a, {
+                          i.a.createElement(h.a, {
                             exact: !0,
                             path: '/',
-                            component: P
+                            component: F
                           }),
-                          i.a.createElement(v.a, {
+                          i.a.createElement(h.a, {
                             exact: !0,
                             path: '/projects/',
+                            component: q
+                          }),
+                          i.a.createElement(h.a, {
+                            path: '/projects/tic-tac-toe',
+                            component: A
+                          }),
+                          i.a.createElement(h.a, {
+                            path: '/projects/simon',
                             component: D
                           }),
-                          i.a.createElement(v.a, {
-                            path: '/projects/tic-tac-toe',
-                            component: B
-                          }),
-                          i.a.createElement(v.a, {
-                            path: '/projects/simon',
+                          i.a.createElement(h.a, {
+                            path: '/projects/markdown-editor',
                             component: H
                           }),
-                          i.a.createElement(v.a, {
-                            path: '/projects/markdown-editor',
-                            component: R
-                          }),
-                          i.a.createElement(v.a, {
+                          i.a.createElement(h.a, {
                             path: '/projects/pixelated',
+                            component: ie
+                          }),
+                          i.a.createElement(h.a, {
+                            path: '/projects/boilerplates',
+                            component: oe
+                          }),
+                          i.a.createElement(h.a, {
+                            path: '/projects/bloc',
+                            component: le
+                          }),
+                          i.a.createElement(h.a, {
+                            path: '/projects/directions',
                             component: se
                           }),
-                          i.a.createElement(v.a, {
-                            path: '/projects/boilerplates',
+                          i.a.createElement(h.a, {
+                            path: '/projects/dashboard',
+                            component: ce
+                          }),
+                          i.a.createElement(h.a, {
+                            path: '/projects/emergency-university',
                             component: me
                           }),
-                          i.a.createElement(v.a, {
-                            path: '/projects/bloc',
+                          i.a.createElement(h.a, {
+                            path: '/projects/mass-notification',
                             component: ue
                           }),
-                          i.a.createElement(v.a, {
-                            path: '/projects/directions',
+                          i.a.createElement(h.a, {
+                            path: '/projects/portfolio',
                             component: pe
                           }),
-                          i.a.createElement(v.a, {
-                            path: '/projects/dashboard',
-                            component: de
-                          }),
-                          i.a.createElement(v.a, {
-                            path: '/projects/emergency-university',
-                            component: ge
-                          }),
-                          i.a.createElement(v.a, {
-                            path: '/projects/mass-notification',
-                            component: he
-                          }),
-                          i.a.createElement(v.a, {
-                            path: '/projects/portfolio',
-                            component: ve
-                          }),
-                          i.a.createElement(v.a, {
+                          i.a.createElement(h.a, {
                             render: function() {
-                              return i.a.createElement(be, null)
+                              return i.a.createElement(de, null)
                             }
                           })
                         )
@@ -4484,7 +4480,7 @@
             t
           )
         })(n.Component)
-      o.a.render(i.a.createElement(Ee, null), document.getElementById('root')),
+      o.a.render(i.a.createElement(ge, null), document.getElementById('root')),
         (function() {
           if ('serviceWorker' in navigator) {
             if (new URL('', window.location).origin !== window.location.origin)
@@ -4517,6 +4513,6 @@
         })()
     }
   },
-  [[26, 2, 1]]
+  [[27, 1, 2]]
 ])
-//# sourceMappingURL=main.d3d06486.chunk.js.map
+//# sourceMappingURL=main.23177cda.chunk.js.map
