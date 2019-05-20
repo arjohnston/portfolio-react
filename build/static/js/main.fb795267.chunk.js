@@ -26,19 +26,19 @@
       }
     },
     27: function(e, t, a) {
-      e.exports = a(57)
+      e.exports = a(55)
     },
     32: function(e, t, a) {},
     41: function(e, t, a) {},
     42: function(e, t, a) {},
     43: function(e, t, a) {},
+    49: function(e, t, a) {},
+    50: function(e, t, a) {},
     51: function(e, t, a) {},
     52: function(e, t, a) {},
     53: function(e, t, a) {},
     54: function(e, t, a) {},
-    55: function(e, t, a) {},
-    56: function(e, t, a) {},
-    57: function(e, t, a) {
+    55: function(e, t, a) {
       'use strict'
       a.r(t)
       var n = a(0),
@@ -105,7 +105,7 @@
           )
         })(n.Component),
         b = Object(h.e)(v),
-        E = a(13),
+        E = a(15),
         f = (a(41), a(24)),
         y = a.n(f),
         j = (function(e) {
@@ -117,9 +117,7 @@
                 logoHeight: 40,
                 headerBackgroundOpacity: 1
               }),
-              (e.handleScroll = e.handleScroll.bind(
-                Object(E.a)(Object(E.a)(e))
-              )),
+              (e.handleScroll = e.handleScroll.bind(Object(E.a)(e))),
               e
             )
           }
@@ -484,7 +482,7 @@
           )
         })(n.Component)),
         C = a(7),
-        T = (a(51),
+        T = (a(49),
         (function(e) {
           function t() {
             return (
@@ -574,7 +572,7 @@
           )
         })(n.Component))
       T.defaultProps = { size: 'one-by-one' }
-      a(52)
+      a(50)
       var L = ['web developer.', 'creator.', 'designer.'],
         F = (function(e) {
           function t() {
@@ -1058,7 +1056,7 @@
           )
         })(n.Component),
         I = a(6),
-        A = (a(53),
+        A = (a(51),
         (function(e) {
           function t(e) {
             var a
@@ -2123,7 +2121,7 @@
         })(n.Component),
         z = a(25),
         B = a.n(z),
-        G = (a(54),
+        G = (a(52),
         'Heading\n =======\n\nSub-heading\n-----------\n\n### Another deeper heading\n\nParagraphs are separated\nby a blank line.\n\nLeave 2 spaces at the end of a line to do a  \nline break\n\nText attributes *italic*, **bold**, `monospace`, ~~strikethrough~~ .\n\nShopping list:\n* apples\n* oranges\n* pears\n\nNumbered list:\n1. apples\n2. oranges\n3. pears'),
         H = (function(e) {
           function t(e) {
@@ -2374,7 +2372,7 @@
             if (e[h] !== t && ne(e, t, a, n, e[h])) return ne(e, t, a, n, e[h])
         return !1
       }
-      a(55)
+      a(53)
       var ie = (function(e) {
           function t(e) {
             var a
@@ -3204,7 +3202,7 @@
             t
           )
         })(n.Component),
-        re = (a(56),
+        re = (a(54),
         (function(e) {
           function t() {
             return (
@@ -4515,4 +4513,4 @@
   },
   [[27, 1, 2]]
 ])
-//# sourceMappingURL=main.23177cda.chunk.js.map
+//# sourceMappingURL=main.fb795267.chunk.js.map
