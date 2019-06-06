@@ -51,3 +51,6 @@ npm-debug.log
 # coverage
 .nyc_output
 coverage
+
+# Package Lock
+package-lock.json
