@@ -1,1 +1,1 @@
-This is my portfolio website at [arjohnston.io](https://arjohnston.io).
+This was a first version of my portfolio website no longer used.
